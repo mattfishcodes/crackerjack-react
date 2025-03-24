@@ -7,7 +7,7 @@ type ScheduleButtonTypes = {
     color: string
 }
 
-export default ({ color }: ScheduleButtonTypes) => {
+export default function ScheduleButton({ color }: ScheduleButtonTypes) {
     if (color !== 'light' && color !== 'dark') {
         throw new TypeError(`prop 'color' must be one of 'light', 'dark'`)
     }

@@ -5,7 +5,8 @@ import Link from "next/link";
 import styles from './Footer.module.scss';
 import Nav from "./Nav";
 
-export default () => {return (
+export default function Footer() {
+    return (
         <footer className={styles.footer}>
             <div className={styles.flex}>
             <Nav position={'footer'}/>

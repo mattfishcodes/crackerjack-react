@@ -2,7 +2,7 @@ import React from "react";
 import styles from './page.module.scss';
 import ScheduleButton from "../components/ScheduleButton";
 
-export default () => {
+export default function Services() {
     return (
         <main>
             <ScheduleButton color='light'/>
