@@ -1,0 +1,35 @@
+.flex {
+    min-height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $primary;
+    padding: 0 50px;
+}
+
+.nav {
+    display: flex;
+    column-gap: 5px;
+}
+
+.link {
+    color: $secondary;
+    padding: 10px 15px;
+    transition: all 200ms;
+
+    &:hover, &:focus {
+        color: $light;
+    }
+}
+
+.active {
+    color: $light;
+}
+
+.copyright {
+    min-height: 5vh;
+    background-color: $light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

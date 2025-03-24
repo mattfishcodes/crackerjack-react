@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    column-gap: 5px;
+}
+
+.link {
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: all 200ms;
+
+    &.top {
+
+        &.active,
+        &:hover,
+        &:focus {
+            color: $secondary;
+            background-color: $primary;
+        }
+    }
+
+    &.bottom {
+        color: $secondary;
+
+        &.active,
+        &:hover,
+        &:focus {
+            color: $light;
+        }
+    }
+}

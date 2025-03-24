@@ -1,0 +1,48 @@
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: $light;
+  color: $primary;
+  font-family: var(--font-urbanist);
+}
+
+main > * {
+  padding: 0 20vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-titillium-web);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.light {
+  color: $light;
+}
+
+.secondary {
+  color: $secondary;
+}
+
+.bg-primary {
+  background-color: $primary;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

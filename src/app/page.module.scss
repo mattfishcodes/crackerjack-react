@@ -1,0 +1,42 @@
+.main > *:nth-child(3n-2) {
+    color: $light;
+    background-color: $primary;
+}
+
+.main > *:nth-child(3n) {
+    color: $primary;
+    background-color: $secondary;
+}
+
+.section {
+    display: flex;
+    height: 40vh;
+}
+
+.logo {
+    height: 40vh;
+    width: auto;
+    // flex: 1;
+}
+
+.scheduleBtn {
+    cursor: pointer;
+    color: $secondary;
+    background-color: $primary;
+    border-radius: 20px;
+    border: 3px solid $primary;
+    padding: 30px;
+    transition: all 200ms;
+
+    span {
+        font-family: var(--font-titillium-web);
+    }
+    p {
+        font-family: var(--font-montserrat);
+    }
+
+    &:hover {
+        color: $light;
+        border-color: $light;
+    }
+}

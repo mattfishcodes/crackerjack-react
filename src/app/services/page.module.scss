@@ -1,0 +1,25 @@
+.header {
+    color: $light;
+    background-color: $primary;
+    text-align: center;
+    min-height: 8vh;
+
+    hr {
+        color: $secondary;
+    }
+}
+
+.flexbox {
+    margin: 20px 0;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 20px;
+}
+
+.flexitem {
+    flex: 1 0 calc(50% - 20px);
+    padding: 20px;
+    // color: $light;
+    // background-color: $primary;
+    border-radius: 20px;
+}

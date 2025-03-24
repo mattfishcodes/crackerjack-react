@@ -1,0 +1,14 @@
+.header {
+    min-height: 10vh;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    border-bottom: 2px solid lightgray;
+}
+
+.logo {
+    height: 5vh;
+    width: auto;
+}
