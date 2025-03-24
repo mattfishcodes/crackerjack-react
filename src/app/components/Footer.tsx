@@ -2,18 +2,13 @@
 
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import styles from './Footer.module.scss';
-import { routes } from "../../../constants";
 import Nav from "./Nav";
 
-export default () => {
-    const pn = usePathname()
-
-    return (
+export default () => {return (
         <footer className={styles.footer}>
             <div className={styles.flex}>
-            <Nav position={'bottom'}/>
+            <Nav position={'footer'}/>
 
             <Link className={styles.link} href='#'>Privacy Policy</Link>
             </div>

@@ -14,7 +14,7 @@ export default () => {
             height={180}
             priority
             />
-            <Nav position={'top'}/>
+            <Nav position={'header'}/>
         </header>
     )
 }

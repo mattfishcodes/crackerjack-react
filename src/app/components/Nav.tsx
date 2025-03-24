@@ -6,11 +6,20 @@ import { usePathname } from "next/navigation";
 import styles from './Nav.module.scss';
 import { routes } from "../../../constants";
 
+type NavTypes = {
+    position: String
+}
 
-export default function Nav({ position }) {
+
+export default function Nav({ position }: NavTypes) {
     const pn = usePathname()
 
-    const positionClass = position === 'top' ? styles.top : styles.bottom
+    const positionClass = position === 'header' ? styles.header : position === 'footer' ? styles.footer : null
+
+    if (positionClass === null) {
+        throw new TypeError(`'position' prop must be one of ['header', 'footer']`)
+    }
+
     return (
         <nav className={styles.nav}>
             {routes.map((l, key) => {
