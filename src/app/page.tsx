@@ -17,6 +17,8 @@ export default function Home() {
         <div style={{ textAlign: 'center' }}>
           <h1 style={{ fontSize: '50px' }}>Crackerjack Solutions</h1>
 
+          <hr/>
+
           <p>Welcome to Crackerjack Solutions Virtual Business Management Services!</p>
 
           <p>Empowering Entrepreneurs and Business Leaders to cultivate business growth, elevate productivity, and optimize operations.</p>

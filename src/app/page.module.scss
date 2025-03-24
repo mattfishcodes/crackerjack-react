@@ -8,13 +8,13 @@
     background-color: $secondary;
 }
 
-.section {
-    display: flex;
-    height: 40vh;
+.main {
+    hr {
+        border-color: $secondary;
+    }
 }
 
 .logo {
     height: 40vh;
     width: auto;
-    // flex: 1;
 }
