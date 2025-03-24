@@ -1,0 +1,38 @@
+.button {
+    cursor: pointer;
+    border: 3px solid;
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 200ms;
+
+    span {
+        font-family: var(--font-titillium-web);
+    }
+
+    p {
+        font-family: var(--font-montserrat);
+    }
+    
+}
+
+.dark {
+    color: $secondary;
+    background-color: $primary;
+    border-color: $primary;
+
+    &:hover {
+        color: $light;
+        border-color: $light;
+    }
+}
+
+.light {
+    color: $primary;
+    background-color: $secondary;
+    border-color: $secondary;
+
+    &:hover {
+        background-color: $light;
+        border-color: $primary;
+    }
+}

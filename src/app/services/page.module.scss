@@ -3,9 +3,17 @@
     background-color: $primary;
     text-align: center;
     min-height: 8vh;
+    padding: 20px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 
     hr {
-        color: $secondary;
+        flex: 0;
+        border: 2px solid $secondary;
+        border-bottom: none;
+        width: 60vw;
     }
 }
 
@@ -19,7 +27,12 @@
 .flexitem {
     flex: 1 0 calc(50% - 20px);
     padding: 20px;
-    // color: $light;
-    // background-color: $primary;
     border-radius: 20px;
+}
+
+.dottedHr {
+    border-bottom: none;
+    border-image-source: url("/dash.svg");
+    border-image-repeat: round;
+    border-image-slice: 18%;
 }

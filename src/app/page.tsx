@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
 import Section from './components/Section';
+import ScheduleButton from './components/ScheduleButton';
 
 export default function Home() {
   return (
@@ -51,10 +52,7 @@ export default function Home() {
 
         <p>Picture a world where you&apos;re not buried in the day-to-day grind, while also having more time to do what you love. Crackerjack Solutions is here to turn that vision into your reality. So, why not get in touch today and unlock your business&apos;s full potential?</p>
 
-        <button className={styles.scheduleBtn}>
-          <span>Schedule Now!</span>
-          <p>Get access to a FREE 30 minute call!</p>
-        </button>
+        <ScheduleButton color='dark'/>
       </div>
     </main>
   );

@@ -1,9 +1,12 @@
 import React from "react";
 import styles from './page.module.scss';
+import ScheduleButton from "../components/ScheduleButton";
 
 export default () => {
     return (
         <main>
+            <ScheduleButton color='light'/>
+
             <header className={styles.header}>
                 <h2>Services</h2>
                 <hr />
@@ -68,34 +71,41 @@ export default () => {
 
                 <h3>Hourly Retainer Packages</h3>
 
-                <p style={{fontFamily: 'var(--font-montserrat)'}}>Flexible Solutions for Your Business Needs</p>
+                <p style={{ fontFamily: 'var(--font-montserrat)' }}>Flexible Solutions for Your Business Needs</p>
 
                 <p>At Crackerjack Solutions, we understand that every business has unique requirements. Our hourly retainer packages offer the flexibility and expertise you need, exactly when you need it. Whether you require ongoing support, specialized project assistance, or expert advice, our retainer packages are designed to fit seamlessly into your workflow.</p>
 
                 <hr />
 
-                <div className={styles.flexbox}>
-                    <div className={styles.flexitem}>
-                        <h4 className='secondary bg-primary'>Why Choose Our Hourly Retainer Packages?</h4>
-                        Customizable Plans: Tailor your package to suit your specific needs, from a few hours a month to full-time support.
-                        Cost-Effective: Optimize your budget with flexible hourly rates that provide excellent value without the commitment of a full-time hire.
-                        Consistency: Work with the same team members who understand your business, ensuring consistent and high-quality results.
-                    </div>
-                    <div className={styles.flexitem}>
-                        <h4 className='secondary bg-primary'>Packages</h4>
+                <div>
+                    <h4 className='secondary bg-primary' style={{ borderRadius: '20px' }}>Why Choose Our Hourly Retainer Packages?</h4>
+                    <p>Customizable Plans: Tailor your package to suit your specific needs, from a few hours a month to full-time support.</p>
+                    <p>Cost-Effective: Optimize your budget with flexible hourly rates that provide excellent value without the commitment of a full-time hire.</p>
+                    <p>Consistency: Work with the same team members who understand your business, ensuring consistent and high-quality results.</p>
+                </div>
+                <div>
+                    <h4 className='secondary bg-primary' style={{ borderRadius: '20px' }}>Packages</h4>
+                    <p>
                         Starter Package: 10 hours per month &#45; Ideal for small projects or as-needed support.
                         $600.00
+                    </p>
+                    <p>
                         Basic Package: 20 hours per month &#45; Suitable for moderate projects and more frequent assistance.
                         $1,200.00
+                    </p>
+                    <p>
                         Growth Package: 30 hours per month &#45; Perfect for ongoing projects and consistent support.
                         $1,650.00
+                    </p>
+                    <p>
                         Pro Package: 40 hours per month &#45; Best for larger projects and frequent collaboration.
                         $2,000.00
-                    </div>
+                    </p>
                 </div>
 
+                <hr className={styles.dottedHr}/>
                 <div>Hourly packages expire 6 months from the date of purchase, and any remaining hours are lost. If you purchase additional hours prior to the expiration of existing hours, they will be added to the existing package, and the expiration date will be extended to 6 months from the last purchase.</div>
-
+                <hr className={styles.dottedHr}/>
             </div>
 
             <div>
