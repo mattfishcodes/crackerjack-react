@@ -37,7 +37,8 @@ export default function Home() {
           <p>Do you experience ongoing stress and overwhelm caused by these issues?</p>
         </div>
         <Image
-          src='/'
+          className={styles.img}
+          src='/scrabble-letters.jpg'
           alt=''
           width={500}
           height={500}
