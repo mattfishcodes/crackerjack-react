@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { Montserrat, Titillium_Web, Urbanist } from "next/font/google";
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 import "./globals.scss";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+
+config.autoAddCss = false
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
