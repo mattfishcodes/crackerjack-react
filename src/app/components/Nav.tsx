@@ -1,9 +1,9 @@
 'use client'
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import styles from './Nav.module.scss';
-import { routes } from "../../../constants";
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import styles from './Nav.module.scss'
+import { routes } from '../../../constants'
 
 type NavTypes = {
     position: string
@@ -15,7 +15,7 @@ export default function Nav({ position }: NavTypes) {
     const positionClass = position === 'header' ? styles.header : position === 'footer' ? styles.footer : null
 
     if (positionClass === null) {
-        throw new TypeError(`'position' prop must be one of ['header', 'footer']`)
+        throw new TypeError('\'position\' prop must be one of [\'header\', \'footer\']')
     }
 
     return (

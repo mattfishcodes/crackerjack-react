@@ -1,7 +1,7 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import styles from './ScheduleButton.module.scss';
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import styles from './ScheduleButton.module.scss'
 
 type ScheduleButtonTypes = {
     color: string
@@ -9,7 +9,7 @@ type ScheduleButtonTypes = {
 
 export default function ScheduleButton({ color }: ScheduleButtonTypes) {
     if (color !== 'light' && color !== 'dark') {
-        throw new TypeError(`prop 'color' must be one of 'light', 'dark'`)
+        throw new TypeError('prop \'color\' must be one of \'light\', \'dark\'')
     }
 
     return (

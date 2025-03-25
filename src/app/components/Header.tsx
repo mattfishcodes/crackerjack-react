@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import styles from './Header.module.scss';
-import Nav from "./Nav";
+import React from 'react'
+import Image from 'next/image'
+import styles from './Header.module.scss'
+import Nav from './Nav'
 
 export default function Header() {
     return (

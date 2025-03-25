@@ -1,9 +1,9 @@
 'use client'
 
-import React from "react";
-import Link from "next/link";
-import styles from './Footer.module.scss';
-import Nav from "./Nav";
+import React from 'react'
+import Link from 'next/link'
+import styles from './Footer.module.scss'
+import Nav from './Nav'
 
 export default function Footer() {
     return (

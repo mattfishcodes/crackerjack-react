@@ -1,6 +1,7 @@
-import React from "react";
-import styles from './page.module.scss';
-import ScheduleButton from "../components/ScheduleButton";
+import React from 'react'
+import styles from './page.module.scss'
+import Section from '../components/Section'
+import ScheduleButton from '../components/ScheduleButton'
 
 export default function Services() {
     return (
