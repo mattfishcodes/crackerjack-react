@@ -6,6 +6,7 @@ import Nav from './Nav'
 export default function Header() {
     return (
         <header className={styles.header}>
+            <div className={styles.container}>
             <Image
             className={styles.logo}
             src="/customcolor_icon_transparent_background.png"
@@ -15,6 +16,7 @@ export default function Header() {
             priority
             />
             <Nav position={'header'}/>
+            </div>
         </header>
     )
 }

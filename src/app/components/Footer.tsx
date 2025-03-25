@@ -8,13 +8,16 @@ import Nav from './Nav'
 export default function Footer() {
     return (
         <footer className={styles.footer}>
-            <div className={styles.flex}>
-            <Nav position={'footer'}/>
-
-            <Link className={styles.link} href='#'>Privacy Policy</Link>
-            </div>
-            <div className={styles.copyright}>
-                <small>Copyright 2025 Crackerjack Solutions LLC</small>
+            <div className={styles.container}>
+                <div>
+                    <div>
+                        <Nav position={'footer'} />
+                        <Link className={styles.link} href='#'>Privacy Policy</Link>
+                    </div>
+                </div>
+                <div className={styles.copyright}>
+                    <small>Copyright 2025 Crackerjack Solutions LLC</small>
+                </div>
             </div>
         </footer>
     )

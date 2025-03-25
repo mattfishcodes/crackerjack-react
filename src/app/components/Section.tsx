@@ -8,7 +8,9 @@ type SectionProps = {
 export default function Section({children}: SectionProps) {
     return (
         <section className={styles.section}>
-            {children}
+            <div className={styles.container}>
+                {children}
+            </div>
         </section>
     )
 }

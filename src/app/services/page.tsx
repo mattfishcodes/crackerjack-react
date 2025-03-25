@@ -6,187 +6,186 @@ import ScheduleButton from '../components/ScheduleButton'
 export default function Services() {
     return (
         <main>
-            <ScheduleButton color='light'/>
+            <Section>
+                <div style={{textAlign: 'center'}}>
+                <h3>Interested in Exploring How our Services Can Benefit You?</h3>
+
+                <p>Schedule your complimentary 30 minute call below.</p>
+                <p>Let&apos;s explore how to navigate life&apos;s unpredictability together and find that equilibrium you&apos;re searching for.</p>
+                <ScheduleButton color='light' />
+                </div>
+            </Section>
 
             <header className={styles.header}>
                 <h2>Services</h2>
                 <hr />
             </header>
 
-            <div className={styles.flexbox}>
-                <div className={`${styles.flexitem} light bg-primary`}>
-                    <h3 className='secondary'>Systems Analysis</h3>
+            <Section>
+                <div className={styles.flexbox}>
+                    <div className={`${styles.flexitem} light bg-primary`}>
+                        <h3 className='secondary'>Systems Analysis</h3>
 
-                    <p>Identify bottlenecks, inefficiencies, and areas for improvement within your organization&apos;s operations.</p>
+                        <p>Identify bottlenecks, inefficiencies, and areas for improvement within your organization&apos;s operations.</p>
 
-                    <hr className='secondary' />
+                        <hr className='secondary' />
 
-                    <p>
-                        <strong className='secondary'>Understanding Your Processes</strong>
-                        <br />
-                        We&apos;ll meet with you to understand your current processes, systems, and workflows.
-                    </p>
+                        <p>
+                            <strong className='secondary'>Understanding Your Processes</strong>
+                            <br />
+                            We&apos;ll meet with you to understand your current processes, systems, and workflows.
+                        </p>
 
-                    <p>
-                        <strong className='secondary'>Thorough Evaluation</strong>
-                        <br />
-                        Our team will conduct a detailed evaluation of your current state.
-                    </p>
+                        <p>
+                            <strong className='secondary'>Thorough Evaluation</strong>
+                            <br />
+                            Our team will conduct a detailed evaluation of your current state.
+                        </p>
 
-                    <p>
-                        <strong className='secondary'>Actionable Recommendations</strong>
-                        <br />
-                        You&apos;ll receive a customized report with actionable recommendations.
-                    </p>
+                        <p>
+                            <strong className='secondary'>Actionable Recommendations</strong>
+                            <br />
+                            You&apos;ll receive a customized report with actionable recommendations.
+                        </p>
 
+                    </div>
+                    <div className={`${styles.flexitem} light bg-primary`}>
+
+                        <h3 className='secondary'>CRM Setup</h3>
+
+                        <p>Streamline your client relationships with a tailored customer relationship management solution.</p>
+
+                        <hr className='secondary' />
+
+                        <p>
+                            <strong className='secondary'>Centralized Platform</strong>
+                            <br />
+                            Manage all client and potential client relationships seamlessly.
+                        </p>
+
+                        <p>
+                            <strong className='secondary'>Stronger Business Relationships</strong>
+                            <br />
+                            Leverage our expertise to cultivate strong connections.
+                        </p>
+
+                        <p>
+                            <strong className='secondary'>Improved Communication</strong>
+                            <br />
+                            Streamline processes and watch your bottom line soar.
+                        </p>
+
+                    </div>
                 </div>
-                <div className={`${styles.flexitem} light bg-primary`}>
+            </Section>
 
-                    <h3 className='secondary'>CRM Setup</h3>
-
-                    <p>Streamline your client relationships with a tailored customer relationship management solution.</p>
-
-                    <hr className='secondary' />
-
-                    <p>
-                        <strong className='secondary'>Centralized Platform</strong>
-                        <br />
-                        Manage all client and potential client relationships seamlessly.
-                    </p>
-
-                    <p>
-                        <strong className='secondary'>Stronger Business Relationships</strong>
-                        <br />
-                        Leverage our expertise to cultivate strong connections.
-                    </p>
-
-                    <p>
-                        <strong className='secondary'>Improved Communication</strong>
-                        <br />
-                        Streamline processes and watch your bottom line soar.
-                    </p>
-
-                </div>
-            </div>
-            <div>
-
-                <h3>Hourly Retainer Packages</h3>
-
-                <p style={{ fontFamily: 'var(--font-montserrat)' }}>Flexible Solutions for Your Business Needs</p>
-
-                <p>At Crackerjack Solutions, we understand that every business has unique requirements. Our hourly retainer packages offer the flexibility and expertise you need, exactly when you need it. Whether you require ongoing support, specialized project assistance, or expert advice, our retainer packages are designed to fit seamlessly into your workflow.</p>
-
-                <hr />
+            <Section>
 
                 <div>
-                    <h4 className='secondary bg-primary' style={{ borderRadius: '20px' }}>Why Choose Our Hourly Retainer Packages?</h4>
-                    <p>Customizable Plans: Tailor your package to suit your specific needs, from a few hours a month to full-time support.</p>
-                    <p>Cost-Effective: Optimize your budget with flexible hourly rates that provide excellent value without the commitment of a full-time hire.</p>
-                    <p>Consistency: Work with the same team members who understand your business, ensuring consistent and high-quality results.</p>
+                    <h3>Hourly Retainer Packages</h3>
+                    <p style={{ fontFamily: 'var(--font-montserrat)' }}>Flexible Solutions for Your Business Needs</p>
+                    <p>At Crackerjack Solutions, we understand that every business has unique requirements. Our hourly retainer packages offer the flexibility and expertise you need, exactly when you need it. Whether you require ongoing support, specialized project assistance, or expert advice, our retainer packages are designed to fit seamlessly into your workflow.</p>
+                    <hr />
+                    <div>
+                        <h4 className='secondary bg-primary' style={{ borderRadius: '20px' }}>Why Choose Our Hourly Retainer Packages?</h4>
+                        <p>Customizable Plans: Tailor your package to suit your specific needs, from a few hours a month to full-time support.</p>
+                        <p>Cost-Effective: Optimize your budget with flexible hourly rates that provide excellent value without the commitment of a full-time hire.</p>
+                        <p>Consistency: Work with the same team members who understand your business, ensuring consistent and high-quality results.</p>
+                    </div>
+                    <div>
+                        <h4 className='secondary bg-primary' style={{ borderRadius: '20px' }}>Packages</h4>
+                        <p>
+                            Starter Package: 10 hours per month &#45; Ideal for small projects or as-needed support.
+                            $600.00
+                        </p>
+                        <p>
+                            Basic Package: 20 hours per month &#45; Suitable for moderate projects and more frequent assistance.
+                            $1,200.00
+                        </p>
+                        <p>
+                            Growth Package: 30 hours per month &#45; Perfect for ongoing projects and consistent support.
+                            $1,650.00
+                        </p>
+                        <p>
+                            Pro Package: 40 hours per month &#45; Best for larger projects and frequent collaboration.
+                            $2,000.00
+                        </p>
+                    </div>
+                    <hr className={styles.dottedHr} />
+                    <div>Hourly packages expire 6 months from the date of purchase, and any remaining hours are lost. If you purchase additional hours prior to the expiration of existing hours, they will be added to the existing package, and the expiration date will be extended to 6 months from the last purchase.</div>
+                    <hr className={styles.dottedHr} />
                 </div>
+            </Section>
+
+            <Section>
                 <div>
-                    <h4 className='secondary bg-primary' style={{ borderRadius: '20px' }}>Packages</h4>
-                    <p>
-                        Starter Package: 10 hours per month &#45; Ideal for small projects or as-needed support.
-                        $600.00
-                    </p>
-                    <p>
-                        Basic Package: 20 hours per month &#45; Suitable for moderate projects and more frequent assistance.
-                        $1,200.00
-                    </p>
-                    <p>
-                        Growth Package: 30 hours per month &#45; Perfect for ongoing projects and consistent support.
-                        $1,650.00
-                    </p>
-                    <p>
-                        Pro Package: 40 hours per month &#45; Best for larger projects and frequent collaboration.
-                        $2,000.00
-                    </p>
+                    Ready to Get Started?
+                    Invest in your business&apos;s success with a flexible hourly retainer package from Crackerjack Solutions. Contact us today to schedule your free consultation and discover how we can help you achieve your goals.
+                    Schedule Now
+                    Get access to a FREE 30 minute call!
                 </div>
+            </Section>
 
-                <hr className={styles.dottedHr}/>
-                <div>Hourly packages expire 6 months from the date of purchase, and any remaining hours are lost. If you purchase additional hours prior to the expiration of existing hours, they will be added to the existing package, and the expiration date will be extended to 6 months from the last purchase.</div>
-                <hr className={styles.dottedHr}/>
-            </div>
+            <Section>
+                <div>
+                    Services Available
+                    Projects
+                    Create Detailed Project Plans
+                    Lead Initial Kickoff Call with Stakeholders
+                    Lead Regular Check In Calls
+                    Manage Communication, Timeline, Change Requests, Status and Deliverables
+                    Maximize Productivity, Quality and Stakeholder Satisfaction
+                    And more…
+                    Systems
+                    Manage Scheduling
+                    Manage Invoicing
+                    Manage Client Onboarding
+                    Review, Update and Create Processes
+                    Create SOPs & Playbooks for Systems
+                    And more…
+                    Operations
+                    Review and Optimize existing Business Processes and Tools
+                    Create SOPs and Playbooks for Operations
+                    Manage CRM, Email and Calendar
+                    Create and/or Update Automations
+                    Develop Digital File Systems
+                    And more…
+                </div>
+            </Section>
 
-            <div>
-                Ready to Get Started?
-
-                Invest in your business’s success with a flexible hourly retainer package from Crackerjack Solutions. Contact us today to schedule your free consultation and discover how we can help you achieve your goals.
-                Schedule Now
-                Get access to a FREE 30 minute call!
-            </div>
-
-            <div>
-
-                Services Available
-                Projects
-
-                Create Detailed Project Plans
-                Lead Initial Kickoff Call with Stakeholders
-                Lead Regular Check In Calls
-                Manage Communication, Timeline, Change Requests, Status and Deliverables
-                Maximize Productivity, Quality and Stakeholder Satisfaction
-                And more…
-
-                Systems
-
-                Manage Scheduling
-                Manage Invoicing
-                Manage Client Onboarding
-                Review, Update and Create Processes
-                Create SOPs & Playbooks for Systems
-                And more…
-
-                Operations
-
-                Review and Optimize existing Business Processes and Tools
-                Create SOPs and Playbooks for Operations
-                Manage CRM, Email and Calendar
-                Create and/or Update Automations
-                Develop Digital File Systems
-                And more…
-
-
-            </div>
-
-            <div>
-
-                Software
-
-                We use a variety of online apps/SaaS tools. Some of them are used daily and some weekly, others less often. However, we have not yet met a SaaS tool that we were not able to master! We learn quickly and love the challenge of learning a new tool.
-
-                Here is a brief list of some of the tools we currently use or have used frequently:
-
-                Airtable
-                Asana
-                Calendly
-                Canva
-                ClickUp
-                Dubsado
-                FormAssembly
-                Gusto
-                HubSpot
-                LastPass
-                Loom
-                MailChimp
-                Make
-
-                Microsoft/Office 365
-                Miro
-                Moxie
-                QuickBooks
-                Salesforce
-                SiteGround
-                Slack
-                Stripe Payments
-                TaskRay
-                Trello
-                WordPress
-                Zapier
-                Zoom
-
-            </div>
+            <Section>
+                <div>
+                    Software
+                    We use a variety of online apps/SaaS tools. Some of them are used daily and some weekly, others less often. However, we have not yet met a SaaS tool that we were not able to master! We learn quickly and love the challenge of learning a new tool.
+                    Here is a brief list of some of the tools we currently use or have used frequently:
+                    Airtable
+                    Asana
+                    Calendly
+                    Canva
+                    ClickUp
+                    Dubsado
+                    FormAssembly
+                    Gusto
+                    HubSpot
+                    LastPass
+                    Loom
+                    MailChimp
+                    Make
+                    Microsoft/Office 365
+                    Miro
+                    Moxie
+                    QuickBooks
+                    Salesforce
+                    SiteGround
+                    Slack
+                    Stripe Payments
+                    TaskRay
+                    Trello
+                    WordPress
+                    Zapier
+                    Zoom
+                </div>
+            </Section>
         </main>
     )
 }

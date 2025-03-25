@@ -1,35 +1,37 @@
-.flex {
-    min-height: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $primary;
-    padding: 0 50px;
-}
+.container {
+    div {
+        min-height: 5vh;
+    }
 
-.nav {
-    display: flex;
-    column-gap: 5px;
+    div:nth-child(odd) {
+        background-color: $primary;
+        display: flex;
+        justify-content: center;
+
+        div {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 1200px;
+        }
+    
+    }
+
+    div:nth-child(even) {
+        background-color: $light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .link {
     color: $secondary;
-    padding: 10px 15px;
+    padding: 0 15px;
     transition: all 200ms;
 
-    &:hover, &:focus {
+    &.active, &:hover, &:focus {
         color: $light;
     }
-}
-
-.active {
-    color: $light;
-}
-
-.copyright {
-    min-height: 5vh;
-    background-color: $light;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
