@@ -9,8 +9,8 @@ export default function Header() {
             <div className={styles.container}>
             <Image
             className={styles.logo}
-            src="/customcolor_icon_transparent_background.png"
-            alt="Crackerjack Solutions logo"
+            src='/customcolor_icon_transparent_background.png'
+            alt='Crackerjack Solutions logo'
             width={180}
             height={180}
             priority

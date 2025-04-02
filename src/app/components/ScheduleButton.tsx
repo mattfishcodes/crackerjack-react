@@ -9,7 +9,6 @@ type ScheduleButtonTypes = {
 
 export default function ScheduleButton({ color }: ScheduleButtonTypes) {
     if (color !== 'light' && color !== 'dark') {
-        /* eslint-disable-next-line quotes */
         throw new TypeError(`prop 'color' must be one of 'light', 'dark'`)
     }
 

@@ -13,8 +13,16 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
-      'quotes': ['error', 'single'],
-      'semi': ['error', 'never']
+      "quotes": [
+        "error", 
+        "single",
+        {
+          "avoidEscape": true,
+          "allowTemplateLiterals": true
+        }
+      ],
+      "jsx-quotes": ["error", "prefer-single"],
+      "semi": ["error", "never"]
     }
   }
 ];

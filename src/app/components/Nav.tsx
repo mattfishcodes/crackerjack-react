@@ -15,7 +15,6 @@ export default function Nav({ position }: NavTypes) {
     const positionClass = position === 'header' ? styles.header : position === 'footer' ? styles.footer : null
 
     if (positionClass === null) {
-        /* eslint-disable-next-line quotes */
         throw new TypeError(`'position' prop must be one of ['header', 'footer']`)
     }
 
