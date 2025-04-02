@@ -5,12 +5,10 @@ type SectionProps = {
     children?: ReactNode;
 }
 
-export default function Section({children}: SectionProps) {
+export default function Section({ children }: SectionProps) {
     return (
         <section className={styles.section}>
-            <div className={styles.container}>
-                {children}
-            </div>
+            {children}
         </section>
     )
 }
