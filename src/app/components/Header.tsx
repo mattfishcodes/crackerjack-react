@@ -2,12 +2,13 @@
 
 import React, { useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import styles from './Header.module.scss'
-import Link from 'next/link'
 import { routes } from '../../../constants'
-import { usePathname } from 'next/navigation'
+
 
 export default function Header() {
     const pn = usePathname()
