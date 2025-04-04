@@ -12,7 +12,7 @@ import { routes } from '../../../constants'
 
 export default function Header() {
     const pn = usePathname()
-    const ref = useRef(null)
+    const ref = useRef<HTMLElement>(null)
 
     const toggle = (instant = false) => {
         if (ref.current) {
