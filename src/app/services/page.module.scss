@@ -1,6 +1,8 @@
+@use '../variables';
+
 .header {
-    color: $light;
-    background-color: $primary;
+    color: variables.$light;
+    background-color: variables.$primary;
     text-align: center;
     min-height: 8vh;
     padding: 20px 0;
@@ -11,7 +13,7 @@
 
     hr {
         flex: 0;
-        border: 2px solid $secondary;
+        border: 2px solid variables.$secondary;
         border-bottom: none;
         width: 60vw;
     }

@@ -1,3 +1,5 @@
+@use 'variables';
+
 html,
 body {
   max-width: 100vw;
@@ -5,8 +7,8 @@ body {
 }
 
 body {
-  background: $light;
-  color: $primary;
+  background: variables.$light;
+  color: variables.$primary;
   font-family: var(--font-urbanist);
 }
 
@@ -31,15 +33,15 @@ img {
 }
 
 .light {
-  color: $light;
+  color: variables.$light;
 }
 
 .secondary {
-  color: $secondary;
+  color: variables.$secondary;
 }
 
 .bg-primary {
-  background-color: $primary;
+  background-color: variables.$primary;
 }
 
 @media (prefers-color-scheme: dark) {

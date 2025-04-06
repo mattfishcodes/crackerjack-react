@@ -1,3 +1,5 @@
+@use '../variables';
+
 .header {
     display: flex;
     flex-direction: column;
@@ -25,7 +27,7 @@
     border: none;
     border-radius: 2px;
     background-color: transparent;
-    color: $primary;
+    color: variables.$primary;
 
     @media (min-width: 576px) {
         display: none;
@@ -45,8 +47,8 @@
         border-bottom: 2px solid lightgray;
 
         &.active, &:hover, &:focus {
-            color: $secondary;
-            background-color: $primary;
+            color: variables.$secondary;
+            background-color: variables.$primary;
         }
     }
 
@@ -68,8 +70,8 @@
         border-radius: 5px;
 
         &.active, &:hover, &:focus {
-            color: $secondary;
-            background-color: $primary;
+            color: variables.$secondary;
+            background-color: variables.$primary;
         }
 
         &:not(:first-child) {

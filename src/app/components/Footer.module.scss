@@ -1,8 +1,10 @@
+@use '../variables';
+
 .top {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    background-color: $primary;
+    background-color: variables.$primary;
     padding: 0.5rem 0;
 }
 
@@ -20,11 +22,11 @@
 }
 
 .link {
-    color: $secondary;
+    color: variables.$secondary;
     margin: 0.25rem 0;
     transition: all 200ms;
 
     &.active, &:hover, &:focus {
-        color: $light;
+        color: variables.$light;
     }
 }
