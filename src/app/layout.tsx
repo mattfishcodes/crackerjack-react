@@ -14,7 +14,7 @@ const montserrat = Montserrat({
 })
 
 const titilliumWeb = Titillium_Web({
-  weight: '600',
+  weight: ['400', '600'],
   variable: '--font-titillium-web',
   subsets: ['latin'],
 })
