@@ -18,10 +18,8 @@
 
 .flipboxContainer {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-
-    @media (min-width: 1000px) {
-        flex-direction: row;
-    }
 }
