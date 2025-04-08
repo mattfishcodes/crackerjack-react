@@ -1,5 +1,9 @@
 @use 'variables';
 
+html {
+  font-size: 16px;
+}
+
 html,
 body {
   max-width: 100vw;
@@ -7,14 +11,45 @@ body {
 }
 
 body {
+  font-size: 1rem;
   background: variables.$light;
   color: variables.$primary;
   font-family: var(--font-urbanist);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-titillium-web);
   font-weight: 400;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+small {
+  font-size: 0.875rem;
 }
 
 * {
@@ -31,6 +66,14 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+hr {
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid variables.$secondary;
+  border-bottom: none;
+  border-radius: 20px;
 }
 
 .light {

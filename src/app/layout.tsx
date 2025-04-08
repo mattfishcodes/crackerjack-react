@@ -10,7 +10,7 @@ config.autoAddCss = false
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
-  subsets: ['latin']
+  subsets: ['latin'],
 })
 
 const titilliumWeb = Titillium_Web({
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang='en'>

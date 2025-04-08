@@ -2,9 +2,9 @@
 
 .flipbox {
     background-color: transparent;
-    width: calc((1200px - 40px) / 3);
-    height: calc((1200px - 40px) / 3);
-    perspective: 1000px;
+    width: min(calc(100vw - 40px), 370px);
+    height: 370px;
+    perspective: 5000px;
 }
 
 .flipboxInner {

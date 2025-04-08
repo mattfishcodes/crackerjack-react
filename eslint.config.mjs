@@ -1,6 +1,7 @@
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { FlatCompat } from '@eslint/eslintrc'
+import prettier from 'eslint-config-prettier'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -10,21 +11,17 @@ const compat = new FlatCompat({
 })
 
 const eslintConfig = [
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  ...compat.extends(
+    'next/core-web-vitals',
+    'next/typescript',
+    'plugin:prettier/recommended',
+  ),
+  prettier,
   {
     rules: {
-      'quotes': [
-        'error', 
-        'single',
-        {
-          'avoidEscape': true,
-          'allowTemplateLiterals': true
-        }
-      ],
-      'jsx-quotes': ['error', 'prefer-single'],
-      'semi': ['error', 'never']
-    }
-  }
+      indent: 'off',
+    },
+  },
 ]
 
 export default eslintConfig
