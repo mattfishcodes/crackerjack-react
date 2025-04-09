@@ -1,25 +1,25 @@
 @use 'variables';
 
-.main>*:nth-child(4n-3) {
-    color: variables.$light;
-    background-color: variables.$primary;
+.main > *:nth-child(4n-3) {
+  color: variables.$light;
+  background-color: variables.$primary;
 }
 
-.main>*:nth-child(4n-1) {
-    color: variables.$primary;
-    background-color: variables.$secondary;
+.main > *:nth-child(4n-1) {
+  color: variables.$primary;
+  background-color: variables.$secondary;
 }
 
 .main {
-    hr {
-        border-color: variables.$secondary;
-    }
+  hr {
+    border-color: variables.$secondary;
+  }
 }
 
 .flipboxContainer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }

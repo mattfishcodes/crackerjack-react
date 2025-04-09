@@ -1,43 +1,42 @@
 @use '../variables';
 
 .button {
-    cursor: pointer;
-    border: 3px solid;
-    border-radius: 20px;
-    padding: 20px 30px;
-    transition: all 200ms;
+  cursor: pointer;
+  border: 3px solid;
+  border-radius: 20px;
+  padding: 20px 30px;
+  transition: all 200ms;
 
-    span {
-        font-family: var(--font-titillium-web);
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
+  span {
+    font-family: var(--font-titillium-web);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
 
-    p {
-        font-family: var(--font-montserrat);
-        font-size: 0.9rem;
-    }
-
+  p {
+    font-family: var(--font-montserrat);
+    font-size: 0.9rem;
+  }
 }
 
 .dark {
-    color: variables.$secondary;
-    background-color: variables.$primary;
-    border-color: variables.$primary;
+  color: variables.$secondary;
+  background-color: variables.$primary;
+  border-color: variables.$primary;
 
-    &:hover {
-        color: variables.$light;
-        border-color: variables.$light;
-    }
+  &:hover {
+    color: variables.$light;
+    border-color: variables.$light;
+  }
 }
 
 .light {
-    color: variables.$primary;
-    background-color: variables.$secondary;
-    border-color: variables.$secondary;
+  color: variables.$primary;
+  background-color: variables.$secondary;
+  border-color: variables.$secondary;
 
-    &:hover {
-        background-color: variables.$light;
-        border-color: variables.$primary;
-    }
+  &:hover {
+    background-color: variables.$light;
+    border-color: variables.$primary;
+  }
 }

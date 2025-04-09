@@ -26,7 +26,7 @@ export default function Services() {
 
       <Section>
         <div className={styles.flexbox}>
-          <div className={`${styles.flexitem} light bg-primary`}>
+          <div className={styles.flexitem}>
             <h3 className='secondary'>Systems Analysis</h3>
 
             <p>

@@ -1,41 +1,43 @@
 @use '../variables';
 
 .top {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    background-color: variables.$primary;
-    padding: 0.5rem 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: variables.$primary;
+  padding: 0.5rem 0;
 
-    @media (min-width: 576px) {
-        flex-direction: row;
-    }
+  @media (min-width: 576px) {
+    flex-direction: row;
+  }
 }
 
 .nav {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 
-    @media (min-width: 576px) {
-        flex-direction: row;
-    }
+  @media (min-width: 576px) {
+    flex-direction: row;
+  }
 }
 
 .copyright {
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .link {
-    color: variables.$secondary;
-    margin: 0.25rem 0.5rem;
-    transition: all 200ms;
+  color: variables.$secondary;
+  margin: 0.25rem 0.5rem;
+  transition: all 200ms;
 
-    &.active, &:hover, &:focus {
-        color: variables.$light;
-    }
+  &.active,
+  &:hover,
+  &:focus {
+    color: variables.$light;
+  }
 }

@@ -1,9 +1,17 @@
 .section {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-    padding: 30px 20px;
-    max-width: 1200px;
+  padding: 30px 20px;
+  max-width: 1200px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+  }
 }
