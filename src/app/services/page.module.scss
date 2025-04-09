@@ -11,11 +11,17 @@
 }
 
 .flexitem {
-  flex: 1 0 calc(50% - 20px);
+  flex: 1;
   padding: 20px;
   border-radius: 20px;
   color: white;
   background-color: variables.$primary;
+
+  h3,
+  strong,
+  hr {
+    color: variables.$secondary;
+  }
 }
 
 .dottedHr {
@@ -23,4 +29,32 @@
   border-image-source: url('/dash.svg');
   border-image-repeat: round;
   border-image-slice: 18%;
+}
+
+.flexContainer {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 10px;
+}
+
+.flexItem {
+  flex: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  min-width: 300px;
+
+  ul {
+    padding-left: 0.5rem !important;
+    list-style-type: none;
+
+    li {
+      padding-left: 1rem;
+      background-image: url('/customcolor_icon_transparent_background.png');
+      background-position: 0 5px;
+      background-size: 10px auto;
+      background-repeat: no-repeat;
+    }
+  }
 }
