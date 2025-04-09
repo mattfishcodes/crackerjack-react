@@ -1,0 +1,89 @@
+@use '../variables';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  min-height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  border-bottom: 2px solid lightgray;
+}
+
+.logo {
+  height: 2rem;
+  width: auto;
+}
+
+.toggle {
+  font-size: 1.5rem;
+  padding: 3px 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  background-color: transparent;
+  color: variables.$primary;
+
+  @media (min-width: 576px) {
+    display: none;
+  }
+}
+
+.mobileNav {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 0;
+  transition: height 500ms ease-in-out;
+  overflow: hidden;
+
+  .link {
+    padding: 0 1rem;
+    line-height: 2rem;
+    border-bottom: 2px solid lightgray;
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: variables.$secondary;
+      background-color: variables.$primary;
+    }
+  }
+
+  &.instant {
+    transition: none !important;
+  }
+
+  @media (min-width: 576px) {
+    display: none;
+  }
+}
+
+.desktopNav {
+  display: none;
+
+  .link {
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: all 200ms ease-in-out;
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: variables.$secondary;
+      background-color: variables.$primary;
+    }
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
+
+  @media (min-width: 576px) {
+    display: block;
+  }
+}

@@ -3,7 +3,7 @@ import { Montserrat, Titillium_Web, Urbanist } from 'next/font/google'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import './globals.scss'
-import Header from './components/Header'
+import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 config.autoAddCss = false
@@ -39,7 +39,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${titilliumWeb.variable} ${urbanist.variable} antialiased`}
       >
-        <Header />
+        <Navbar />
         {children}
         <Footer />
       </body>
