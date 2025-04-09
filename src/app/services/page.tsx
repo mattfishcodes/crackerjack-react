@@ -19,10 +19,7 @@ export default function Services() {
         </div>
       </Section>
 
-      <header className={styles.header}>
-        <h2>Services</h2>
-        <hr />
-      </header>
+      <Header title={'Services'} />
 
       <Section>
         <div className={styles.flexbox}>

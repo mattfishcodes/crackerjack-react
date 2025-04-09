@@ -1,29 +1,13 @@
 @use '../variables';
 
-.header {
-  color: variables.$light;
-  background-color: variables.$primary;
-  text-align: center;
-  min-height: 8vh;
-  padding: 20px 0;
+.flexbox {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  gap: 20px;
 
-  hr {
-    flex: 0;
-    border: 2px solid variables.$secondary;
-    border-bottom: none;
-    width: 60vw;
+  @media (min-width: 576px) {
+    flex-direction: row;
   }
-}
-
-.flexbox {
-  margin: 20px 0;
-  display: flex;
-  flex-flow: row wrap;
-  column-gap: 20px;
 }
 
 .flexitem {
