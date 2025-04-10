@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'variables.module';
 
 .main > *:nth-child(4n-3) {
   color: variables.$light;
