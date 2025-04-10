@@ -1,14 +1,19 @@
 import React, { ReactNode } from 'react'
 import styles from './Section.module.scss'
 
-type SectionProps = {
+interface SectionProps extends React.HTMLAttributes<HTMLElement> {
   children?: ReactNode
 }
 
-export default function Section({ children }: SectionProps) {
+const Section: React.FunctionComponent<SectionProps> = ({
+  children,
+  ...props
+}) => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} {...props}>
       <div className={styles.container}>{children}</div>
     </section>
   )
 }
+
+export default Section

@@ -225,7 +225,7 @@ export default function Services() {
         </div>
       </Section>
 
-      <Section>
+      <Section className={styles.gradientBackground}>
         <div>
           <p>
             Software We use a variety of online apps/SaaS tools. Some of them
@@ -235,7 +235,14 @@ export default function Services() {
             brief list of some of the tools we currently use or have used
             frequently:
           </p>
-          <div>
+          <div
+            style={{
+              display: 'flex',
+              flexFlow: 'row wrap',
+              justifyContent: 'center',
+              alignItems: 'left',
+            }}
+          >
             <div>
               Airtable
               <br />
