@@ -1,8 +1,6 @@
-@use '../variables.module';
-
 .header {
-  color: variables.$light;
-  background-color: variables.$primary;
+  color: $light;
+  background-color: $primary;
   text-align: center;
   min-height: 8vh;
   padding: 20px 0;

@@ -1,14 +1,12 @@
-@use '../variables.module';
-
 .top {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  background-color: variables.$primary;
+  background-color: $primary;
   padding: 0.5rem 0;
 
-  @media (min-width: 576px) {
+  @include responsive(sm) {
     flex-direction: row;
   }
 }
@@ -18,7 +16,7 @@
   flex-flow: column nowrap;
   align-items: center;
 
-  @media (min-width: 576px) {
+  @include responsive(sm) {
     flex-direction: row;
   }
 }
@@ -31,13 +29,13 @@
 }
 
 .link {
-  color: variables.$secondary;
+  color: $secondary;
   margin: 0.25rem 0.5rem;
   transition: all 200ms;
 
   &.active,
   &:hover,
   &:focus {
-    color: variables.$light;
+    color: $light;
   }
 }

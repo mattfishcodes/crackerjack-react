@@ -1,11 +1,9 @@
-@use '../variables.module';
-
 .flexbox {
   display: flex;
   flex-flow: column nowrap;
   gap: 20px;
 
-  @media (min-width: 576px) {
+  @include responsive(sm) {
     flex-direction: row;
   }
 }
@@ -15,12 +13,12 @@
   padding: 20px;
   border-radius: 20px;
   color: white;
-  background-color: variables.$primary;
+  background-color: $primary;
 
   h3,
   strong,
   hr {
-    color: variables.$secondary;
+    color: $secondary;
   }
 }
 
@@ -60,16 +58,16 @@
 }
 
 .gradientBackground {
-  background-color: variables.$secondary;
+  background-color: $secondary;
   background-image:
     linear-gradient(
       175deg,
-      rgb(from variables.$primary r g b / 0.75) 10%,
+      rgb(from $primary r g b / 0.75) 10%,
       rgb(0 0 0 / 0) 10%
     ),
     linear-gradient(
       185deg,
-      rgb(from variables.$primary r g b / 0.75) 10%,
+      rgb(from $primary r g b / 0.75) 10%,
       rgb(0 0 0 / 0) 10%
     );
 }

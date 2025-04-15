@@ -1,18 +1,16 @@
-@use 'variables.module';
-
 .main > *:nth-child(4n-3) {
-  color: variables.$light;
-  background-color: variables.$primary;
+  color: $light;
+  background-color: $primary;
 }
 
 .main > *:nth-child(4n-1) {
-  color: variables.$primary;
-  background-color: variables.$secondary;
+  color: $primary;
+  background-color: $secondary;
 }
 
 .main {
   hr {
-    border-color: variables.$secondary;
+    border-color: $secondary;
   }
 }
 
