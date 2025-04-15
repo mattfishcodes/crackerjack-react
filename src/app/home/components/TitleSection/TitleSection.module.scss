@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+
+  @include responsive(sm) {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    font-weight: 600;
+  }
+}
+
+.links {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+
+  a {
+    border: 2px solid $primary;
+    flex: 1 1 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      color: $secondary;
+      background-color: $primary;
+    }
+
+    @include responsive(sm) {
+      transition: all 200ms ease-in-out;
+    }
+  }
+
+  .iconWrapper {
+    width: 3rem;
+    font-size: 2rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+  }
+
+  span {
+    font-family: var(--font-titillium-web);
+    font-size: 1.5rem;
+  }
+}

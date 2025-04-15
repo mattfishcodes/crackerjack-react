@@ -3,25 +3,13 @@ import styles from './page.module.scss'
 import Section from '../components/Section'
 import ScheduleButton from '../components/ScheduleButton'
 import Header from '../components/Header'
+import CallToActionBanner from './components/CallToActionBanner.tsx/CallToActionBanner'
 
 export default function Services() {
   return (
     <main>
       <Section>
-        <div style={{ textAlign: 'center' }}>
-          <h3 style={{ lineHeight: '2.25rem', marginBottom: '20px' }}>
-            Interested in Exploring How our Services Can Benefit You?
-          </h3>
-
-          <p>Schedule your complimentary 30 minute call below.</p>
-
-          <p>
-            Let&apos;s explore how to navigate life&apos;s unpredictability
-            together and find that equilibrium you&apos;re searching for.
-          </p>
-
-          <ScheduleButton color='light' />
-        </div>
+        <CallToActionBanner />
       </Section>
 
       <Header title={'Services'} />
