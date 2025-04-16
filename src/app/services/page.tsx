@@ -1,15 +1,22 @@
 import React from 'react'
 import styles from './page.module.scss'
 import Section from '../components/Section'
-import ScheduleButton from '../components/ScheduleButton'
 import Header from '../components/Header'
-import CallToActionBanner from './components/CallToActionBanner.tsx/CallToActionBanner'
+import CallToAction from './components/CallToAction/CallToAction'
 
 export default function Services() {
   return (
     <main>
       <Section>
-        <CallToActionBanner />
+        <CallToAction>
+          <h3>Interested in Exploring How our Services Can Benefit You?</h3>
+          <p>
+            Schedule your complimentary 30 minute call below.
+            <br />
+            Let&apos;s explore how to navigate life&apos;s unpredictability
+            togetherand find that equilibrium you&apos;re searching for.
+          </p>
+        </CallToAction>
       </Section>
 
       <Header title={'Services'} />
@@ -152,16 +159,16 @@ export default function Services() {
       </Section>
 
       <Section>
-        <div>
-          <h2>Ready to Get Started?</h2>
+        <CallToAction>
+          <h3>Ready to Get Started?</h3>
           <p>
             Invest in your business&apos;s success with a flexible hourly
-            retainer package from Crackerjack Solutions. Contact us today to
-            schedule your free consultation and discover how we can help you
-            achieve your goals.
+            retainer package from Crackerjack Solutions.
+            <br />
+            Contact us today to schedule your free consultation and discover how
+            we can help you achieve your goals.
           </p>
-          <ScheduleButton color='light' />
-        </div>
+        </CallToAction>
       </Section>
 
       <Section>
