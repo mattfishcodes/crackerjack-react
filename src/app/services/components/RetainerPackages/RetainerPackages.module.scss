@@ -1,0 +1,31 @@
+.container {
+  color: $primary;
+  background-color: $secondary;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: 1200px;
+  padding: 30px 20px;
+
+  hr {
+    border-color: $primary;
+  }
+
+  header {
+    margin-bottom: 1rem;
+  }
+}
+
+.dottedHr {
+  border-bottom: none;
+  border-image-source: url('/dash.svg');
+  border-image-repeat: round;
+  border-image-slice: 18%;
+  margin: 1rem 0;
+}
+
+.disclaimer {
+  padding: 0 1rem;
+}
