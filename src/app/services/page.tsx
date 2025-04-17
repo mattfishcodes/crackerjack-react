@@ -7,6 +7,7 @@ import ServiceDescription from './components/ServiceDescription/ServiceDescripti
 import RetainerPackages from './components/RetainerPackages/RetainerPackages'
 import ServicesList from './components/ServicesList/ServicesList'
 import SoftwareList from './components/SoftwareList/SoftwareList'
+import ReviewsCarousel from './components/ReviewsCarousel/ReviewsCarousel'
 
 export default function Services() {
   return (
@@ -79,6 +80,8 @@ export default function Services() {
       </Section>
 
       <SoftwareList />
+
+      <ReviewsCarousel />
     </main>
   )
 }

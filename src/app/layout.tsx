@@ -1,5 +1,10 @@
 import type { Metadata } from 'next'
-import { Montserrat, Titillium_Web, Urbanist } from 'next/font/google'
+import {
+  Meow_Script,
+  Montserrat,
+  Titillium_Web,
+  Urbanist,
+} from 'next/font/google'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import './globals.scss'
@@ -7,6 +12,12 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 config.autoAddCss = false
+
+const meowScript = Meow_Script({
+  weight: ['400'],
+  variable: '--font-meow-script',
+  subsets: ['latin'],
+})
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
@@ -37,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${montserrat.variable} ${titilliumWeb.variable} ${urbanist.variable} antialiased`}
+        className={`${meowScript.variable} ${montserrat.variable} ${titilliumWeb.variable} ${urbanist.variable} antialiased`}
       >
         <Navbar />
         {children}
