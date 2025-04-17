@@ -1,7 +1,11 @@
 import React from 'react'
 import styles from './Header.module.scss'
 
-export default function Header({ title }) {
+type HeaderProps = {
+  title: string
+}
+
+const Header: React.FunctionComponent<HeaderProps> = ({ title }) => {
   return (
     <header className={styles.header}>
       <h2>{title}</h2>
@@ -9,3 +13,5 @@ export default function Header({ title }) {
     </header>
   )
 }
+
+export default Header
