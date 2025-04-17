@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from './page.module.scss'
+// import styles from './page.module.scss'
 import Section from '../components/Section'
 import Header from '../components/Header'
-import ScheduleButton from '../components/ScheduleButton'
+import CallToAction from '../components/CallToAction'
 
 export default function About() {
   return (
@@ -101,18 +101,17 @@ export default function About() {
       </Section>
 
       <Section>
-        <div>
-          <strong>
+        <CallToAction buttonColor='dark'>
+          <h3>
             Thank you for taking the time to learn a bit about me and
             Crackerjack Solutions online business management services.
-          </strong>
+          </h3>
           <p>
             We are excited to explore how we can assist you in achieving your
             business goals and overcoming challenges. Feel free to reach out,
             and let&apos;s start a conversation!
           </p>
-          <ScheduleButton color='dark' />
-        </div>
+        </CallToAction>
       </Section>
     </main>
   )
