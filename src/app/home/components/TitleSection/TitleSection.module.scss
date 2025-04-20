@@ -6,7 +6,7 @@
   text-align: center;
   gap: 1rem;
 
-  @include responsive(sm) {
+  @include min-width(sm) {
     flex-direction: row;
   }
 

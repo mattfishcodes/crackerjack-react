@@ -24,7 +24,7 @@
   font-family: var(--font-titillium-web);
   font-size: 1.5rem;
 
-  @include responsive(sm) {
+  @include min-width(sm) {
     flex-direction: row;
   }
 }
@@ -44,7 +44,7 @@
     background-color: $primary;
   }
 
-  @include responsive(sm) {
+  @include min-width(sm) {
     flex: 1 1 33%;
 
     flex-direction: column;
@@ -63,7 +63,7 @@
   align-items: center;
   margin-right: 0.5rem;
 
-  @include responsive(sm) {
+  @include min-width(sm) {
     width: auto;
     font-size: 4rem;
   }

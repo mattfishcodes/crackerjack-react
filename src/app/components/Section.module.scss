@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
 
-  @include responsive(sm) {
+  @include min-width(sm) {
     flex-direction: row;
   }
 }

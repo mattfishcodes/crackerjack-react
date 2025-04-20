@@ -14,7 +14,7 @@
   align-items: center;
   padding: 0 1rem;
 
-  @include responsive(sm) {
+  @include min-width(sm) {
     width: 1200px;
   }
 }
@@ -33,7 +33,7 @@
   background-color: transparent;
   color: $primary;
 
-  @include responsive(sm) {
+  @include min-width(sm) {
     display: none;
   }
 }
@@ -65,7 +65,7 @@
     transition: none !important;
   }
 
-  @include responsive(sm) {
+  @include min-width(sm) {
     display: none;
   }
 }
@@ -90,7 +90,7 @@
     }
   }
 
-  @include responsive(sm) {
+  @include min-width(sm) {
     display: block;
   }
 }

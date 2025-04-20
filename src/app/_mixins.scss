@@ -1,4 +1,4 @@
-@mixin responsive($breakpoint) {
+@mixin min-width($breakpoint) {
   @if $breakpoint == sm {
     @media (min-width: 576px) {
       @content;

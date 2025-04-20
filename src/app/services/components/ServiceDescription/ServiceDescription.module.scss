@@ -3,7 +3,7 @@
   flex-flow: column nowrap;
   gap: 1rem;
 
-  @include responsive(sm) {
+  @include min-width(sm) {
     flex-direction: row;
   }
 

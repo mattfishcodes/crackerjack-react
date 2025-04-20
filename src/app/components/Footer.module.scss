@@ -6,7 +6,7 @@
   background-color: $primary;
   padding: 0.5rem 0;
 
-  @include responsive(sm) {
+  @include min-width(sm) {
     flex-direction: row;
   }
 }
@@ -16,7 +16,7 @@
   flex-flow: column nowrap;
   align-items: center;
 
-  @include responsive(sm) {
+  @include min-width(sm) {
     flex-direction: row;
   }
 }

@@ -23,7 +23,7 @@
       transform: scale(1.1);
     }
 
-    @include responsive(sm) {
+    @include min-width(sm) {
       display: block;
     }
   }
