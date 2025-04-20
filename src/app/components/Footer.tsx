@@ -25,7 +25,7 @@ export default function Footer() {
         </nav>
         <Link
           className={`${styles.link} ${pn === '/privacy-policy' ? styles.active : ''}`}
-          href='#'
+          href='/privacy-policy'
         >
           Privacy Policy
         </Link>

@@ -1,9 +1,9 @@
 import styles from './page.module.scss'
 import Section from './components/Section'
-import ServicesLinks from './home/components/ServicesList/ServicesLinks'
-import CallToAction from './components/CallToAction'
-import PaintPointsSection from './home/components/PainPointsSection/PainPointsSection'
 import TitleSection from './home/components/TitleSection/TitleSection'
+import PaintPointsSection from './home/components/PainPointsSection/PainPointsSection'
+import CallToAction from './components/CallToAction'
+import ServicesLinks from './home/components/ServicesLinks/ServicesLinks'
 
 export default function Home() {
   return (

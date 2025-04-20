@@ -74,16 +74,18 @@ hr {
   border-radius: 20px;
 }
 
-.light {
-  color: $light;
-}
+.separator {
+  height: 2px;
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 20px;
 
-.secondary {
-  color: $secondary;
-}
-
-.bg-primary {
-  background-color: $primary;
+  &.light {
+    background-color: $secondary;
+  }
+  &.dark {
+    background-color: $primary;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

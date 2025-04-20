@@ -14,24 +14,24 @@ const ServicesLinks = () => {
     <div className={styles.container}>
       <h3>Services</h3>
 
-      <hr />
+      <div className='separator dark' />
 
       <div className={styles.links}>
-        <a href='/services#systems-analysis'>
+        <a className={styles.link} href='/services#systems-analysis'>
           <span className={styles.iconWrapper}>
             <FontAwesomeIcon icon={faRectangleList} />
           </span>
           <span>Systems Analysis</span>
         </a>
 
-        <a href='/services#crm-setup'>
+        <a className={styles.link} href='/services#crm-setup'>
           <span className={styles.iconWrapper}>
             <FontAwesomeIcon icon={faGears} />
           </span>
           <span>CRM Setup</span>
         </a>
 
-        <a href='/services#website-maintenance'>
+        <a className={styles.link} href='/services#website-maintenance'>
           <span className={styles.iconWrapper}>
             <FontAwesomeIcon icon={faSitemap} />
           </span>

@@ -35,7 +35,7 @@ export default function Navbar() {
         <Link href='/'>
           <Image
             className={styles.logo}
-            src='/customcolor_icon_transparent_background.png'
+            src='/icon.svg'
             alt='Crackerjack Solutions logo'
             width={180}
             height={180}
@@ -47,7 +47,7 @@ export default function Navbar() {
           {routes.map((l, key) => {
             return (
               <Link
-                className={`${styles.link} ${pn === l[0] ? styles.active : ''}`}
+                className={pn === l[0] ? styles.active : ''}
                 key={key}
                 href={l[0]}
               >
@@ -66,7 +66,7 @@ export default function Navbar() {
         {routes.map((l, key) => {
           return (
             <Link
-              className={`${styles.link} ${pn === l[0] ? styles.active : ''}`}
+              className={pn === l[0] ? styles.active : ''}
               key={key}
               href={l[0]}
               onClick={() => toggle(true)}

@@ -1,15 +1,18 @@
 .container {
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
 
   p {
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 300;
+    // padding: 0 0.5rem;
   }
-}
 
-.image {
-  width: 100%;
+  @include responsive(sm) {
+    flex-direction: row;
+  }
 }
