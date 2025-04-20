@@ -1,5 +1,5 @@
 import styles from './page.module.scss'
-import Section from './components/Section'
+import Container from './components/Container/Container'
 import TitleSection from './home/components/TitleSection/TitleSection'
 import PaintPointsSection from './home/components/PainPointsSection/PainPointsSection'
 import CallToAction from './components/CallToAction'
@@ -8,13 +8,15 @@ import ServicesLinks from './home/components/ServicesLinks/ServicesLinks'
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Section>
+      <Container>
         <TitleSection />
-      </Section>
-      <Section>
+      </Container>
+
+      <Container>
         <PaintPointsSection />
-      </Section>
-      <Section>
+      </Container>
+
+      <Container>
         <CallToAction buttonColor='dark'>
           <h3>
             If you answered yes to one or more of the above questions,
@@ -42,10 +44,11 @@ export default function Home() {
             get in touch today and unlock your business&apos;s full potential?
           </p>
         </CallToAction>
-      </Section>
-      <Section>
+      </Container>
+
+      <Container>
         <ServicesLinks />
-      </Section>
+      </Container>
     </main>
   )
 }

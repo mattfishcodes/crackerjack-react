@@ -1,17 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-// import styles from './page.module.scss'
-import Section from '../components/Section'
+import styles from './page.module.scss'
+import Container from '../components/Container/Container'
 import Header from '../components/Header'
 import CallToAction from '../components/CallToAction'
 
 export default function About() {
   return (
-    <main>
+    <main className={styles.container}>
       <Header title={'About'} />
 
-      <Section>
+      <Container>
         <div>
           <h3>Christine Warner</h3>
           <Image
@@ -56,9 +56,9 @@ export default function About() {
             performance!
           </p>
         </div>
-      </Section>
+      </Container>
 
-      <Section>
+      <Container>
         <p>
           If you would like to review my recent career history, you can do so{' '}
           <Link href='#' style={{ textDecoration: 'underline' }}>
@@ -66,9 +66,9 @@ export default function About() {
           </Link>
           .
         </p>
-      </Section>
+      </Container>
 
-      <Section>
+      <Container>
         <div>
           <h2>Matthew Fisher</h2>
           <p>
@@ -93,14 +93,14 @@ export default function About() {
             on new challenges and help my clients succeed in the digital world.
           </p>
         </div>
-      </Section>
+      </Container>
 
-      <Section>
+      <Container>
         <h3>Core Values</h3>
         <p>Integrity Accountability Kindness</p>
-      </Section>
+      </Container>
 
-      <Section>
+      <Container>
         <CallToAction buttonColor='dark'>
           <h3>
             Thank you for taking the time to learn a bit about me and
@@ -112,7 +112,7 @@ export default function About() {
             and let&apos;s start a conversation!
           </p>
         </CallToAction>
-      </Section>
+      </Container>
     </main>
   )
 }

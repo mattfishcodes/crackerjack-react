@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './page.module.scss'
-import Section from '../components/Section'
+import Container from '../components/Container/Container'
 import Header from '../components/Header'
 import CallToAction from '../components/CallToAction'
 import ServiceDescription from './components/ServiceDescription/ServiceDescription'
@@ -12,7 +12,7 @@ import ReviewsCarousel from './components/ReviewsCarousel/ReviewsCarousel'
 export default function Services() {
   return (
     <main>
-      <Section>
+      <Container>
         <CallToAction buttonColor='light'>
           <h3>Interested in Exploring How our Services Can Benefit You?</h3>
           <p>
@@ -22,17 +22,17 @@ export default function Services() {
             togetherand find that equilibrium you&apos;re searching for.
           </p>
         </CallToAction>
-      </Section>
+      </Container>
 
       <Header title={'Services'} />
 
-      <Section>
+      <Container>
         <ServiceDescription />
-      </Section>
+      </Container>
 
       <RetainerPackages />
 
-      <Section>
+      <Container>
         <CallToAction buttonColor='light'>
           <h3>Ready to Get Started?</h3>
           <p>
@@ -43,9 +43,9 @@ export default function Services() {
             we can help you achieve your goals.
           </p>
         </CallToAction>
-      </Section>
+      </Container>
 
-      <Section>
+      <Container>
         <div className={styles.flexContainer}>
           <ServicesList title={'Projects'}>
             <li>Create Detailed Project Plans</li>
@@ -77,7 +77,7 @@ export default function Services() {
             <li>And more…</li>
           </ServicesList>
         </div>
-      </Section>
+      </Container>
 
       <SoftwareList />
 
