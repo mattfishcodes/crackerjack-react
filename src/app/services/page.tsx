@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './page.module.scss'
 import Container from '../components/Container/Container'
 import CallToAction from '../components/CallToAction'
+import PageHeader from '../components/PageHeader/PageHeader'
 import ServiceDescription from './components/ServiceDescription/ServiceDescription'
 import RetainerPackages from './components/RetainerPackages/RetainerPackages'
 import ServicesList from './components/ServicesList/ServicesList'
@@ -23,12 +24,7 @@ export default function Services() {
         </CallToAction>
       </Container>
 
-      <Container bg='primary'>
-        <div style={{ textAlign: 'center' }}>
-          <h1>Services</h1>
-          <div className='separator light' />
-        </div>
-      </Container>
+      <PageHeader title='Services' />
 
       <Container>
         <ServiceDescription />

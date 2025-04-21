@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from '../components/Header'
+import PageHeader from '../components/PageHeader/PageHeader'
 
 export default function Contact() {
   return (
     <main>
-      <Header title={'Contact'} />
+      <PageHeader title='Contact Us' />
     </main>
   )
 }

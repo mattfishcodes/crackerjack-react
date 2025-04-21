@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  @include min-width(sm) {
+    flex-direction: row;
+  }
+}
+
+.item {
+  flex: 1;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  &:first-child {
+    flex: 0 0 33%;
+  }
+}
+
+.headshot {
+  width: 100%;
+  height: auto;
+}
