@@ -3,20 +3,14 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  margin: 30px 20px;
 
   h3 {
     font-weight: 600;
   }
-
-  hr {
-    max-width: 1200px;
-  }
 }
 
 .links {
-  max-width: 1200px;
-  position: relative;
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   gap: 10px;
@@ -30,18 +24,21 @@
 }
 
 .link {
-  border: 2px solid $primary;
-  width: calc(100vw - 40px);
-  padding: 10px;
+  color: $secondary;
+  background-color: $primary;
+  border: none;
+  padding: 1.5rem 1rem;
   border-radius: 10px;
+  font-size: 1.5rem;
+
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 
   &:hover,
   &:focus {
-    color: $secondary;
-    background-color: $primary;
+    color: $primary;
+    background-color: $secondary;
   }
 
   @include min-width(sm) {

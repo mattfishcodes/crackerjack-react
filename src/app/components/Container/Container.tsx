@@ -3,13 +3,20 @@
 import React from 'react'
 import styles from './Container.module.scss'
 
-interface Container extends React.HTMLAttributes<HTMLElement> {
+type ContainerType = {
+  bg?: string
   children?: React.ReactNode
 }
 
-const Container: React.FunctionComponent<Container> = ({ children }) => {
+const Container: React.FunctionComponent<ContainerType> = ({
+  bg,
+  children,
+}) => {
+  if (bg === undefined) {
+    bg = ''
+  }
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} ${styles[bg]}`}>
       <div className={styles.container}>{children}</div>
     </section>
   )

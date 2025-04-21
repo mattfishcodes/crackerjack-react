@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './page.module.scss'
 import Container from '../components/Container/Container'
-import Header from '../components/Header'
 import CallToAction from '../components/CallToAction'
 import ServiceDescription from './components/ServiceDescription/ServiceDescription'
 import RetainerPackages from './components/RetainerPackages/RetainerPackages'
@@ -11,7 +10,7 @@ import ReviewsCarousel from './components/ReviewsCarousel/ReviewsCarousel'
 
 export default function Services() {
   return (
-    <main>
+    <main className={styles.main}>
       <Container>
         <CallToAction buttonColor='light'>
           <h3>Interested in Exploring How our Services Can Benefit You?</h3>
@@ -24,13 +23,20 @@ export default function Services() {
         </CallToAction>
       </Container>
 
-      <Header title={'Services'} />
+      <Container bg='primary'>
+        <div style={{ textAlign: 'center' }}>
+          <h1>Services</h1>
+          <div className='separator light' />
+        </div>
+      </Container>
 
       <Container>
         <ServiceDescription />
       </Container>
 
-      <RetainerPackages />
+      <Container bg='secondary'>
+        <RetainerPackages />
+      </Container>
 
       <Container>
         <CallToAction buttonColor='light'>
@@ -46,42 +52,14 @@ export default function Services() {
       </Container>
 
       <Container>
-        <div className={styles.flexContainer}>
-          <ServicesList title={'Projects'}>
-            <li>Create Detailed Project Plans</li>
-            <li>Lead Initial Kickoff Call with Stakeholders</li>
-            <li>Lead Regular Check In Calls</li>
-            <li>
-              Manage Communication, Timeline, Change Requests, Status and
-              Deliverables
-            </li>
-            <li>Maximize Productivity, Quality and Stakeholder Satisfaction</li>
-            <li>And more…</li>
-          </ServicesList>
-
-          <ServicesList title={'Systems'}>
-            <li>Manage Scheduling</li>
-            <li>Manage Invoicing</li>
-            <li>Manage Client Onboarding</li>
-            <li>Review, Update and Create Processes</li>
-            <li>Create SOPs & Playbooks for Systems</li>
-            <li>And more…</li>
-          </ServicesList>
-
-          <ServicesList title={'Operations'}>
-            <li>Review and Optimize existing Business Processes and Tools</li>
-            <li>Create SOPs and Playbooks for Operations</li>
-            <li>Manage CRM, Email and Calendar</li>
-            <li>Create and/or Update Automations</li>
-            <li>Develop Digital File Systems</li>
-            <li>And more…</li>
-          </ServicesList>
-        </div>
+        <ServicesList />
       </Container>
 
       <SoftwareList />
 
-      <ReviewsCarousel />
+      <Container>
+        <ReviewsCarousel />
+      </Container>
     </main>
   )
 }

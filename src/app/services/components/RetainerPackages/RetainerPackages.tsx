@@ -18,7 +18,7 @@ const RetainerPackages = () => {
           ongoing support, specialized project assistance, or expert advice, our
           retainer packages are designed to fit seamlessly into your workflow.
         </p>
-        <hr />
+        <div className='separator dark' />
         <div>
           <header className={styles.header}>
             <h4>Why Choose Our Hourly Retainer Packages?</h4>
@@ -36,7 +36,7 @@ const RetainerPackages = () => {
             business, ensuring consistent and high-quality results.
           </p>
         </div>
-        <hr />
+        <div className='separator dark' />
         <div>
           <header className={styles.header}>
             <h4>Packages</h4>

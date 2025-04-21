@@ -1,21 +1,5 @@
-.container {
-  flex: 1;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  min-width: 300px;
-
-  ul {
-    padding-left: 0.5rem !important;
-    list-style-type: none;
-
-    li {
-      padding-left: 1rem;
-      background-image: url('/customcolor_icon_transparent_background.png');
-      background-position: 0 5px;
-      background-size: 10px auto;
-      background-repeat: no-repeat;
-    }
-  }
+.flexContainer {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 10px;
 }
