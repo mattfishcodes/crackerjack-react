@@ -14,7 +14,7 @@ const ServiceDescription = () => {
           your organization&apos;s operations.
         </p>
 
-        <hr />
+        <div className='separator light' />
 
         <p>
           <strong>Understanding Your Processes</strong>
@@ -44,7 +44,7 @@ const ServiceDescription = () => {
           relationship management solution.
         </p>
 
-        <hr />
+        <div className='separator light' />
 
         <p>
           <strong>Centralized Platform</strong>

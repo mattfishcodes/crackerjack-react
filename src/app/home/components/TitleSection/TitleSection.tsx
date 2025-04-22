@@ -12,7 +12,7 @@ const TitleSection = () => {
       </div>
       <div className={styles.item}>
         <h1>Crackerjack Solutions</h1>
-        <hr />
+        <div className='separator light' />
         <p>
           Welcome to Crackerjack Solutions Virtual Business Management Services!
         </p>

@@ -11,11 +11,9 @@
   }
 }
 
-.dottedHr {
-  border-bottom: none;
-  border-image-source: url('/dash.svg');
-  border-image-repeat: round;
-  border-image-slice: 18%;
+.dottedSeparator {
+  height: 2px;
+  background-image: url('/dash.svg');
   margin: 1rem 0;
 }
 
