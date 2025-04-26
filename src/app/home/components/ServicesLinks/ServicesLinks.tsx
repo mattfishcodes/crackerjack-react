@@ -2,11 +2,8 @@
 
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faRectangleList,
-  faGears,
-  faSitemap,
-} from '@fortawesome/free-solid-svg-icons'
+import { faRectangleList, faGears } from '@fortawesome/free-solid-svg-icons'
+import { faReact } from '@fortawesome/free-brands-svg-icons'
 import styles from './ServicesLinks.module.scss'
 
 const ServicesLinks = () => {
@@ -31,11 +28,11 @@ const ServicesLinks = () => {
           <span>CRM Setup</span>
         </a>
 
-        <a className={styles.link} href='/services#website-maintenance'>
+        <a className={styles.link} href='/services#static-react-site'>
           <span className={styles.iconWrapper}>
-            <FontAwesomeIcon icon={faSitemap} />
+            <FontAwesomeIcon icon={faReact} />
           </span>
-          <span>Website Maintenance</span>
+          <span>Static Site Builds</span>
         </a>
       </div>
     </div>
