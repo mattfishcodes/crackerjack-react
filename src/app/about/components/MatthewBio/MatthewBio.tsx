@@ -14,11 +14,14 @@ const MatthewBio = () => {
         establish their online presence.
       </p>
       <p>
-        I specialize in building and maintaining websites using WordPress, the
-        world&apos;s most popular content management system. While I may be
-        early in my professional journey, my commitment to continuous learning
-        and improvement has equipped me with the skills needed to deliver
-        top-notch web solutions.
+        I specialize in building and maintaining websites using{' '}
+        <a href='https://react.dev/' style={{ textDecoration: 'underline' }}>
+          React
+        </a>
+        , a popular open source front-end javascript library built by Facebook
+        (Meta). While I may be early in my professional journey, my commitment
+        to continuous learning and improvement has equipped me with the skills
+        needed to deliver top-notch web solutions.
       </p>
       <p>
         Whether you&apos;re looking for a brand-new website or need help

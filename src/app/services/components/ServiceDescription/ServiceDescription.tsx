@@ -6,7 +6,7 @@ import styles from './ServiceDescription.module.scss'
 const ServiceDescription = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.item}>
+      <div id='systems-analysis' className={styles.item}>
         <h3>Systems Analysis</h3>
 
         <p>
@@ -36,7 +36,7 @@ const ServiceDescription = () => {
           recommendations.
         </p>
       </div>
-      <div className={styles.item}>
+      <div id='crm-setup' className={styles.item}>
         <h3>CRM Setup</h3>
 
         <p>
@@ -62,6 +62,34 @@ const ServiceDescription = () => {
           <strong>Improved Communication</strong>
           <br />
           Streamline processes and watch your bottom line soar.
+        </p>
+      </div>
+      <div id='static-react-site' className={styles.item}>
+        <h3>Static React Website</h3>
+
+        <p>
+          Launch a fast, modern, and reliable website built with React and
+          Nextjs.
+        </p>
+
+        <div className='separator light' />
+
+        <p>
+          <strong>Lightning-Fast Performance</strong>
+          <br />
+          Serve pre-rendered pages instantly for a smooth user experience.
+        </p>
+
+        <p>
+          <strong>SEO Optimization</strong>
+          <br />
+          Boost your visibility with static pages that search engines love.
+        </p>
+
+        <p>
+          <strong>Easy Maintenance</strong>
+          <br />
+          Update your content effortlessly without complex backend systems.
         </p>
       </div>
     </div>
