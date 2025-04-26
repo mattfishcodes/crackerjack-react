@@ -51,7 +51,9 @@ export default function Services() {
         <ServicesList />
       </Container>
 
-      <SoftwareList />
+      <Container bg='fancy'>
+        <SoftwareList />
+      </Container>
 
       <Container>
         <ReviewsCarousel />
