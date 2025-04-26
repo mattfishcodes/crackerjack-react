@@ -1,29 +1,25 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Script from 'next/script'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import styles from './page.module.scss'
 import PageHeader from '../components/PageHeader/PageHeader'
 import Container from '../components/Container/Container'
 
 export default function Contact() {
   const [loaded, setLoaded] = useState(false)
+  const iframeRef = useRef<HTMLIFrameElement | null>(null)
 
   const injectForm = () => {
-    const moxieFrame: HTMLElement | null = document.getElementById(
-      'moxie-website-contact-form',
-    )
-
-    if (moxieFrame !== null) {
-      /* @ts-expect-error iframe element has src */
-      moxieFrame.src =
+    if (iframeRef.current !== null) {
+      iframeRef.current.src =
         'https://hello.withmoxie.com/01/crackerjack-solutions/website-contact-form?inFrame=true&sourceUrl=' +
         encodeURIComponent(window.location.href)
 
-      moxieFrame.onload = () => {
-        setLoaded(true)
-      }
-      setTimeout(
-        () =>
+      iframeRef.current.onload = () => {
+        setTimeout(() => {
           /* @ts-expect-error included in cdn script below */
           iFrameResize(
             {
@@ -32,11 +28,12 @@ export default function Contact() {
               sizeHeight: true,
               log: false,
               checkOrigin: false,
+              onResized: () => setLoaded(true),
             },
             '#moxie-website-contact-form',
-          ),
-        100,
-      )
+          )
+        }, 100)
+      }
 
       window.addEventListener(
         'message',
@@ -47,6 +44,7 @@ export default function Contact() {
             event.data.startsWith('[Redirect]')
           ) {
             const url = event.data.slice(10)
+            console.log(event.data)
             window.location = url
           }
         },
@@ -71,6 +69,7 @@ export default function Contact() {
         <div style={{ width: '100%', minHeight: '600px' }}>
           <iframe
             id='moxie-website-contact-form'
+            ref={iframeRef}
             style={{
               padding: '0px',
               margin: '0px',
@@ -81,7 +80,11 @@ export default function Contact() {
             }}
           ></iframe>
 
-          <h2 style={{ display: loaded ? 'none' : 'inline' }}>Loading...</h2>
+          {!loaded && (
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <FontAwesomeIcon icon={faSpinner} className={styles.loader} />
+            </div>
+          )}
         </div>
       </Container>
     </main>
