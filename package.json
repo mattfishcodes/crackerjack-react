@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prepare": "husky",
     "dev": "next dev",
     "build": "rm -rf out && next build",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier . --write",
     "typecheck": "tsc --noEmit",
-    "cleanup": "npm run lint && npm run prettier && npm run typecheck"
+    "cleanup": "npm run lint && npm run typecheck && npm run prettier"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -30,6 +31,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^9.1.7",
     "prettier": "^3.5.3",
     "sass-loader": "^16.0.5",
     "typescript": "^5"
