@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "rm -rf out && next build",
     "start": "next start",
-    "lint": "next lint && prettier . --write && tsc --noEmit"
+    "lint": "next lint",
+    "prettier": "prettier . --write",
+    "typecheck": "tsc --noEmit",
+    "cleanup": "npm run lint && npm run prettier && npm run typecheck"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
