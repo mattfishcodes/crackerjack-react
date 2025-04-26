@@ -31,8 +31,25 @@ export default function About() {
       </Container>
 
       <Container bg='primary'>
-        <h3>Core Values</h3>
-        <p>Integrity Accountability Kindness</p>
+        <div
+          style={{
+            display: 'flex',
+            flexFlow: 'column nowrap',
+            alignItems: 'center',
+          }}
+        >
+          <h3>Core Values</h3>
+          <p
+            style={{
+              fontFamily: 'var(--font-montserrat)',
+              fontSize: '1.25rem',
+              fontWeight: 300,
+            }}
+          >
+            <span>Integrity</span> <span>Accountability</span>{' '}
+            <span>Kindness</span>
+          </p>
+        </div>
       </Container>
 
       <Container>
