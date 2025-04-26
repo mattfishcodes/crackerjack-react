@@ -4,7 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import styles from './Footer.module.scss'
-import { routes } from '../../../constants'
+import routes from '../routes'
 
 export default function Footer() {
   const pn = usePathname()
@@ -15,11 +15,11 @@ export default function Footer() {
         <nav className={styles.nav}>
           {routes.map((r, i) => (
             <Link
-              className={`${styles.link} ${pn === r[0] ? styles.active : ''}`}
-              href={r[0]}
+              className={`${styles.link} ${pn === r.href ? styles.active : ''}`}
+              href={r.href}
               key={i}
             >
-              {r[1]}
+              {r.name}
             </Link>
           ))}
         </nav>

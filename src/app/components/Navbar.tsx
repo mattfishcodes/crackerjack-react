@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import styles from './Navbar.module.scss'
-import { routes } from '../../../constants'
+import routes from '../routes'
 
 export default function Navbar() {
   const pn = usePathname()
@@ -44,14 +44,14 @@ export default function Navbar() {
         </Link>
 
         <nav className={styles.desktopNav}>
-          {routes.map((l, key) => {
+          {routes.map((r, i) => {
             return (
               <Link
-                className={pn === l[0] ? styles.active : ''}
-                key={key}
-                href={l[0]}
+                className={pn === r.href ? styles.active : ''}
+                key={i}
+                href={r.href}
               >
-                {l[1]}
+                {r.name}
               </Link>
             )
           })}
@@ -63,15 +63,15 @@ export default function Navbar() {
       </div>
 
       <nav ref={ref} className={styles.mobileNav}>
-        {routes.map((l, key) => {
+        {routes.map((r, i) => {
           return (
             <Link
-              className={pn === l[0] ? styles.active : ''}
-              key={key}
-              href={l[0]}
+              className={pn === r.href ? styles.active : ''}
+              key={i}
+              href={r.href}
               onClick={() => toggle(true)}
             >
-              {l[1]}
+              {r.name}
             </Link>
           )
         })}
