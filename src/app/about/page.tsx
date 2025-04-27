@@ -4,7 +4,7 @@ import styles from './page.module.scss'
 import PageHeader from '../components/PageHeader/PageHeader'
 import Container from '../components/Container/Container'
 import ChristineBio from './components/ChristineBio/ChristineBio'
-import CallToAction from '../components/CallToAction'
+import CallToAction from '../components/CallToAction/CallToAction'
 import MatthewBio from './components/MatthewBio/MatthewBio'
 
 export default function About() {

@@ -2,7 +2,7 @@ import styles from './page.module.scss'
 import Container from './components/Container/Container'
 import TitleSection from './home/components/TitleSection/TitleSection'
 import PaintPointsSection from './home/components/PainPointsSection/PainPointsSection'
-import CallToAction from './components/CallToAction'
+import CallToAction from './components/CallToAction/CallToAction'
 import ServicesLinks from './home/components/ServicesLinks/ServicesLinks'
 
 export default function Home() {

@@ -6,7 +6,7 @@ import React, {
   ReactElement,
   ReactNode,
 } from 'react'
-import ScheduleButton from './ScheduleButton'
+import ScheduleButton from '../ScheduleButton/ScheduleButton'
 import styles from './CallToAction.module.scss'
 
 type CallToActionProps = {

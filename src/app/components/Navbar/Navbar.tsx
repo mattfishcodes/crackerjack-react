@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import styles from './Navbar.module.scss'
-import routes from '../routes'
+import routes from '../../routes'
 
 export default function Navbar() {
   const pn = usePathname()
