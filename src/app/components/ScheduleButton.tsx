@@ -10,7 +10,7 @@ type ScheduleButtonTypes = {
 
 export default function ScheduleButton({ color }: ScheduleButtonTypes) {
   return (
-    <Link href='#'>
+    <Link href='https://crackerjack-solutions.moxieapp.com/public/crackerjack-solutions/consult-30-minutes'>
       <button className={`${styles.button} ${styles[color]}`}>
         <span>
           Schedule Now! <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
