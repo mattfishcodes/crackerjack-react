@@ -1,12 +1,7 @@
 'use client'
 
-import React, {
-  cloneElement,
-  isValidElement,
-  ReactElement,
-  ReactNode,
-} from 'react'
-import ScheduleButton from '../ScheduleButton/ScheduleButton'
+import { cloneElement, isValidElement, ReactElement, ReactNode } from 'react'
+import ScheduleButton from '@/app/components/ScheduleButton/ScheduleButton'
 import styles from './CallToAction.module.scss'
 
 type CallToActionProps = {

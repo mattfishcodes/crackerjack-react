@@ -2,7 +2,7 @@
 
 import React from 'react'
 import styles from './page.module.scss'
-import Container from '../components/Container/Container'
+import Container from '@/app/components/Container/Container'
 
 const PrivacyPolicy = () => {
   return (

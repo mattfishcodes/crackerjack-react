@@ -2,7 +2,7 @@
 
 import React from 'react'
 import styles from './ServicesList.module.scss'
-import List from '../../../components/List/List'
+import List from '@/app/components/List/List'
 
 const ServicesList = () => {
   return (

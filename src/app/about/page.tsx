@@ -2,13 +2,13 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './page.module.scss'
-import PageHeader from '../components/PageHeader/PageHeader'
-import Container from '../components/Container/Container'
+import PageHeader from '@/app/components/PageHeader/PageHeader'
+import Container from '@/app/components/Container/Container'
 import ChristineBio from './components/ChristineBio/ChristineBio'
 import ChristineCerts from './components/ChristineCerts/ChristineCerts'
 import MatthewBio from './components/MatthewBio/MatthewBio'
 import CoreValues from './components/CoreValues/CoreValues'
-import CallToAction from '../components/CallToAction/CallToAction'
+import CallToAction from '@/app/components/CallToAction/CallToAction'
 
 export default function About() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../Container/Container'
+import Container from '@/app/components/Container/Container'
 
 type PageHeaderProps = {
   title: string

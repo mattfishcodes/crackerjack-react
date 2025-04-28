@@ -5,8 +5,8 @@ import Script from 'next/script'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import styles from './page.module.scss'
-import PageHeader from '../components/PageHeader/PageHeader'
-import Container from '../components/Container/Container'
+import PageHeader from '@/app/components/PageHeader/PageHeader'
+import Container from '@/app/components/Container/Container'
 
 export default function Contact() {
   const [loaded, setLoaded] = useState(false)
