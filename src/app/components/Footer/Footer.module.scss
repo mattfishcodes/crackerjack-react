@@ -1,10 +1,8 @@
-.top {
+.container {
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
   justify-content: center;
-  background-color: $primary;
   padding: 0.5rem 0;
+  background-color: $primary;
 
   @include min-width(sm) {
     flex-direction: row;
@@ -12,12 +10,26 @@
 }
 
 .nav {
+  flex: 100%;
+  max-width: 1200px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 
+  > div {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
   @include min-width(sm) {
     flex-direction: row;
+    justify-content: space-between;
+
+    > div {
+      text-align: start;
+      flex-direction: row;
+    }
   }
 }
 
@@ -30,7 +42,7 @@
 
 .link {
   color: $secondary;
-  margin: 0.25rem 0.5rem;
+  padding: 0.25rem 0.5rem;
   transition: all 200ms;
 
   &.active,

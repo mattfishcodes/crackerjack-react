@@ -11,24 +11,28 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.top}>
+      <div className={styles.container}>
         <nav className={styles.nav}>
-          {routes.map((r, i) => (
+          <div>
+            {routes.map((r, i) => (
+              <Link
+                className={`${styles.link} ${pn === r.href ? styles.active : ''}`}
+                href={r.href}
+                key={i}
+              >
+                {r.name}
+              </Link>
+            ))}
+          </div>
+          <div>
             <Link
-              className={`${styles.link} ${pn === r.href ? styles.active : ''}`}
-              href={r.href}
-              key={i}
+              className={`${styles.link} ${pn === '/privacy-policy/' ? styles.active : ''}`}
+              href='/privacy-policy'
             >
-              {r.name}
+              Privacy Policy
             </Link>
-          ))}
+          </div>
         </nav>
-        <Link
-          className={`${styles.link} ${pn === '/privacy-policy' ? styles.active : ''}`}
-          href='/privacy-policy'
-        >
-          Privacy Policy
-        </Link>
       </div>
       <div className={styles.copyright}>
         <small>Copyright 2025 Crackerjack Solutions LLC</small>

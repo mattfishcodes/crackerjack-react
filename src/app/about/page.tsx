@@ -19,7 +19,7 @@ export default function About() {
       <Container bg='secondary'>
         <div style={{ textAlign: 'center' }}>
           If you would like to review my recent career history, you can do so{' '}
-          <Link href='#' style={{ textDecoration: 'underline' }}>
+          <Link href='/qualifications/' style={{ textDecoration: 'underline' }}>
             here
           </Link>
           .
@@ -52,7 +52,7 @@ export default function About() {
         </div>
       </Container>
 
-      <Container>
+      <Container bg='secondary'>
         <CallToAction buttonColor='dark'>
           <h3>
             Thank you for taking the time to learn a bit about me and
