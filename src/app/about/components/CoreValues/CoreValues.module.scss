@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  p {
+    font-family: var(--font-montserrat);
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+}
+
+.imgContainer {
+  margin: 1rem 0;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @include min-width(sm) {
+    flex-direction: row;
+  }
+}

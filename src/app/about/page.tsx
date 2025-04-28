@@ -1,11 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './page.module.scss'
 import PageHeader from '../components/PageHeader/PageHeader'
 import Container from '../components/Container/Container'
 import ChristineBio from './components/ChristineBio/ChristineBio'
-import CallToAction from '../components/CallToAction/CallToAction'
+import ChristineCerts from './components/ChristineCerts/ChristineCerts'
 import MatthewBio from './components/MatthewBio/MatthewBio'
+import CoreValues from './components/CoreValues/CoreValues'
+import CallToAction from '../components/CallToAction/CallToAction'
 
 export default function About() {
   return (
@@ -27,29 +30,21 @@ export default function About() {
       </Container>
 
       <Container>
-        <MatthewBio />
+        <ChristineCerts />
       </Container>
 
       <Container bg='primary'>
-        <div
-          style={{
-            display: 'flex',
-            flexFlow: 'column nowrap',
-            alignItems: 'center',
-          }}
-        >
-          <h3>Core Values</h3>
-          <p
-            style={{
-              fontFamily: 'var(--font-montserrat)',
-              fontSize: '1.25rem',
-              fontWeight: 300,
-            }}
-          >
-            <span>Integrity</span> <span>Accountability</span>{' '}
-            <span>Kindness</span>
-          </p>
+        <MatthewBio />
+      </Container>
+
+      <Container>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <Image src='/Matthew-Cert.png' alt='' width={300} height={300} />
         </div>
+      </Container>
+
+      <Container bg='primary'>
+        <CoreValues />
       </Container>
 
       <Container bg='secondary'>
