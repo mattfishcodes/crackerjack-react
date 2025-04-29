@@ -20,7 +20,7 @@ export default function Contact() {
 
       iframeRef.current.onload = () => {
         setTimeout(() => {
-          /* @ts-expect-error included in cdn script below */
+          /* @ts-expect-error iFrameResize included in cdn script below */
           iFrameResize(
             {
               heightCalculationMethod: 'min',
@@ -28,7 +28,11 @@ export default function Contact() {
               sizeHeight: true,
               log: false,
               checkOrigin: false,
-              onResized: () => setLoaded(true),
+              onResized: () => {
+                if (iframeRef.current?.style.height !== '4px') {
+                  setLoaded(true)
+                }
+              },
             },
             '#moxie-website-contact-form',
           )
@@ -61,28 +65,26 @@ export default function Contact() {
     <main>
       <PageHeader title='Contact Us' />
 
+      <h4 className={styles.heading}>
+        We&apos;d Love to Help You - Reach Out Today!
+      </h4>
+
       <Container>
         <Script
           type='text/javascript'
           src='https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.10/iframeResizer.min.js'
         ></Script>
+
         <div style={{ width: '100%', minHeight: '600px' }}>
           <iframe
             id='moxie-website-contact-form'
             ref={iframeRef}
-            style={{
-              padding: '0px',
-              margin: '0px',
-              border: 'none',
-              maxWidth: '100%',
-              minWidth: '100%',
-              display: loaded ? 'inline' : 'none',
-            }}
+            className={`${styles.iframe} ${loaded ? styles.loaded : ''}`}
           ></iframe>
 
           {!loaded && (
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <FontAwesomeIcon icon={faSpinner} className={styles.loader} />
+              <FontAwesomeIcon icon={faSpinner} className={styles.spinner} />
             </div>
           )}
         </div>

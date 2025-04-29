@@ -1,4 +1,3 @@
-import styles from './page.module.scss'
 import Container from './components/Container/Container'
 import TitleSection from './home/components/TitleSection/TitleSection'
 import PaintPointsSection from './home/components/PainPointsSection/PainPointsSection'
@@ -8,7 +7,7 @@ import OurProcess from './home/components/OurProcess/OurProcess'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <Container bg='primary'>
         <TitleSection />
       </Container>
