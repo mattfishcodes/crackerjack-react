@@ -9,6 +9,7 @@ import ChristineCerts from './components/ChristineCerts/ChristineCerts'
 import MatthewBio from './components/MatthewBio/MatthewBio'
 import CoreValues from './components/CoreValues/CoreValues'
 import CallToAction from '@/app/components/CallToAction/CallToAction'
+import { images } from '@/lib/images'
 
 export default function About() {
   return (
@@ -39,7 +40,12 @@ export default function About() {
 
       <Container>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Image src='/Matthew-Cert.png' alt='' width={300} height={300} />
+          <Image
+            src={images.matthewCert.src}
+            alt={images.matthewCert.alt}
+            width={300}
+            height={300}
+          />
         </div>
       </Container>
 

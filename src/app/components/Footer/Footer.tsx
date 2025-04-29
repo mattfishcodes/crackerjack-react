@@ -4,7 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import styles from './Footer.module.scss'
-import routes from '../../routes'
+import routes from '@/app/routes'
 
 export default function Footer() {
   const pn = usePathname()

@@ -3,6 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './ChristineBio.module.scss'
+import { images } from '@/lib/images'
 
 const ChristineBio = () => {
   return (
@@ -12,8 +13,8 @@ const ChristineBio = () => {
         <div className={styles.item}>
           <Image
             className={styles.headshot}
-            src='/christine-headshot.png'
-            alt=''
+            src={images.christineHeadshot.src}
+            alt={images.christineHeadshot.alt}
             width={500}
             height={500}
           />

@@ -3,6 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './PainPointsSection.module.scss'
+import { images } from '@/lib/images'
 
 const PaintPointsSection = () => {
   return (
@@ -30,8 +31,8 @@ const PaintPointsSection = () => {
       </div>
       <Image
         className={styles.image}
-        src='/scrabble-letters.jpg'
-        alt=''
+        src={images.scrabbleLetters.src}
+        alt={images.scrabbleLetters.alt}
         width={400}
         height={300}
       />
