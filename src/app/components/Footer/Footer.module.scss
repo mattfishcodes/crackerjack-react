@@ -42,12 +42,20 @@
 
 .link {
   color: $secondary;
-  padding: 0.25rem 0.5rem;
   transition: all 200ms;
+  margin: 0.25rem 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &.active,
   &:hover,
   &:focus {
     color: $light;
+  }
+
+  @include min-width(sm) {
+    margin: 0.25rem 0.5rem 0.25rem 0;
   }
 }

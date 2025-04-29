@@ -15,6 +15,7 @@
   padding: 0 1rem;
 
   @include min-width(sm) {
+    padding: 0;
     width: 1200px;
   }
 }

@@ -31,4 +31,8 @@
   padding: 2rem 1rem;
   max-width: 1200px;
   width: 100%;
+
+  @include min-width(sm) {
+    padding: 2rem 0;
+  }
 }
