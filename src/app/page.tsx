@@ -1,3 +1,5 @@
+'use client'
+
 import Container from './components/Container/Container'
 import TitleSection from './home/components/TitleSection/TitleSection'
 import PaintPointsSection from './home/components/PainPointsSection/PainPointsSection'

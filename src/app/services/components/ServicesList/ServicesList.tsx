@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import styles from './ServicesList.module.scss'
 import List from '@/app/components/List/List'
 

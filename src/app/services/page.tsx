@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+
 import styles from './page.module.scss'
 import Container from '@/app/components/Container/Container'
 import CallToAction from '@/app/components/CallToAction/CallToAction'

@@ -1,11 +1,8 @@
-import React from 'react'
+'use client'
+
 import Container from '@/app/components/Container/Container'
 
-type PageHeaderProps = {
-  title: string
-}
-
-const PageHeader: React.FunctionComponent<PageHeaderProps> = ({ title }) => {
+const PageHeader = ({ title }: { title: string }) => {
   return (
     <Container bg='primary'>
       <div style={{ textAlign: 'center' }}>
