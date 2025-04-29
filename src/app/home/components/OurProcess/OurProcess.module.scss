@@ -1,0 +1,46 @@
+.heading {
+  text-align: center;
+  font-weight: 600;
+}
+
+.container {
+  margin-top: 3rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+
+  p {
+    margin: 0;
+  }
+
+  @include min-width(sm) {
+    flex-direction: row;
+  }
+}
+
+.item {
+  flex: 25%;
+
+  text-align: center;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include min-width(sm) {
+    transform: rotate(-90deg);
+  }
+}
+
+.number {
+  font-family: var(--font-montserrat);
+  background-color: $secondary;
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}

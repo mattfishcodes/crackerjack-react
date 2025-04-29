@@ -4,11 +4,12 @@ import TitleSection from './home/components/TitleSection/TitleSection'
 import PaintPointsSection from './home/components/PainPointsSection/PainPointsSection'
 import CallToAction from './components/CallToAction/CallToAction'
 import ServicesLinks from './home/components/ServicesLinks/ServicesLinks'
+import OurProcess from './home/components/OurProcess/OurProcess'
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Container>
+      <Container bg='primary'>
         <TitleSection />
       </Container>
 
@@ -16,7 +17,7 @@ export default function Home() {
         <PaintPointsSection />
       </Container>
 
-      <Container>
+      <Container bg='secondary'>
         <CallToAction buttonColor='dark'>
           <h3>
             If you answered yes to one or more of the above questions,
@@ -48,6 +49,10 @@ export default function Home() {
 
       <Container>
         <ServicesLinks />
+      </Container>
+
+      <Container>
+        <OurProcess />
       </Container>
     </main>
   )
