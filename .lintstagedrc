@@ -1,4 +1,0 @@
-{
-  "*.{ts,tsx,mjs}": ["npm run lint", "npm run typecheck", "npm run prettier"],
-  "!(*.ts|*.tsx|*.mjs)": ["npm run prettier"]
-}
