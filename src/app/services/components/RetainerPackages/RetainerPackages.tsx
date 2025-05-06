@@ -57,7 +57,7 @@ const RetainerPackages = () => {
             frequent collaboration. $2,000.00
           </p>
         </div>
-        <div className={styles.dottedSeparator} />
+        <div className='separator dotted' />
         <div className={styles.disclaimer}>
           Hourly packages expire 6 months from the date of purchase, and any
           remaining hours are lost. If you purchase additional hours prior to
@@ -65,7 +65,7 @@ const RetainerPackages = () => {
           package, and the expiration date will be extended to 6 months from the
           last purchase.
         </div>
-        <div className={styles.dottedSeparator} />
+        <div className='separator dotted' />
       </div>
     </div>
   )

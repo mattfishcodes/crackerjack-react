@@ -8,6 +8,12 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-size: 1rem;
   background: $light;
@@ -23,6 +29,7 @@ h5,
 h6 {
   font-family: var(--font-titillium-web);
   font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -54,12 +61,6 @@ small {
   font-size: 0.875rem;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -79,8 +80,16 @@ img {
   &.light {
     background-color: $secondary;
   }
+
   &.dark {
     background-color: $primary;
+  }
+
+  &.dotted {
+    height: 2px;
+    background-image: url('/dash.svg');
+    background-position: 10px 0;
+    margin: 1rem 0;
   }
 }
 

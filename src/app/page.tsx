@@ -14,14 +14,12 @@ export default function Home() {
         <TitleSection />
       </Container>
 
-      <Container>
-        <PaintPointsSection />
-      </Container>
+      <PaintPointsSection />
 
       <Container bg='secondary'>
         <CallToAction buttonColor='dark'>
           <h3>
-            If you answered yes to one or more of the above questions,
+            Do you experience ongoing stress caused by these issues? <br />
             Crackerjack Solutions can help!
           </h3>
           <p>

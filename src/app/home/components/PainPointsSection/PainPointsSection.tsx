@@ -1,41 +1,52 @@
 'use client'
 
-import Image from 'next/image'
-import styles from './PainPointsSection.module.scss'
-import { images } from '@/lib/images'
+import Container from '@/app/components/Container/Container'
 
 const PaintPointsSection = () => {
   return (
-    <div className={styles.container}>
-      <div>
-        <p>
+    <Container>
+      <div style={{ marginBottom: '2rem' }}>
+        <div className='separator dotted' />
+        <h4>
           Are your days filled with scattered tasks and a never ending to do
           list?
-        </p>
+        </h4>
+        <div className='separator dotted' />
+
         <p>
-          Do you find yourself jumping from one task to another, unable to focus
-          on what truly matters?
-        </p>
-        <p>
-          Are you struggling to keep up with the rapidly evolving digital
-          landscape and its challenges?
-        </p>
-        <p>
-          Is your productivity suffering due to inefficient systems and
-          operations?
-        </p>
-        <p>
-          Do you experience ongoing stress and overwhelm caused by these issues?
+          You&apos;re not alone. Juggling scattered tasks, constant context
+          switching, and a to-do list that never shrinks can leave you feeling
+          overwhelmed and unproductive. It&apos;s time to bring clarity, focus,
+          and structure back into your day.
         </p>
       </div>
-      <Image
-        className={styles.image}
-        src={images.scrabbleLetters.src}
-        alt={images.scrabbleLetters.alt}
-        width={400}
-        height={300}
-      />
-    </div>
+      <div style={{ marginBottom: '2rem' }}>
+        <div className='separator dotted' />
+        <h4>
+          Are you struggling to keep up with the rapidly evolving digital
+          landscape and its challenges?
+        </h4>
+        <div className='separator dotted' />
+        <p>
+          Staying current feels like a full-time job—new platforms, shifting
+          algorithms, and endless tools all competing for your attention. If
+          you&apos;re feeling lost in the noise, you&apos;re not alone. We help
+          you cut through the chaos and focus on what really moves the needle.
+        </p>
+      </div>
+      <div className='separator dotted' />
+      <h4>
+        Is your productivity suffering due to inefficient systems and
+        operations?
+      </h4>
+      <div className='separator dotted' />
+      <p>
+        Clunky workflows, outdated tools, and disjointed systems can quietly
+        drain hours from your day and stall growth. Streamlining your operations
+        isn&apos;t just a luxury—it&apos;s essential for staying competitive and
+        reclaiming your time.
+      </p>
+    </Container>
   )
 }
 

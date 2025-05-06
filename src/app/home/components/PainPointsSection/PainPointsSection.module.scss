@@ -1,18 +1,28 @@
 .container {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  // display: flex;
+  // flex-flow: column nowrap;
+  // align-items: center;
+  // justify-content: space-between;
+  // gap: 1rem;
+
+  // text-align: center;
+
+  h4 {
+    // font-size: 1.5rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    color: $secondary;
+    background-color: $primary;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
 
   p {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    font-weight: 300;
-    // padding: 0 0.5rem;
+    line-height: 1.5rem;
+    padding: 1.25rem 0.25rem;
   }
 
-  @include min-width(sm) {
-    flex-direction: row;
-  }
+  // @include min-width(sm) {
+  //   flex-direction: row;
+  // }
 }
