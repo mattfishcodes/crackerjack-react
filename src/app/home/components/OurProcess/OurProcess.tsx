@@ -3,10 +3,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import styles from './OurProcess.module.scss'
+import Container from '@/app/components/Container/Container'
 
 const OurProcess = () => {
   return (
-    <>
+    <Container bg='secondary'>
       <h3 className={styles.heading}>Our Process</h3>
       <div className='separator dark' />
       <div className={styles.container}>
@@ -14,9 +15,9 @@ const OurProcess = () => {
           <p className={styles.number}>1</p>
           <h3>Initial Consultation</h3>
           <p>
-            We start with a complimentary, open discussion to fully understand
-            your business needs and goals. This allows us to propose the perfect
-            solution tailored to your unique situation.
+            We begin with a free, open discussion to understand your business
+            goals and challenges, so we can recommend the right solution for
+            your needs.
           </p>
         </div>
         <div className={styles.arrow}>
@@ -26,9 +27,8 @@ const OurProcess = () => {
           <p className={styles.number}>2</p>
           <h3>Package Selection</h3>
           <p>
-            We will help you choose the package that best suits your
-            requirements—whether it&apos;s systems analysis, CRM setup, website
-            development/maintenance, or an hourly retainer option.
+            Together, we&apos;ll select the best-fit package—whether you need
+            systems analysis, CRM setup, web development, or ongoing support.
           </p>
         </div>
         <div className={styles.arrow}>
@@ -38,9 +38,8 @@ const OurProcess = () => {
           <p className={styles.number}>3</p>
           <h3>Planning</h3>
           <p>
-            We&apos;ll conduct a thorough discovery call to review and plan the
-            project details, then we will provide a detailed proposal for your
-            review and signature.
+            Next, we&apos;ll schedule a detailed discovery call to outline the
+            project scope and deliver a tailored proposal for your approval.
           </p>
         </div>
         <div className={styles.arrow}>
@@ -55,7 +54,7 @@ const OurProcess = () => {
           </p>
         </div>
       </div>
-    </>
+    </Container>
   )
 }
 

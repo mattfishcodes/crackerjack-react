@@ -50,9 +50,7 @@ export default function Home() {
         <ServicesLinks />
       </Container>
 
-      <Container>
-        <OurProcess />
-      </Container>
+      <OurProcess />
     </main>
   )
 }

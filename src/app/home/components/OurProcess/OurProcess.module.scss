@@ -20,8 +20,15 @@
 
 .item {
   flex: 25%;
-
+  background-color: $primary;
+  color: $light;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
   text-align: center;
+
+  h3 {
+    margin: 0.5rem 0;
+  }
 }
 
 .arrow {
@@ -36,6 +43,8 @@
 
 .number {
   font-family: var(--font-montserrat);
+  font-weight: 600;
+  color: $primary;
   background-color: $secondary;
   display: inline-flex;
   width: 2rem;
