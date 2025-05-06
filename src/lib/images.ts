@@ -7,7 +7,6 @@ import kindnessMeme from '@/assests/kindness-meme.jpg'
 import matthewCert from '@/assests/Matthew-Cert.png'
 import moxieApproved from '@/assests/Moxie-Approved.png'
 import salesforceAdmin from '@/assests/Salesforce-Administrator.png'
-import scrabbleLetters from '@/assests/scrabble-letters.jpg'
 
 export const images = {
   accountabilityMeme: {
@@ -44,10 +43,6 @@ export const images = {
   },
   salesforceAdmin: {
     src: salesforceAdmin,
-    alt: '',
-  },
-  scrabbleLetters: {
-    src: scrabbleLetters,
     alt: '',
   },
 }
