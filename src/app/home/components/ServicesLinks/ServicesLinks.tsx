@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRectangleList, faGears } from '@fortawesome/free-solid-svg-icons'
 import { faReact } from '@fortawesome/free-brands-svg-icons'
@@ -13,26 +14,26 @@ const ServicesLinks = () => {
       <div className='separator dark' />
 
       <div className={styles.links}>
-        <a className={styles.link} href='/services#systems-analysis'>
+        <Link className={styles.link} href='/services#systems-analysis'>
           <span className={styles.iconWrapper}>
             <FontAwesomeIcon icon={faRectangleList} />
           </span>
           <span>Systems Analysis</span>
-        </a>
+        </Link>
 
-        <a className={styles.link} href='/services#crm-setup'>
+        <Link className={styles.link} href='/services#crm-setup'>
           <span className={styles.iconWrapper}>
             <FontAwesomeIcon icon={faGears} />
           </span>
           <span>CRM Setup</span>
-        </a>
+        </Link>
 
-        <a className={styles.link} href='/services#static-react-site'>
+        <Link className={styles.link} href='/services#static-react-site'>
           <span className={styles.iconWrapper}>
             <FontAwesomeIcon icon={faReact} />
           </span>
           <span>Static Site Builds</span>
-        </a>
+        </Link>
       </div>
     </div>
   )
