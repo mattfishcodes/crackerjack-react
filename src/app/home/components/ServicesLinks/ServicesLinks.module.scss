@@ -9,6 +9,11 @@
   }
 }
 
+.header {
+  text-align: center;
+  font-weight: 600;
+}
+
 .links {
   width: 100%;
   display: flex;
@@ -46,7 +51,7 @@
 
     flex-direction: column;
     justify-content: center;
-    min-height: 10rem;
+    min-height: 15rem;
     transition: all 200ms ease-in-out;
   }
 }

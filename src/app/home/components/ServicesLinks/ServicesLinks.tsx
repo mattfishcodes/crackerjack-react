@@ -5,11 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRectangleList, faGears } from '@fortawesome/free-solid-svg-icons'
 import { faReact } from '@fortawesome/free-brands-svg-icons'
 import styles from './ServicesLinks.module.scss'
+import Container from '@/app/components/Container/Container'
 
 const ServicesLinks = () => {
   return (
-    <div className={styles.container}>
-      <h3>Services</h3>
+    <Container>
+      <h3 className={styles.header}>Services</h3>
 
       <div className='separator dark' />
 
@@ -35,7 +36,7 @@ const ServicesLinks = () => {
           <span>Static Site Builds</span>
         </Link>
       </div>
-    </div>
+    </Container>
   )
 }
 

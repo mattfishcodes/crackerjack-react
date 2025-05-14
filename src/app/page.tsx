@@ -10,13 +10,11 @@ import OurProcess from './home/components/OurProcess/OurProcess'
 export default function Home() {
   return (
     <main>
-      <Container bg='primary'>
-        <TitleSection />
-      </Container>
+      <TitleSection />
 
       <PaintPointsSection />
 
-      <Container bg='secondary'>
+      <Container bg='gray'>
         <CallToAction buttonColor='dark'>
           <h3>
             Do you experience ongoing stress caused by these issues? <br />
@@ -46,9 +44,7 @@ export default function Home() {
         </CallToAction>
       </Container>
 
-      <Container>
-        <ServicesLinks />
-      </Container>
+      <ServicesLinks />
 
       <OurProcess />
     </main>

@@ -7,7 +7,7 @@ import Container from '@/app/components/Container/Container'
 
 const OurProcess = () => {
   return (
-    <Container bg='secondary'>
+    <Container bg='gray'>
       <h3 className={styles.heading}>Our Process</h3>
       <div className='separator dark' />
       <div className={styles.container}>
