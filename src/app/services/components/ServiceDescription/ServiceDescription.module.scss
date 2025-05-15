@@ -19,4 +19,8 @@
   background-color: $primary;
   border-radius: 10px;
   padding: 1rem;
+
+  @include min-width(sm) {
+    padding: 2rem;
+  }
 }

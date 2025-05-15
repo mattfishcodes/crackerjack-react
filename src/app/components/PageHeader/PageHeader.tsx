@@ -1,15 +1,15 @@
 'use client'
 
-import Container from '@/app/components/Container/Container'
+import styles from './PageHeader.module.scss'
 
 const PageHeader = ({ title }: { title: string }) => {
   return (
-    <Container bg='primary'>
-      <div style={{ textAlign: 'center' }}>
+    <div className={styles.container}>
+      <div className={styles.content}>
         <h1>{title}</h1>
-        <div className='separator light' />
+        <div className={styles.separator} />
       </div>
-    </Container>
+    </div>
   )
 }
 

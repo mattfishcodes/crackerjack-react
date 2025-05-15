@@ -48,7 +48,7 @@ export default function Services() {
         </CallToAction>
       </Container>
 
-      <Container>
+      <Container bg='gray'>
         <ServicesList />
       </Container>
 
