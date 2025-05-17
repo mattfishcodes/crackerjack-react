@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   output: command === 'build' ? 'export' : undefined,
   trailingSlash: true,
   images: {
-    loaderFile: './imageLoader.ts',
+    // loaderFile: './imageLoader.ts',
     unoptimized: true,
   },
   allowedDevOrigins: ['192.168.1.*'],
