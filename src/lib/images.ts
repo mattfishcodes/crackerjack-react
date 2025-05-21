@@ -1,12 +1,13 @@
-import accountabilityMeme from '@/assests/accountability-meme.jpg'
-import christineHeadshot from '@/assests/christine-headshot.png'
-import dbmProjectCert from '@/assests/DBM-PM-Cert.jpg'
-import dbmSystemsCert from '@/assests/DBM-SM-Cert.jpg'
-import integrityMeme from '@/assests/integrity-meme.jpg'
-import kindnessMeme from '@/assests/kindness-meme.jpg'
-import matthewCert from '@/assests/Matthew-Cert.png'
-import moxieApproved from '@/assests/Moxie-Approved.png'
-import salesforceAdmin from '@/assests/Salesforce-Administrator.png'
+import accountabilityMeme from '@/assets/accountability-meme.jpg'
+import christineHeadshot from '@/assets/christine-headshot.png'
+import dbmProjectCert from '@/assets/DBM-PM-Cert.jpg'
+import dbmSystemsCert from '@/assets/DBM-SM-Cert.jpg'
+import integrityMeme from '@/assets/integrity-meme.jpg'
+import kindnessMeme from '@/assets/kindness-meme.jpg'
+import matthewCert from '@/assets/Matthew-Cert.png'
+import moxieApproved from '@/assets/Moxie-Approved.png'
+import salesforceAdmin from '@/assets/Salesforce-Administrator.png'
+import titleLogo from '@/assets/icon-square.png'
 
 export const images = {
   accountabilityMeme: {
@@ -43,6 +44,10 @@ export const images = {
   },
   salesforceAdmin: {
     src: salesforceAdmin,
+    alt: '',
+  },
+  titleLogo: {
+    src: titleLogo,
     alt: '',
   },
 }
