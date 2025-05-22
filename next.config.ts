@@ -7,8 +7,8 @@ const nextConfig: NextConfig = {
   output: command === 'build' ? 'export' : undefined,
   trailingSlash: true,
   images: {
-    // loaderFile: './imageLoader.ts',
-    unoptimized: true,
+    loaderFile: './imageLoader.ts',
+    deviceSizes: [10, 576, 768, 992, 1200, 1400],
   },
   allowedDevOrigins: ['192.168.1.*'],
   sassOptions: {

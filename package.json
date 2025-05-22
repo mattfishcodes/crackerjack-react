@@ -10,7 +10,8 @@
     "lint": "next lint",
     "prettier": "prettier . --write",
     "typecheck": "tsc --noEmit --project tsconfig.json",
-    "cleanup": "npm run lint && npm run typecheck && npm run prettier"
+    "cleanup": "npm run lint && npm run typecheck && npm run prettier",
+    "sharp": "rm public/images/*.webp; node scripts/optimize-images.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",

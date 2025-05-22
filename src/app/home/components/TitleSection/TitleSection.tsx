@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import styles from './TitleSection.module.scss'
 import Container from '@/app/components/Container/Container'
-import { images } from '@/lib/images'
 
 const TitleSection = () => {
   return (
@@ -11,10 +10,12 @@ const TitleSection = () => {
       <div className={styles.container}>
         <div className={styles.item}>
           <Image
-            src={images.titleLogo.src}
-            alt={images.titleLogo.alt}
-            width={400}
-            height={400}
+            src='/images/icon-square.png'
+            alt=''
+            width={800}
+            height={800}
+            sizes='(max-width: 768px) 300px, 800px'
+            priority
           />
         </div>
         <div className={styles.item}>

@@ -40,6 +40,7 @@ export default function Navbar() {
             width={180}
             height={180}
             priority
+            unoptimized
           />
         </Link>
 

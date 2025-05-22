@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import styles from './CoreValues.module.scss'
-import { images } from '@/lib/images'
 
 const CoreValues = () => {
   return (
@@ -13,22 +12,25 @@ const CoreValues = () => {
       </p>
       <div className={styles.imgContainer}>
         <Image
-          src={images.integrityMeme.src}
-          alt={images.integrityMeme.alt}
+          src='/integrity-meme.jpg'
+          alt=''
           width={300}
           height={300}
+          sizes='(max-width: 768px) 100px, 300px'
         />
         <Image
-          src={images.accountabilityMeme.src}
-          alt={images.accountabilityMeme.alt}
+          src='/accountability-meme.jpg'
+          alt=''
           width={300}
           height={300}
+          sizes='(max-width: 768px) 100px, 300px'
         />
         <Image
-          src={images.kindnessMeme.src}
-          alt={images.kindnessMeme.alt}
+          src='/kindness-meme.jpg'
+          alt=''
           width={300}
           height={300}
+          sizes='(max-width: 768px) 100px, 300px'
         />
       </div>
     </div>

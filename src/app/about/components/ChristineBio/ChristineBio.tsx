@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import styles from './ChristineBio.module.scss'
-import { images } from '@/lib/images'
 
 const ChristineBio = () => {
   return (
@@ -12,10 +11,12 @@ const ChristineBio = () => {
         <div className={styles.item}>
           <Image
             className={styles.headshot}
-            src={images.christineHeadshot.src}
-            alt={images.christineHeadshot.alt}
+            src='/christine-headshot.png'
+            alt='Crackerjack Solutions founder Christine Warner'
             width={500}
             height={500}
+            sizes='(max-width: 768px) 100px, 400px'
+            priority
           />
         </div>
         <div className={styles.item}>

@@ -6,11 +6,15 @@
   text-align: center;
   gap: 1rem;
 
-  @include min-width(sm) {
-    flex-direction: row;
+  .item {
+    width: 100%;
   }
 
-  .item:nth-child(1) {
-    flex: 1 1 20%;
+  @include min-width(sm) {
+    flex-direction: row;
+
+    .item:nth-child(1) {
+      flex: 1 1 20%;
+    }
   }
 }

@@ -2,34 +2,37 @@
 
 import Image from 'next/image'
 import styles from './ChristineCerts.module.scss'
-import { images } from '@/lib/images'
 
 const ChristineCerts = () => {
   return (
     <div className={styles.container}>
       <Image
-        src={images.salesforceAdmin.src}
-        alt={images.salesforceAdmin.alt}
+        src='/Salesforce-Administrator.png'
+        alt=''
         width={200}
         height={200}
+        sizes='(max-width: 768px) 100px, 300px'
       />
       <Image
-        src={images.dbmProjectCert.src}
-        alt={images.dbmProjectCert.alt}
+        src='/DBM-PM-Cert.jpg'
+        alt=''
         width={200}
         height={200}
+        sizes='(max-width: 768px) 100px, 300px'
       />
       <Image
-        src={images.dbmSystemsCert.src}
-        alt={images.dbmSystemsCert.alt}
+        src='/DBM-SM-Cert.jpg'
+        alt=''
         width={200}
         height={200}
+        sizes='(max-width: 768px) 100px, 300px'
       />
       <Image
-        src={images.moxieApproved.src}
-        alt={images.moxieApproved.alt}
+        src='/Moxie-Approved.png'
+        alt=''
         width={200}
         height={200}
+        sizes='(max-width: 768px) 100px, 300px'
       />
     </div>
   )
