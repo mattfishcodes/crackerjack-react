@@ -8,7 +8,7 @@ const path = require('path')
 const dir = path.join(__dirname, '../public/images')
 
 // You can customize these sizes
-const sizes = [16, 32, 48, 64, 96, 128, 256, 384, 576, 768, 992, 1200, 1400]
+const sizes = [16, 32, 256, 576, 768, 992, 1200, 1400]
 
 async function optimizeImages() {
   await fs.ensureDir(dir)

@@ -16,9 +16,7 @@ export default function About() {
     <main className={styles.container}>
       <PageHeader title='About' />
 
-      <Container>
-        <ChristineBio />
-      </Container>
+      <ChristineBio />
 
       <Container bg='secondary'>
         <div style={{ textAlign: 'center' }}>

@@ -2,10 +2,11 @@
 
 import Image from 'next/image'
 import styles from './ChristineBio.module.scss'
+import Container from '@/app/components/Container/Container'
 
 const ChristineBio = () => {
   return (
-    <div>
+    <Container>
       <h2>Christine Warner</h2>
       <div className={styles.container}>
         <div className={styles.item}>
@@ -57,7 +58,7 @@ const ChristineBio = () => {
           </p>
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 

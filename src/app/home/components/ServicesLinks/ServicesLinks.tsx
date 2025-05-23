@@ -9,7 +9,7 @@ import Container from '@/app/components/Container/Container'
 
 const ServicesLinks = () => {
   return (
-    <Container>
+    <Container bg='gray'>
       <h3 className={styles.header}>Services</h3>
 
       <div className='separator dark' />

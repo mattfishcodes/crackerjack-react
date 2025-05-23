@@ -44,9 +44,9 @@ export default function Home() {
         </CallToAction>
       </Container>
 
-      <ServicesLinks />
-
       <OurProcess />
+
+      <ServicesLinks />
     </main>
   )
 }
