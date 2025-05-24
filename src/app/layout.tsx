@@ -10,6 +10,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import './globals.scss'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
+import Script from 'next/script'
 
 config.autoAddCss = false
 
@@ -49,6 +50,18 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <Script
+              id='cookieyes'
+              src='https://cdn-cookieyes.com/client_data/ec6aea4d0b987f40283650e6/script.js'
+            ></Script>
+            <Script
+              id='cookieyes-banner'
+              src='https://cdn-cookieyes.com/client_data/ec6aea4d0b987f40283650e6/banner.js'
+            ></Script>
+          </>
+        )}
         <link
           rel='icon'
           type='image/png'
