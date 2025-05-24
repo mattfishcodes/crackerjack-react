@@ -63,32 +63,36 @@ const ServiceDescription = () => {
           Streamline processes and watch your bottom line soar.
         </p>
       </div>
-      <div id='static-react-site' className={styles.item}>
-        <h3>Static React Website</h3>
+      <div id='website-refresh' className={styles.item}>
+        <h3>Website Refresh</h3>
 
-        <p>
-          Launch a fast, modern, and reliable website built with React and
-          Nextjs.
-        </p>
+        <p>Launch a fast, modern, and reliable refresh of your site.</p>
 
         <div className='separator light' />
 
         <p>
-          <strong>Lightning-Fast Performance</strong>
+          <strong>Faster Load Times with Pre-Rendered React Pages</strong>
           <br />
-          Serve pre-rendered pages instantly for a smooth user experience.
+          By converting your site to a static React-powered platform, we can
+          dramatically reduce load times. This approach pre-renders pages at
+          build time, ensuring users experience near-instant loading —
+          especially important for SEO and user retention.
         </p>
 
         <p>
-          <strong>SEO Optimization</strong>
+          <strong>Improved Mobile Responsiveness and UI/UX</strong>
           <br />
-          Boost your visibility with static pages that search engines love.
+          Many sites suffer from clunky mobile layouts or dated design patterns.
+          A refreshed UI will make the experience seamless across all devices,
+          align with modern design trends, and better reflect the
+          professionalism of your brand.
         </p>
 
         <p>
-          <strong>Easy Maintenance</strong>
-          <br />
-          Update your content effortlessly without complex backend systems.
+          <strong>Future-Ready, Maintainable Architecture</strong>
+          <br />A static architecture reduces server load, lowers hosting costs,
+          and increases security — all while being easy to update or expand as
+          your business grows.
         </p>
       </div>
     </div>

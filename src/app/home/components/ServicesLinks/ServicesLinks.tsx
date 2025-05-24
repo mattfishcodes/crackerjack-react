@@ -29,11 +29,11 @@ const ServicesLinks = () => {
           <span>CRM Setup</span>
         </Link>
 
-        <Link className={styles.link} href='/services#static-react-site'>
+        <Link className={styles.link} href='/services#website-refresh'>
           <span className={styles.iconWrapper}>
             <FontAwesomeIcon icon={faReact} />
           </span>
-          <span>Static Site Builds</span>
+          <span>Website Refresh</span>
         </Link>
       </div>
     </Container>
