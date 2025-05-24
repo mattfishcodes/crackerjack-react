@@ -19,7 +19,7 @@ export default function About() {
       <ChristineBio />
 
       <Container bg='secondary'>
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', fontSize: '1.25rem' }}>
           If you would like to review my recent career history, you can do so{' '}
           <Link href='/qualifications/' style={{ textDecoration: 'underline' }}>
             here
