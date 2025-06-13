@@ -42,19 +42,19 @@ const RetainerPackages = () => {
           </header>
           <p>
             Starter Package: 10 hours per month &#45; Ideal for small projects
-            or as-needed support. $600.00
+            or as-needed support.
           </p>
           <p>
             Basic Package: 20 hours per month &#45; Suitable for moderate
-            projects and more frequent assistance. $1,200.00
+            projects and more frequent assistance.
           </p>
           <p>
             Growth Package: 30 hours per month &#45; Perfect for ongoing
-            projects and consistent support. $1,650.00
+            projects and consistent support.
           </p>
           <p>
             Pro Package: 40 hours per month &#45; Best for larger projects and
-            frequent collaboration. $2,000.00
+            frequent collaboration.
           </p>
         </div>
         <div className='separator dotted' />
