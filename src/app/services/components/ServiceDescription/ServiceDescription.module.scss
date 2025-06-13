@@ -3,7 +3,7 @@
   flex-flow: column nowrap;
   gap: 1rem;
 
-  @include min-width(sm) {
+  @include min-width(lg) {
     flex-flow: row wrap;
   }
 
@@ -20,7 +20,7 @@
   border-radius: 10px;
   padding: 1rem;
 
-  @include min-width(sm) {
+  @include min-width(lg) {
     padding: 2rem;
   }
 }

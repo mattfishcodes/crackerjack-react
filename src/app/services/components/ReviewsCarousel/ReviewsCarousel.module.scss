@@ -23,7 +23,7 @@
       transform: scale(1.1);
     }
 
-    @include min-width(sm) {
+    @include min-width(lg) {
       display: block;
     }
   }

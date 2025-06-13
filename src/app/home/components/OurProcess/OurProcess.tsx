@@ -13,7 +13,7 @@ const OurProcess = () => {
       <div className={styles.container}>
         <div className={styles.item}>
           <p className={styles.number}>1</p>
-          <h3>Initial Consultation</h3>
+          <h3>Consultation</h3>
           <p>
             We begin with a free, open discussion to understand your business
             goals and challenges, so we can recommend the right solution for

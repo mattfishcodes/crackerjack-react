@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
 
-  @include min-width(sm) {
+  @include min-width(lg) {
     img {
       width: 30%;
     }

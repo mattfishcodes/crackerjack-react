@@ -14,7 +14,7 @@
   align-items: center;
   padding: 0 1rem;
 
-  @include min-width(sm) {
+  @include min-width(lg) {
     padding: 0;
     width: 1200px;
   }
@@ -34,7 +34,7 @@
   background-color: transparent;
   color: $primary;
 
-  @include min-width(sm) {
+  @include min-width(lg) {
     display: none;
   }
 }
@@ -66,7 +66,7 @@
     transition: none !important;
   }
 
-  @include min-width(sm) {
+  @include min-width(lg) {
     display: none;
   }
 }
@@ -91,7 +91,7 @@
     }
   }
 
-  @include min-width(sm) {
+  @include min-width(lg) {
     display: block;
   }
 }

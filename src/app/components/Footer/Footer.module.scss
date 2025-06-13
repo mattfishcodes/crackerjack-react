@@ -4,7 +4,7 @@
   padding: 0.5rem 0;
   background-color: $primary;
 
-  @include min-width(sm) {
+  @include min-width(lg) {
     flex-direction: row;
   }
 }
@@ -22,7 +22,7 @@
     flex-flow: column nowrap;
   }
 
-  @include min-width(sm) {
+  @include min-width(lg) {
     flex-direction: row;
     justify-content: space-between;
 
@@ -55,7 +55,7 @@
     color: $light;
   }
 
-  @include min-width(sm) {
+  @include min-width(lg) {
     margin: 0.25rem 0.5rem 0.25rem 0;
   }
 }

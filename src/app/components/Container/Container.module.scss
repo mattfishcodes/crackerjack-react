@@ -36,7 +36,7 @@
   max-width: 1200px;
   width: 100%;
 
-  @include min-width(sm) {
+  @include min-width(lg) {
     padding: 4rem 0;
   }
 }
