@@ -20,7 +20,7 @@ export default function Services() {
             Schedule your complimentary 30 minute call below.
             <br />
             Let&apos;s explore how to navigate life&apos;s unpredictability
-            togetherand find that equilibrium you&apos;re searching for.
+            together and find that equilibrium you&apos;re searching for.
           </p>
         </CallToAction>
       </Container>
