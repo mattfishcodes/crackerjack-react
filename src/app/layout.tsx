@@ -10,6 +10,8 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import './globals.scss'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
+import GoogleTag from './components/GoogleTag'
+import CookieConsentBanner from './components/CookieConsentBanner/CookieConsentBanner'
 
 config.autoAddCss = false
 
@@ -49,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
+        <GoogleTag />
         <link
           rel='icon'
           type='image/png'
@@ -73,6 +76,8 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+
+        <CookieConsentBanner />
       </body>
     </html>
   )
