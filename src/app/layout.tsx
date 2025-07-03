@@ -5,13 +5,12 @@ import {
   Titillium_Web,
   Urbanist,
 } from 'next/font/google'
+import Script from 'next/script'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import './globals.scss'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
-import GoogleTag from './components/GoogleTag'
-import CookieConsentBanner from './components/CookieConsentBanner/CookieConsentBanner'
 
 config.autoAddCss = false
 
@@ -43,6 +42,8 @@ export const metadata: Metadata = {
     'Crackerjack Solutions | Empowering Entrepreneurs and Business Leaders | Project, Systems and Operations Management',
 }
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -51,7 +52,19 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
-        <GoogleTag />
+        {isProduction && (
+          <Script
+            id='google-tag-manager'
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-W92JNWZC');`,
+            }}
+          />
+        )}
+
         <link
           rel='icon'
           type='image/png'
@@ -73,11 +86,20 @@ export default function RootLayout({
       <body
         className={`${meowScript.variable} ${montserrat.variable} ${titilliumWeb.variable} ${urbanist.variable} antialiased`}
       >
+        {isProduction && (
+          <noscript>
+            <iframe
+              src='https://www.googletagmanager.com/ns.html?id=GTM-W92JNWZC'
+              height='0'
+              width='0'
+              style={{ display: 'none', visibility: 'hidden' }}
+            ></iframe>
+          </noscript>
+        )}
+
         <Navbar />
         {children}
         <Footer />
-
-        <CookieConsentBanner />
       </body>
     </html>
   )
