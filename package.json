@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "rm -rf out && next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "prettier": "prettier . --write",
     "typecheck": "tsc --noEmit --project tsconfig.json",
     "cleanup": "npm run lint && npm run typecheck && npm run prettier",
@@ -25,7 +25,6 @@
     "sass": "^1.94.2"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@next/eslint-plugin-next": "^16.0.4",
     "@types/node": "^24",
     "@types/react": "^19",
