@@ -2,11 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Script from 'next/script'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import styles from './page.module.scss'
 import PageHeader from '@/app/components/PageHeader/PageHeader'
 import Container from '@/app/components/Container/Container'
+import { LoaderCircle } from 'lucide-react'
 
 export default function Contact() {
   const [loaded, setLoaded] = useState(false)
@@ -82,7 +81,7 @@ export default function Contact() {
 
           {!loaded && (
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <FontAwesomeIcon icon={faSpinner} className={styles.spinner} />
+              <LoaderCircle className={styles.spinner} />
             </div>
           )}
         </div>

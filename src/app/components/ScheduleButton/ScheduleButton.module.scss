@@ -10,9 +10,10 @@
     font-size: 1.5rem;
     font-weight: 600;
 
-    svg {
-      font-size: 1.3rem;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   p {

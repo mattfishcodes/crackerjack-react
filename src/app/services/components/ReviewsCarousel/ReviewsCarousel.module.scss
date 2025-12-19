@@ -18,6 +18,10 @@
 
     transition: all 100ms ease-in-out;
 
+    svg {
+      margin-top: 2px;
+    }
+
     &:hover {
       color: $secondary;
       transform: scale(1.1);

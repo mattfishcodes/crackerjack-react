@@ -57,16 +57,12 @@
 }
 
 .iconWrapper {
-  width: 3rem;
-  font-size: 2rem;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 0.5rem;
 
   @include min-width(lg) {
-    width: auto;
-    font-size: 4rem;
+    margin: 0;
   }
 }

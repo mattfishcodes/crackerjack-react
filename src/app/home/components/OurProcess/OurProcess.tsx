@@ -1,7 +1,6 @@
 'use client'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { ArrowDown } from 'lucide-react'
 import styles from './OurProcess.module.scss'
 import Container from '@/app/components/Container/Container'
 
@@ -21,7 +20,7 @@ const OurProcess = () => {
           </p>
         </div>
         <div className={styles.arrow}>
-          <FontAwesomeIcon icon={faArrowDown} />
+          <ArrowDown />
         </div>
         <div className={styles.item}>
           <p className={styles.number}>2</p>
@@ -32,7 +31,7 @@ const OurProcess = () => {
           </p>
         </div>
         <div className={styles.arrow}>
-          <FontAwesomeIcon icon={faArrowDown} />
+          <ArrowDown />
         </div>
         <div className={styles.item}>
           <p className={styles.number}>3</p>
@@ -43,7 +42,7 @@ const OurProcess = () => {
           </p>
         </div>
         <div className={styles.arrow}>
-          <FontAwesomeIcon icon={faArrowDown} />
+          <ArrowDown />
         </div>
         <div className={styles.item}>
           <p className={styles.number}>4</p>

@@ -4,10 +4,9 @@ import { useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 import styles from './Navbar.module.scss'
 import routes from '@/app/routes'
+import { Menu } from 'lucide-react'
 
 export default function Navbar() {
   const pn = usePathname()
@@ -59,7 +58,7 @@ export default function Navbar() {
         </nav>
 
         <button onClick={() => toggle()} className={styles.toggle}>
-          <FontAwesomeIcon icon={faBars} />
+          <Menu strokeWidth={3} />
         </button>
       </div>
 

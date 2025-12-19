@@ -6,13 +6,9 @@ import {
   Urbanist,
 } from 'next/font/google'
 import Script from 'next/script'
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
 import './globals.scss'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
-
-config.autoAddCss = false
 
 const meowScript = Meow_Script({
   weight: ['400'],

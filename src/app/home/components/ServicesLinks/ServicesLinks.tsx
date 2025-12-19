@@ -1,11 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRectangleList, faGears } from '@fortawesome/free-solid-svg-icons'
-import { faReact } from '@fortawesome/free-brands-svg-icons'
 import styles from './ServicesLinks.module.scss'
 import Container from '@/app/components/Container/Container'
+import { Cog, List, Waypoints } from 'lucide-react'
 
 const ServicesLinks = () => {
   return (
@@ -17,21 +15,21 @@ const ServicesLinks = () => {
       <div className={styles.links}>
         <Link className={styles.link} href='/services#systems-analysis'>
           <span className={styles.iconWrapper}>
-            <FontAwesomeIcon icon={faRectangleList} />
+            <List size={48} />
           </span>
           <span>Systems Analysis</span>
         </Link>
 
         <Link className={styles.link} href='/services#crm-setup'>
           <span className={styles.iconWrapper}>
-            <FontAwesomeIcon icon={faGears} />
+            <Cog size={48} />
           </span>
           <span>CRM Setup</span>
         </Link>
 
         <Link className={styles.link} href='/services#website-refresh'>
           <span className={styles.iconWrapper}>
-            <FontAwesomeIcon icon={faReact} />
+            <Waypoints size={48} />
           </span>
           <span>Website Refresh</span>
         </Link>

@@ -2,11 +2,7 @@
 
 import { useRef } from 'react'
 import styles from './ReviewsCarousel.module.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const ReviewsCarousel = () => {
   const ulRef = useRef<HTMLUListElement | null>(null)
@@ -37,7 +33,7 @@ const ReviewsCarousel = () => {
       <h4 style={{ textAlign: 'center', margin: '1rem 0' }}>Reviews</h4>
       <div className={styles.container}>
         <button className={styles.scrollBack} onClick={scrollBack}>
-          <FontAwesomeIcon icon={faChevronLeft} />
+          <ChevronLeft />
         </button>
         <ul ref={ulRef} className={styles.ul}>
           <li ref={liRef}>
@@ -92,7 +88,7 @@ const ReviewsCarousel = () => {
           </li>
         </ul>
         <button className={styles.scrollForward} onClick={scrollForward}>
-          <FontAwesomeIcon icon={faChevronRight} />
+          <ChevronRight />
         </button>
       </div>
     </div>
