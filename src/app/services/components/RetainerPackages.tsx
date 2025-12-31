@@ -1,14 +1,13 @@
 'use client'
 
 import Separator from '@/components/Separator'
-import styles from './RetainerPackages.module.scss'
 
 const RetainerPackages = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
+    <div className='text-primary flex justify-center'>
+      <div>
         <h3>Hourly Retainer Packages</h3>
-        <p style={{ fontFamily: 'var(--font-montserrat)', fontWeight: '300' }}>
+        <p className='font-montserrat'>
           Flexible Solutions for Your Business Needs
         </p>
         <p>
@@ -20,9 +19,8 @@ const RetainerPackages = () => {
         </p>
         <Separator variant='dark' />
         <div>
-          <header className={styles.header}>
-            <h4>Why Choose Our Hourly Retainer Packages?</h4>
-          </header>
+          <h4>Why Choose Our Hourly Retainer Packages?</h4>
+
           <p>
             Customizable Plans: Tailor your package to suit your specific needs,
             from a few hours a month to full-time support.
@@ -38,9 +36,7 @@ const RetainerPackages = () => {
         </div>
         <Separator variant='dark' />
         <div>
-          <header className={styles.header}>
-            <h4>Packages</h4>
-          </header>
+          <h4>Packages</h4>
           <p>
             Starter Package: 10 hours per month &#45; Ideal for small projects
             or as-needed support.
@@ -59,7 +55,7 @@ const RetainerPackages = () => {
           </p>
         </div>
         <Separator variant='dotted' />
-        <div className={styles.disclaimer}>
+        <div className='px-4'>
           Hourly packages expire 6 months from the date of purchase, and any
           remaining hours are lost. If you purchase additional hours prior to
           the expiration of existing hours, they will be added to the existing

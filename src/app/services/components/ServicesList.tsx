@@ -1,11 +1,10 @@
 'use client'
 
-import styles from './ServicesList.module.scss'
 import List from '@/app/components/List/List'
 
 const ServicesList = () => {
   return (
-    <div className={styles.flexContainer}>
+    <div className='flex flex-row flex-wrap gap-2'>
       <List
         title={'Projects'}
         list={[

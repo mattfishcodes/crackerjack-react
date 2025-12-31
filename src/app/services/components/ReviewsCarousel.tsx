@@ -1,7 +1,6 @@
 'use client'
 
 import { useRef } from 'react'
-import styles from './ReviewsCarousel.module.scss'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const ReviewsCarousel = () => {
@@ -30,14 +29,23 @@ const ReviewsCarousel = () => {
 
   return (
     <div>
-      <h4 style={{ textAlign: 'center', margin: '1rem 0' }}>Reviews</h4>
-      <div className={styles.container}>
-        <button className={styles.scrollBack} onClick={scrollBack}>
+      <h4 className='my-4 text-center'>Reviews</h4>
+      <div className='relative flex items-center justify-center'>
+        <button
+          className='bg-primary hover:text-secondary hidden h-8 w-8 cursor-pointer rounded-full text-white transition-all hover:scale-110 lg:inline-block'
+          onClick={scrollBack}
+        >
           <ChevronLeft />
         </button>
-        <ul ref={ulRef} className={styles.ul}>
-          <li ref={liRef}>
-            <blockquote>
+        <ul
+          ref={ulRef}
+          className='mb-4 flex snap-x snap-mandatory gap-[1.1rem] overflow-x-scroll scroll-smooth px-4'
+        >
+          <li
+            ref={liRef}
+            className='flex flex-[100%] shrink-0 grow-0 snap-center list-none flex-col justify-center border border-gray-200 p-4'
+          >
+            <blockquote className='mb-4'>
               Working with Christine was a great experience, and I will
               certainly hire her again. She was methodical, highly responsive,
               and professional, and her service exceeded my expectations. What
@@ -49,32 +57,32 @@ const ReviewsCarousel = () => {
               her services to anyone seeking a reliable, skilled, and
               trustworthy partner for their business needs.
             </blockquote>
-            <p>Avinoam Lerner</p>
+            <div className='font-meow-script text-3xl'>- Avinoam Lerner</div>
           </li>
-          <li>
-            <blockquote>
+          <li className='flex flex-[100%] shrink-0 grow-0 snap-center list-none flex-col justify-center border border-gray-200 p-4'>
+            <blockquote className='mb-4'>
               It was a pleasure working with Christine. She was able to walk us
               through different solutions to help us with our form builds. She
               provided examples and documentation in a timely manner. It was a
               great experience overall. The whole team really enjoyed working
               with Christine and learned a lot.
             </blockquote>
-            <p>Trina</p>
+            <div className='font-meow-script text-3xl'>- Trina</div>
           </li>
-          <li>
-            <blockquote>Christine was outstanding!</blockquote>
-            <p>Mandy</p>
+          <li className='flex flex-[100%] shrink-0 grow-0 snap-center list-none flex-col justify-center border border-gray-200 p-4'>
+            <blockquote className='mb-4'>Christine was outstanding!</blockquote>
+            <div className='font-meow-script text-3xl'>- Mandy</div>
           </li>
-          <li>
-            <blockquote>
+          <li className='flex flex-[100%] shrink-0 grow-0 snap-center list-none flex-col justify-center border border-gray-200 p-4'>
+            <blockquote className='mb-4'>
               Christine has gone over and beyond during the onboarding and
               training. She is very knowledgeable and is a great trainer, always
               making sure the training is very practical and customized.
             </blockquote>
-            <p>Nadine</p>
+            <div className='font-meow-script text-3xl'>- Nadine</div>
           </li>
-          <li>
-            <blockquote>
+          <li className='flex flex-[100%] shrink-0 grow-0 snap-center list-none flex-col justify-center border border-gray-200 p-4'>
+            <blockquote className='mb-4'>
               This was one of the most comprehensive and helpful onboarding
               experiences I have had with any product or service. Christine was
               incredibly helpful and flexible, working with us to address our
@@ -84,10 +92,13 @@ const ReviewsCarousel = () => {
               to the meetings. The organization and set up for booking calls
               also worked well and was effective. Thank you!
             </blockquote>
-            <p>Victoria</p>
+            <div className='font-meow-script text-3xl'>- Victoria</div>
           </li>
         </ul>
-        <button className={styles.scrollForward} onClick={scrollForward}>
+        <button
+          className='bg-primary hover:text-secondary hidden h-8 w-8 cursor-pointer rounded-full text-white transition-all hover:scale-110 lg:inline-block'
+          onClick={scrollForward}
+        >
           <ChevronRight />
         </button>
       </div>
