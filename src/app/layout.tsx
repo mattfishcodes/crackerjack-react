@@ -6,7 +6,7 @@ import {
   Urbanist,
 } from 'next/font/google'
 import Script from 'next/script'
-import './globals.scss'
+import './globals.css'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 
