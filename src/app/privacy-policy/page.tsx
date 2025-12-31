@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './page.module.scss'
-import Container from '@/app/components/Container/Container'
+import Container from '@/components/Container'
 
 const PrivacyPolicy = () => {
   return (

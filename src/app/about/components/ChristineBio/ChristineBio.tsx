@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import styles from './ChristineBio.module.scss'
-import Container from '@/app/components/Container/Container'
+import Container from '@/components/Container'
 
 const ChristineBio = () => {
   return (

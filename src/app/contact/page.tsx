@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Script from 'next/script'
 import styles from './page.module.scss'
 import PageHeader from '@/app/components/PageHeader/PageHeader'
-import Container from '@/app/components/Container/Container'
+import Container from '@/components/Container'
 import { LoaderCircle } from 'lucide-react'
 
 export default function Contact() {

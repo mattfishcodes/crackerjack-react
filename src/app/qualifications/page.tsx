@@ -1,6 +1,6 @@
 'use client'
 
-import Container from '@/app/components/Container/Container'
+import Container from '@/components/Container'
 import styles from './page.module.scss'
 
 const Qualifications = () => {

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './page.module.scss'
 import PageHeader from '@/app/components/PageHeader/PageHeader'
-import Container from '@/app/components/Container/Container'
+import Container from '@/components/Container'
 import ChristineBio from './components/ChristineBio/ChristineBio'
 import ChristineCerts from './components/ChristineCerts/ChristineCerts'
 import MatthewBio from './components/MatthewBio/MatthewBio'
@@ -18,7 +18,7 @@ export default function About() {
 
       <ChristineBio />
 
-      <Container bg='secondary'>
+      <Container className='bg-secondary'>
         <div style={{ textAlign: 'center', fontSize: '1.25rem' }}>
           If you would like to review my recent career history, you can do so{' '}
           <Link href='/qualifications/' style={{ textDecoration: 'underline' }}>
@@ -32,7 +32,7 @@ export default function About() {
         <ChristineCerts />
       </Container>
 
-      <Container bg='primary'>
+      <Container className='bg-primary'>
         <MatthewBio />
       </Container>
 
@@ -48,11 +48,11 @@ export default function About() {
         </div>
       </Container>
 
-      <Container bg='primary'>
+      <Container className='bg-primary'>
         <CoreValues />
       </Container>
 
-      <Container bg='secondary'>
+      <Container className='bg-secondary'>
         <CallToAction buttonColor='dark'>
           <h3>
             Thank you for taking the time to learn a bit about me and

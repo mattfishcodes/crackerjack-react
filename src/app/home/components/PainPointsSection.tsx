@@ -1,17 +1,19 @@
 'use client'
 
-import Container from '@/app/components/Container/Container'
+import Container from '@/components/Container'
 import Separator from '@/components/Separator'
 
 const PaintPointsSection = () => {
   return (
     <Container>
-      <div style={{ marginBottom: '2rem' }}>
+      <div className='mb-8'>
         <Separator variant='dotted' />
-        <h4>
+
+        <h4 className='text-primary'>
           Are your days filled with scattered tasks and a never ending to do
           list?
         </h4>
+
         <Separator variant='dotted' />
 
         <p>
@@ -21,13 +23,16 @@ const PaintPointsSection = () => {
           and structure back into your day.
         </p>
       </div>
-      <div style={{ marginBottom: '2rem' }}>
+      <div className='mb-8'>
         <Separator variant='dotted' />
-        <h4>
+
+        <h4 className='text-primary'>
           Are you struggling to keep up with the rapidly evolving digital
           landscape and its challenges?
         </h4>
+
         <Separator variant='dotted' />
+
         <p>
           Staying current feels like a full-time job—new platforms, shifting
           algorithms, and endless tools all competing for your attention. If
@@ -36,11 +41,13 @@ const PaintPointsSection = () => {
         </p>
       </div>
       <Separator variant='dotted' />
-      <h4>
+      <h4 className='text-primary'>
         Is your productivity suffering due to inefficient systems and
         operations?
       </h4>
+
       <Separator variant='dotted' />
+
       <p>
         Clunky workflows, outdated tools, and disjointed systems can quietly
         drain hours from your day and stall growth. Streamlining your operations

@@ -5,6 +5,9 @@
 @theme {
   --color-primary: oklch(0.2754 0.1291 308.93);
   --color-secondary: oklch(0.7857 0.1552 85.32);
+
+  --font-montserrat: var(--font-montserrat);
+  --font-titillium-web: var(--font-titillium-web);
 }
 
 html {
@@ -68,7 +71,6 @@ small {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 

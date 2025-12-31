@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './page.module.scss'
-import Container from '@/app/components/Container/Container'
+import Container from '@/components/Container'
 import CallToAction from '@/app/components/CallToAction/CallToAction'
 import PageHeader from '@/app/components/PageHeader/PageHeader'
 import ServiceDescription from './components/ServiceDescription/ServiceDescription'
@@ -31,7 +31,7 @@ export default function Services() {
         <ServiceDescription />
       </Container>
 
-      <Container bg='secondary'>
+      <Container className='bg-secondary'>
         <RetainerPackages />
       </Container>
 
@@ -48,11 +48,11 @@ export default function Services() {
         </CallToAction>
       </Container>
 
-      <Container bg='gray'>
+      <Container className='bg-gray-100'>
         <ServicesList />
       </Container>
 
-      <Container bg='fancy'>
+      <Container className='bg-gray-500'>
         <SoftwareList />
       </Container>
 
