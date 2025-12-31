@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Script from 'next/script'
 import styles from './page.module.scss'
-import PageHeader from '@/app/components/PageHeader/PageHeader'
+import PageHeader from '@/components/PageHeader'
 import Container from '@/components/Container'
 import { LoaderCircle } from 'lucide-react'
 
@@ -60,7 +60,7 @@ export default function Contact() {
 
   return (
     <main>
-      <PageHeader title='Contact Us' />
+      <PageHeader>Contact Us</PageHeader>
 
       <h4 className={styles.heading}>
         We&apos;d Love to Help You - Reach Out Today!

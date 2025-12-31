@@ -1,7 +1,7 @@
 'use client'
 
 import Container from '@/components/Container'
-import PageHeader from '@/app/components/PageHeader/PageHeader'
+import PageHeader from '@/components/PageHeader'
 import ServiceDescription from './components/ServiceDescription'
 import RetainerPackages from './components/RetainerPackages'
 import ServicesList from './components/ServicesList'
@@ -23,7 +23,7 @@ export default function Services() {
         <ScheduleButton color='light' />
       </Container>
 
-      <PageHeader title='Services' />
+      <PageHeader>Services</PageHeader>
 
       <Container>
         <ServiceDescription />

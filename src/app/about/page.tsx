@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './page.module.scss'
-import PageHeader from '@/app/components/PageHeader/PageHeader'
+import PageHeader from '@/components/PageHeader'
 import Container from '@/components/Container'
 import ChristineBio from './components/ChristineBio/ChristineBio'
 import ChristineCerts from './components/ChristineCerts/ChristineCerts'
@@ -14,7 +14,7 @@ import CallToAction from '@/app/components/CallToAction/CallToAction'
 export default function About() {
   return (
     <main className={styles.container}>
-      <PageHeader title='About' />
+      <PageHeader>About</PageHeader>
 
       <ChristineBio />
 
