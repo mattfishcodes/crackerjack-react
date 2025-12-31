@@ -9,7 +9,7 @@ import ChristineBio from './components/ChristineBio/ChristineBio'
 import ChristineCerts from './components/ChristineCerts/ChristineCerts'
 import MatthewBio from './components/MatthewBio/MatthewBio'
 import CoreValues from './components/CoreValues/CoreValues'
-import CallToAction from '@/app/components/CallToAction/CallToAction'
+import ScheduleButton from '@/components/ScheduleButton'
 
 export default function About() {
   return (
@@ -52,18 +52,17 @@ export default function About() {
         <CoreValues />
       </Container>
 
-      <Container className='bg-secondary'>
-        <CallToAction buttonColor='dark'>
-          <h3>
-            Thank you for taking the time to learn a bit about me and
-            Crackerjack Solutions online business management services.
-          </h3>
-          <p>
-            We are excited to explore how we can assist you in achieving your
-            business goals and overcoming challenges. Feel free to reach out,
-            and let&apos;s start a conversation!
-          </p>
-        </CallToAction>
+      <Container className='bg-secondary text-center'>
+        <h3>
+          Thank you for taking the time to learn a bit about me and Crackerjack
+          Solutions online business management services.
+        </h3>
+        <p>
+          We are excited to explore how we can assist you in achieving your
+          business goals and overcoming challenges. Feel free to reach out, and
+          let&apos;s start a conversation!
+        </p>
+        <ScheduleButton color='dark' />
       </Container>
     </main>
   )

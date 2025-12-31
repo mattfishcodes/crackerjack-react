@@ -7,7 +7,7 @@ import RetainerPackages from './components/RetainerPackages'
 import ServicesList from './components/ServicesList'
 import SoftwareList from './components/SoftwareList'
 import ReviewsCarousel from './components/ReviewsCarousel'
-import ScheduleButton from '../components/ScheduleButton/ScheduleButton'
+import ScheduleButton from '../../components/ScheduleButton'
 
 export default function Services() {
   return (
