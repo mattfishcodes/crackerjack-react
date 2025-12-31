@@ -1,5 +1,6 @@
 'use client'
 
+import Separator from '@/components/Separator'
 import styles from './ServiceDescription.module.scss'
 
 const ServiceDescription = () => {
@@ -13,7 +14,7 @@ const ServiceDescription = () => {
           your organization&apos;s operations.
         </p>
 
-        <div className='separator light' />
+        <Separator variant='light' />
 
         <p>
           <strong>Understanding Your Processes</strong>
@@ -43,7 +44,7 @@ const ServiceDescription = () => {
           relationship management solution.
         </p>
 
-        <div className='separator light' />
+        <Separator variant='light' />
 
         <p>
           <strong>Centralized Platform</strong>
@@ -68,7 +69,7 @@ const ServiceDescription = () => {
 
         <p>Launch a fast, modern, and reliable refresh of your site.</p>
 
-        <div className='separator light' />
+        <Separator variant='light' />
 
         <p>
           <strong>Faster Load Times with Pre-Rendered React Pages</strong>

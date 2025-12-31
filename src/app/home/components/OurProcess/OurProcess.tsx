@@ -3,12 +3,13 @@
 import { ArrowDown } from 'lucide-react'
 import styles from './OurProcess.module.scss'
 import Container from '@/app/components/Container/Container'
+import Separator from '@/components/Separator'
 
 const OurProcess = () => {
   return (
     <Container>
       <h3 className={styles.heading}>Our Process</h3>
-      <div className='separator dark' />
+      <Separator variant='dark' />
       <div className={styles.container}>
         <div className={styles.item}>
           <p className={styles.number}>1</p>

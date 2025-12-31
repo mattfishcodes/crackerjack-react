@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import styles from './TitleSection.module.scss'
 import Container from '@/app/components/Container/Container'
+import Separator from '@/components/Separator'
 
 const TitleSection = () => {
   return (
@@ -20,7 +21,7 @@ const TitleSection = () => {
         </div>
         <div className={styles.item}>
           <h1>Crackerjack Solutions</h1>
-          <div className='separator light' />
+          <Separator variant='light' />
           <p>
             Welcome to Crackerjack Solutions Virtual Business Management
             Services!

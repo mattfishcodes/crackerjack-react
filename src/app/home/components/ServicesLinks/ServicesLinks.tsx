@@ -4,13 +4,14 @@ import Link from 'next/link'
 import styles from './ServicesLinks.module.scss'
 import Container from '@/app/components/Container/Container'
 import { Cog, List, Waypoints } from 'lucide-react'
+import Separator from '@/components/Separator'
 
 const ServicesLinks = () => {
   return (
     <Container bg='gray'>
       <h3 className={styles.header}>Services</h3>
 
-      <div className='separator dark' />
+      <Separator variant='dark' />
 
       <div className={styles.links}>
         <Link className={styles.link} href='/services#systems-analysis'>
