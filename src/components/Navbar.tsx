@@ -1,18 +1,44 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import routes from '@/app/routes'
-import { Menu } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
+
+function useLockBodyScroll(locked: boolean) {
+  useEffect(() => {
+    if (!locked) return
+
+    const scrollY = window.scrollY
+
+    document.body.style.position = 'fixed'
+    document.body.style.top = `-${scrollY}px`
+    document.body.style.left = '0'
+    document.body.style.right = '0'
+    document.body.style.width = '100%'
+
+    return () => {
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      document.body.style.width = ''
+
+      window.scrollTo(0, scrollY)
+    }
+  }, [locked])
+}
 
 export default function Navbar() {
   const pn = usePathname()
   const ref = useRef<HTMLElement>(null)
 
   const [open, setOpen] = useState(false)
+
+  useLockBodyScroll(open)
 
   return (
     <header className='flex flex-col items-center justify-center border-b-2 border-gray-400'>
@@ -53,21 +79,35 @@ export default function Navbar() {
         </button>
       </div>
 
+      {open && (
+        <div
+          onClick={() => setOpen(false)}
+          className='fixed inset-0 z-30 bg-black/40'
+        />
+      )}
+
       <nav
         ref={ref}
         className={cn(
-          'fixed inset-x-0 top-16 z-40 bg-white',
+          'fixed inset-x-0 top-0 z-40 bg-white',
           'origin-top transform-gpu',
           'transition-all duration-300 ease-out',
           'pointer-events-none -translate-y-2 scale-y-95 opacity-0',
-          'flex flex-col border-t border-gray-400',
+          'flex flex-col',
+          'motion-reduce:transition-none',
+          'text-right',
           open && 'pointer-events-auto translate-y-0 scale-y-100 opacity-100',
         )}
       >
+        <div className='px-4 py-2'>
+          <button onClick={() => setOpen(false)}>
+            <X size={36} />
+          </button>
+        </div>
         {routes.map((r, i) => {
           return (
             <Link
-              className='active:text-secondary active:bg-primary border-b border-gray-400 px-4 py-2 text-right text-xl'
+              className='active:text-secondary active:bg-primary px-4 py-2 text-xl'
               key={i}
               href={r.href}
               onClick={() => setOpen((v) => !v)}
