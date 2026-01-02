@@ -12,12 +12,6 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 256],
   },
   allowedDevOrigins: ['192.168.1.*'],
-  sassOptions: {
-    additionalData: `
-      @use "@/app/mixins" as *;
-      @use "@/app/variables" as *;
-    `,
-  },
 }
 
 export default nextConfig

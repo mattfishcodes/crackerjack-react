@@ -4,5 +4,5 @@ module.exports = {
     'npm run typecheck',
     `npx prettier ${files.join(' ')} --write`,
   ],
-  '*.{json,scss}': (files) => [`npx prettier ${files.join(' ')} --write`],
+  '*.{json,css}': (files) => [`npx prettier ${files.join(' ')} --write`],
 }
