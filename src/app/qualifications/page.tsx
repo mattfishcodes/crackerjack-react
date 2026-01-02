@@ -1,19 +1,16 @@
 'use client'
 
 import Container from '@/components/Container'
-import styles from './page.module.scss'
 
 const Qualifications = () => {
   return (
     <Container>
-      <div className={styles.div}>
-        <h2 className={styles.header}>Career History-Christine</h2>
+      <div className='mb-8'>
+        <h2>Career History-Christine</h2>
       </div>
 
-      <div className={styles.div}>
-        <h3 className={styles.header}>
-          Confidential Start Up Operations Development Project (Remote)
-        </h3>
+      <div className='mb-8'>
+        <h3>Confidential Start Up Operations Development Project (Remote)</h3>
         <p>
           <strong>Project Lead</strong>
         </p>
@@ -33,8 +30,8 @@ const Qualifications = () => {
         </p>
       </div>
 
-      <div className={styles.div}>
-        <h3 className={styles.header}>TaskRay (Remote)</h3>
+      <div className='mb-8'>
+        <h3>TaskRay (Remote)</h3>
         <p>
           <strong>Implementation Specialist II - Onboarding</strong>
         </p>
@@ -51,8 +48,8 @@ const Qualifications = () => {
         </p>
       </div>
 
-      <div className={styles.div}>
-        <h3 className={styles.header}>FormAssembly (Remote)</h3>
+      <div className='mb-8'>
+        <h3>FormAssembly (Remote)</h3>
 
         <p>
           <strong>Implementation Specialist - Onboarding</strong>
@@ -74,8 +71,8 @@ const Qualifications = () => {
         <p>Onboarding CSAT consistently over 95%.</p>
       </div>
 
-      <div className={styles.div}>
-        <h3 className={styles.header}>FormAssembly (Remote)</h3>
+      <div className='mb-8'>
+        <h3>FormAssembly (Remote)</h3>
 
         <p>
           <strong>Implementation Advisor</strong>
@@ -93,8 +90,8 @@ const Qualifications = () => {
         <p>Prepared project Statement of Work and quotes.</p>
       </div>
 
-      <div className={styles.div}>
-        <h3 className={styles.header}>FormAssembly (Remote)</h3>
+      <div className='mb-8'>
+        <h3>FormAssembly (Remote)</h3>
 
         <p>
           <strong>Customer Support Engineer</strong>
@@ -134,8 +131,8 @@ const Qualifications = () => {
         </p>
       </div>
 
-      <div className={styles.div}>
-        <h3 className={styles.header}>Confidential Employer (Remote)</h3>
+      <div className='mb-8'>
+        <h3>Confidential Employer (Remote)</h3>
 
         <p>
           <strong>Customer Success Specialist</strong>
@@ -153,8 +150,8 @@ const Qualifications = () => {
         </p>
       </div>
 
-      <div className={styles.div}>
-        <h3 className={styles.header}>
+      <div className='mb-8'>
+        <h3>
           Confidential Start Up Infrastructure Development Project (Remote)
         </h3>
 
@@ -174,10 +171,8 @@ const Qualifications = () => {
         </p>
       </div>
 
-      <div className={styles.div}>
-        <h3 className={styles.header}>
-          Integrated Systems Consultants (ISC), Traverse City, MI
-        </h3>
+      <div className='mb-8'>
+        <h3>Integrated Systems Consultants (ISC), Traverse City, MI</h3>
 
         <p>
           <strong>Help Desk Manager</strong>
@@ -205,10 +200,8 @@ const Qualifications = () => {
         </p>
       </div>
 
-      <div className={styles.div}>
-        <h3 className={styles.header}>
-          Traverse City State Bank, Traverse City, MI
-        </h3>
+      <div className='mb-8'>
+        <h3>Traverse City State Bank, Traverse City, MI</h3>
 
         <p>
           <strong>Closing Coordinator</strong>
@@ -226,10 +219,8 @@ const Qualifications = () => {
         </p>
       </div>
 
-      <div className={styles.div}>
-        <h3 className={styles.header}>
-          Adagio Consulting Group, Inc., West Chester, PA
-        </h3>
+      <div className='mb-8'>
+        <h3>Adagio Consulting Group, Inc., West Chester, PA</h3>
 
         <p>
           <strong>Help Desk Analyst</strong>
@@ -259,8 +250,8 @@ const Qualifications = () => {
         <p>On call Lead 24/7.</p>
       </div>
 
-      <div className={styles.div}>
-        <h3 className={styles.header}>CW Consulting - MI and DE</h3>
+      <div className='mb-8'>
+        <h3>CW Consulting - MI and DE</h3>
 
         <p>
           <strong>Technology Consultant</strong>
@@ -274,8 +265,8 @@ const Qualifications = () => {
         </p>
       </div>
 
-      <div className={styles.div}>
-        <h3 className={styles.header}>Interactive Search, Inc. - CA and MI</h3>
+      <div className='mb-8'>
+        <h3>Interactive Search, Inc. - CA and MI</h3>
 
         <p>
           <strong>Operations Manager</strong>

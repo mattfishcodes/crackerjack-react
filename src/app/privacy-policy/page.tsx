@@ -1,20 +1,22 @@
 'use client'
 
-import styles from './page.module.scss'
 import Container from '@/components/Container'
 
 const PrivacyPolicy = () => {
   return (
     <Container>
-      <div className={styles.div}>
-        <h1 className={styles.header}>Privacy Policy</h1>
+      <div className='mb-8'>
+        <h1>Privacy Policy</h1>
         <p>
           We respect your privacy and are committed to protecting it through
           compliance with this policy.
         </p>
         <p>
           Our website address is:{' '}
-          <a href='https://www.crackerjacksolutions.com' className={styles.a}>
+          <a
+            href='https://www.crackerjacksolutions.com'
+            className='hover:text-primary font-semibold underline transition-colors'
+          >
             https://www.crackerjacksolutions.com
           </a>
           .
@@ -30,20 +32,20 @@ const PrivacyPolicy = () => {
           advise you to frequently visit this page.
         </p>
       </div>
-      <div className={styles.div}>
-        <h2 className={styles.header}>What User Data We Collect</h2>
+      <div className='mb-8'>
+        <h2>What User Data We Collect</h2>
         <p>When you visit our website, we may collect the following data:</p>
-        <ul className={styles.ul}>
+        <ul className='ml-2'>
           <li>Your IP address.</li>
           <li>The contact information you provide on our contact form.</li>
           <li>Other information such as interests and preferences.</li>
           <li>Data profile regarding your online behavior on our website.</li>
         </ul>
       </div>
-      <div className={styles.div}>
-        <h2 className={styles.header}>Why We Collect Your Data</h2>
+      <div className='mb-8'>
+        <h2>Why We Collect Your Data</h2>
         <p>We collect your data for several reasons:</p>
-        <ul className={styles.ul}>
+        <ul className='ml-2'>
           <li>To better understand your needs.</li>
           <li>To improve our services and products.</li>
           <li>
@@ -55,8 +57,8 @@ const PrivacyPolicy = () => {
           </li>
         </ul>
       </div>
-      <div className={styles.div}>
-        <h2 className={styles.header}>Safeguarding and Securing the Data</h2>
+      <div className='mb-8'>
+        <h2>Safeguarding and Securing the Data</h2>
         <p>
           Crackerjack Solutions LLC is committed to securing your data and
           keeping it confidential. Crackerjack Solutions LLC has done all in its
@@ -65,8 +67,8 @@ const PrivacyPolicy = () => {
           safeguard all the information we collect online.
         </p>
       </div>
-      <div className={styles.div}>
-        <h2 className={styles.header}>Our Cookie Policy</h2>
+      <div className='mb-8'>
+        <h2>Our Cookie Policy</h2>
         <p>
           Cookies are strictly used to monitor which pages you find useful and
           which you do not so that we can provide a better experience for you.
@@ -79,7 +81,10 @@ const PrivacyPolicy = () => {
         <p>
           If you want to disable cookies, you can do so by accessing the
           settings of your internet browser. You can visit{' '}
-          <a href='https://www.internetcookies.com' className={styles.a}>
+          <a
+            href='https://www.internetcookies.com'
+            className='hover:text-primary underline'
+          >
             https://www.internetcookies.com
           </a>
           , which contains comprehensive information on how to do this on a wide
@@ -87,8 +92,8 @@ const PrivacyPolicy = () => {
           may not perform as expected.
         </p>
       </div>
-      <div className={styles.div}>
-        <h2 className={styles.header}>Links to Other Websites</h2>
+      <div className='mb-8'>
+        <h2>Links to Other Websites</h2>
         <p>
           Our website may contain links that lead to other websites. If you
           click on these links Crackerjack Solutions LLC cannot be held
@@ -100,10 +105,8 @@ const PrivacyPolicy = () => {
           website you go to from our website.
         </p>
       </div>
-      <div className={styles.div}>
-        <h2 className={styles.header}>
-          Restricting the Use of your Personal Data
-        </h2>
+      <div className='mb-8'>
+        <h2>Restricting the Use of your Personal Data</h2>
         <p>
           Crackerjack Solutions LLC will not lease, sell or distribute your
           personal information to any third parties, unless we have your

@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Script from 'next/script'
-import styles from './page.module.scss'
 import PageHeader from '@/components/PageHeader'
 import Container from '@/components/Container'
 import { LoaderCircle } from 'lucide-react'
+import { cn } from '@/lib/utils'
 
 export default function Contact() {
   const [loaded, setLoaded] = useState(false)
@@ -62,7 +62,7 @@ export default function Contact() {
     <main>
       <PageHeader>Contact Us</PageHeader>
 
-      <h4 className={styles.heading}>
+      <h4 className='m-0 mt-8 text-center italic'>
         We&apos;d Love to Help You - Reach Out Today!
       </h4>
 
@@ -72,16 +72,19 @@ export default function Contact() {
           src='https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.10/iframeResizer.min.js'
         ></Script>
 
-        <div style={{ width: '100%', minHeight: '600px' }}>
+        <div className='min-h-150 w-full'>
           <iframe
             id='moxie-website-contact-form'
             ref={iframeRef}
-            className={`${styles.iframe} ${loaded ? styles.loaded : ''}`}
+            className={cn(
+              'border-primary m-0 hidden min-w-full rounded-md border-2 p-0',
+              loaded && 'inline',
+            )}
           ></iframe>
 
           {!loaded && (
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <LoaderCircle className={styles.spinner} />
+            <div className='flex justify-center'>
+              <LoaderCircle className='text-primary h-20 w-20 animate-spin' />
             </div>
           )}
         </div>

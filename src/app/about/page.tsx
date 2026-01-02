@@ -2,55 +2,54 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './page.module.scss'
 import PageHeader from '@/components/PageHeader'
 import Container from '@/components/Container'
-import ChristineBio from './components/ChristineBio/ChristineBio'
-import ChristineCerts from './components/ChristineCerts/ChristineCerts'
-import MatthewBio from './components/MatthewBio/MatthewBio'
-import CoreValues from './components/CoreValues/CoreValues'
+import ChristineBio from './components/ChristineBio'
+import ChristineCerts from './components/ChristineCerts'
+import MatthewBio from './components/MatthewBio'
+import CoreValues from './components/CoreValues'
 import ScheduleButton from '@/components/ScheduleButton'
 
 export default function About() {
   return (
-    <main className={styles.container}>
+    <main>
       <PageHeader>About</PageHeader>
 
       <ChristineBio />
 
-      <Container className='bg-secondary'>
-        <div style={{ textAlign: 'center', fontSize: '1.25rem' }}>
+      <Container className='bg-primary text-secondary font-semibold'>
+        <div className='text-center text-xl'>
           If you would like to review my recent career history, you can do so{' '}
-          <Link href='/qualifications/' style={{ textDecoration: 'underline' }}>
+          <Link
+            href='/qualifications/'
+            className='underline underline-offset-2 transition-all hover:text-white'
+          >
             here
           </Link>
           .
         </div>
       </Container>
 
-      <Container>
-        <ChristineCerts />
-      </Container>
+      <ChristineCerts />
 
-      <Container className='bg-primary'>
-        <MatthewBio />
-      </Container>
+      <MatthewBio />
 
       <Container>
-        <div className={styles.certificateWrapper}>
-          <Image
-            src='/Matthew-Cert.png'
-            alt=''
-            width={300}
-            height={300}
-            sizes='(max-width: 768px) 100px, 300px'
-          />
+        <div className='flex justify-center'>
+          <div className='w-full lg:w-[30%]'>
+            <Image
+              className=''
+              src='/Matthew-Cert.png'
+              alt=''
+              width={300}
+              height={300}
+              sizes='(max-width: 768px) 100px, 300px'
+            />
+          </div>
         </div>
       </Container>
 
-      <Container className='bg-primary'>
-        <CoreValues />
-      </Container>
+      <CoreValues />
 
       <Container className='bg-secondary text-center'>
         <h3>

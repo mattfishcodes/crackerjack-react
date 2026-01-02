@@ -1,10 +1,10 @@
 'use client'
 
-import styles from './MatthewBio.module.scss'
+import Container from '@/components/Container'
 
 const MatthewBio = () => {
   return (
-    <div className={styles.container}>
+    <Container className='bg-primary text-white'>
       <h2>Matthew Fisher</h2>
       <p>
         I&apos;m Matthew, lead web designer here at Crackerjack Solutions. With
@@ -30,7 +30,7 @@ const MatthewBio = () => {
         enjoying music or nature. I&apos;m always excited to take on new
         challenges and help my clients succeed in the digital world.
       </p>
-    </div>
+    </Container>
   )
 }
 
