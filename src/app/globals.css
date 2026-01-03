@@ -12,66 +12,52 @@
 }
 
 @layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-titillium-web mb-4 font-light;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
   p {
     @apply mb-4 text-base leading-6;
   }
 
   p:last-child {
-    margin-bottom: 0;
+    @apply mb-0;
   }
-}
 
-html {
-  font-size: 16px;
+  img {
+    @apply h-auto w-full;
+  }
 }
 
 html,
 body {
+  font-size: 16px;
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: var(--font-urbanist);
 }
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-size: 1rem;
-  font-family: var(--font-urbanist);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-titillium-web);
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.75rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-size: 1.25rem;
-}
-
-small {
-  font-size: 0.875rem;
-}
-
-img {
-  width: 100%;
-  height: auto;
 }
