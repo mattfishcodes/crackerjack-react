@@ -53,10 +53,10 @@ export default function RootLayout({
             id='google-tag-manager'
             dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-W92JNWZC');`,
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-TH5JV84B');`,
             }}
           />
         )}
@@ -83,14 +83,16 @@ export default function RootLayout({
         className={`${meowScript.variable} ${montserrat.variable} ${titilliumWeb.variable} ${urbanist.variable} antialiased`}
       >
         {isProduction && (
+          // <!-- Google Tag Manager (noscript) -->
           <noscript>
             <iframe
-              src='https://www.googletagmanager.com/ns.html?id=GTM-W92JNWZC'
+              src='https://www.googletagmanager.com/ns.html?id=GTM-TH5JV84B'
               height='0'
               width='0'
-              className='hidden'
+              style={{ display: 'none', visibility: 'hidden' }}
             ></iframe>
           </noscript>
+          // <!-- End Google Tag Manager (noscript) -->
         )}
 
         <Navbar />
