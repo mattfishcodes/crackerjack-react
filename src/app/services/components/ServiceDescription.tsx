@@ -9,7 +9,7 @@ const ServiceDescription = () => {
         id='systems-analysis'
         className='bg-primary flex-4/9 rounded-xl p-4 text-white lg:p-8'
       >
-        <h3 className='text-secondary'>Systems Analysis</h3>
+        <h3 className='text-secondary font-semibold'>Systems Analysis</h3>
 
         <p>
           Identify bottlenecks, inefficiencies, and areas for improvement within
@@ -44,7 +44,7 @@ const ServiceDescription = () => {
         id='crm-setup'
         className='bg-primary flex-4/9 rounded-xl p-4 text-white lg:p-8'
       >
-        <h3 className='text-secondary'>CRM Setup</h3>
+        <h3 className='text-secondary font-semibold'>CRM Setup</h3>
 
         <p>
           Streamline your client relationships with a tailored customer
@@ -77,7 +77,7 @@ const ServiceDescription = () => {
         id='website-refresh'
         className='bg-primary flex-4/9 rounded-xl p-4 text-white lg:p-8'
       >
-        <h3 className='text-secondary'>Website Refresh</h3>
+        <h3 className='text-secondary font-semibold'>Website Refresh</h3>
 
         <p>Launch a fast, modern, and reliable refresh of your site.</p>
 
