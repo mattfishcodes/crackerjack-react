@@ -14,7 +14,7 @@ const ChristineBio = () => {
             alt='Crackerjack Solutions founder Christine Warner'
             width={500}
             height={500}
-            sizes='(max-width: 768px) 100px, 400px'
+            sizes='(max-width: 768px) 200px, 400px'
             priority
           />
         </div>

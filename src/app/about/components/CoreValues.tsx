@@ -18,21 +18,21 @@ const CoreValues = () => {
             alt=''
             width={300}
             height={300}
-            sizes='(max-width: 768px) 100px, 300px'
+            sizes='(max-width: 768px) 200px, 300px'
           />
           <Image
             src='/accountability-meme.jpg'
             alt=''
             width={300}
             height={300}
-            sizes='(max-width: 768px) 100px, 300px'
+            sizes='(max-width: 768px) 200px, 300px'
           />
           <Image
             src='/kindness-meme.jpg'
             alt=''
             width={300}
             height={300}
-            sizes='(max-width: 768px) 100px, 300px'
+            sizes='(max-width: 768px) 200px, 300px'
           />
         </div>
       </div>

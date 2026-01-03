@@ -13,7 +13,7 @@ const ChristineCerts = () => {
           alt=''
           width={200}
           height={200}
-          sizes='(max-width: 768px) 100px, 300px'
+          sizes='(max-width: 768px) 200px, 300px'
         />
         <Image
           className='flex-[49%] md:flex-1'
@@ -21,7 +21,7 @@ const ChristineCerts = () => {
           alt=''
           width={200}
           height={200}
-          sizes='(max-width: 768px) 100px, 300px'
+          sizes='(max-width: 768px) 200px, 300px'
         />
         <Image
           className='flex-[49%] md:flex-1'
@@ -29,7 +29,7 @@ const ChristineCerts = () => {
           alt=''
           width={200}
           height={200}
-          sizes='(max-width: 768px) 100px, 300px'
+          sizes='(max-width: 768px) 200px, 300px'
         />
         <Image
           className='flex-[49%] md:flex-1'
@@ -37,7 +37,7 @@ const ChristineCerts = () => {
           alt=''
           width={200}
           height={200}
-          sizes='(max-width: 768px) 100px, 300px'
+          sizes='(max-width: 768px) 200px, 300px'
         />
       </div>
     </Container>
