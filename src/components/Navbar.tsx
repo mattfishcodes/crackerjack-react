@@ -1,36 +1,12 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import routes from '@/app/routes'
 import { Menu, X } from 'lucide-react'
-import { cn } from '@/lib/utils'
-
-function useLockBodyScroll(locked: boolean) {
-  useEffect(() => {
-    if (!locked) return
-
-    const scrollY = window.scrollY
-
-    document.body.style.position = 'fixed'
-    document.body.style.top = `-${scrollY}px`
-    document.body.style.left = '0'
-    document.body.style.right = '0'
-    document.body.style.width = '100%'
-
-    return () => {
-      document.body.style.position = ''
-      document.body.style.top = ''
-      document.body.style.left = ''
-      document.body.style.right = ''
-      document.body.style.width = ''
-
-      window.scrollTo(0, scrollY)
-    }
-  }, [locked])
-}
+import { cn, useLockBodyScroll } from '@/lib/utils'
 
 export default function Navbar() {
   const pn = usePathname()
