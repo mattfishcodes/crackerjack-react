@@ -12,10 +12,7 @@ const Container = ({
 }) => {
   return (
     <section
-      className={cn(
-        'flex items-center justify-center p-[2rem_1rem]',
-        className,
-      )}
+      className={cn('flex items-center justify-center px-4 py-8', className)}
     >
       <div className='w-full max-w-300'>{children}</div>
     </section>

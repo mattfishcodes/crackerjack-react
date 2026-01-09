@@ -22,7 +22,7 @@ export default function About() {
           If you would like to review my recent career history, you can do so{' '}
           <Link
             href='/qualifications/'
-            className='underline underline-offset-2 transition-all hover:text-white'
+            className='underline underline-offset-2 transition-all visited:text-gray-200 hover:text-white active:text-white'
           >
             here
           </Link>
@@ -36,7 +36,7 @@ export default function About() {
 
       <Container>
         <div className='flex justify-center'>
-          <div className='w-full lg:w-[30%]'>
+          <div className='w-full md:w-[30%]'>
             <Image
               className=''
               src='/Matthew-Cert.png'

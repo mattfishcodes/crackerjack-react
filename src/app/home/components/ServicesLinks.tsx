@@ -38,7 +38,7 @@ const ServicesLinks = () => {
               href={link.href}
               className='group bg-primary text-secondary hover:bg-secondary focus:bg-secondary active:bg-secondary flex flex-row items-center rounded-xl p-[1.5rem_1rem] lg:min-h-60 lg:flex-1/3 lg:flex-col lg:justify-center lg:transition-all'
             >
-              <span className='group-hover:text-primary group-focus:text-primary group-active:text-primary mr-1 flex items-center justify-center lg:m-0 lg:transition-all'>
+              <span className='group-hover:text-primary group-focus:text-primary group-active:text-primary mr-2 flex items-center justify-center lg:m-0 lg:transition-all'>
                 {link.icon}
               </span>
               <span className='group-hover:text-primary group-focus:text-primary group-active:text-primary text-2xl lg:transition-all'>

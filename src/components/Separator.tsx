@@ -6,10 +6,10 @@ const Separator = ({ variant }: { variant: 'light' | 'dark' | 'dotted' }) => {
   return (
     <div
       className={cn(
-        'h-0.5 w-full rounded-3xl mt-4 mb-4',
+        'mt-4 mb-4 h-0.5 w-full rounded-3xl',
         variant === 'light' && 'bg-secondary',
         variant === 'dark' && 'bg-primary',
-        variant === 'dotted' && 'bg-[url("/dash.svg")] bg-position-[10px_0]',
+        variant === 'dotted' && 'bg-[url(/dash.svg)] bg-position-[10px_0]',
       )}
     />
   )

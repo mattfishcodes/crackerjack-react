@@ -8,7 +8,7 @@ const TitleSection = () => {
   return (
     <Container className='bg-primary text-white'>
       <div className='flex flex-col items-center justify-between gap-4 text-center lg:flex-row'>
-        <div className='w-full lg:max-w-1/4'>
+        <div className='w-full md:max-w-1/4'>
           <Image
             src='/images/icon-square.png'
             alt=''

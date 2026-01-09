@@ -12,7 +12,7 @@ const OurProcess = () => {
       <Separator variant='dark' />
 
       <div className='flex flex-col lg:flex-row'>
-        <div className='flex-1 p-[2rem_1rem] text-center'>
+        <div className='flex-1 px-4 py-4 text-center'>
           <p className='font-montserrat text-primary bg-secondary inline-flex h-8 w-8 items-center justify-center rounded-full font-semibold'>
             1
           </p>
@@ -23,10 +23,10 @@ const OurProcess = () => {
             your needs.
           </p>
         </div>
-        <div className='flex items-center justify-center lg:rotate-270'>
+        <div className='flex items-center justify-center lg:-rotate-90'>
           <ArrowDown />
         </div>
-        <div className='flex-1 p-[2rem_1rem] text-center'>
+        <div className='flex-1 px-4 py-4 text-center'>
           <p className='font-montserrat text-primary bg-secondary inline-flex h-8 w-8 items-center justify-center rounded-full font-semibold'>
             2
           </p>
@@ -39,7 +39,7 @@ const OurProcess = () => {
         <div className='flex items-center justify-center lg:-rotate-90'>
           <ArrowDown />
         </div>
-        <div className='flex-1 p-[2rem_1rem] text-center'>
+        <div className='flex-1 px-4 py-4 text-center'>
           <p className='font-montserrat text-primary bg-secondary inline-flex h-8 w-8 items-center justify-center rounded-full font-semibold'>
             3
           </p>
@@ -49,10 +49,10 @@ const OurProcess = () => {
             project scope and deliver a tailored proposal for your approval.
           </p>
         </div>
-        <div className='flex items-center justify-center lg:rotate-270'>
+        <div className='flex items-center justify-center lg:-rotate-90'>
           <ArrowDown />
         </div>
-        <div className='flex-1 p-[2rem_1rem] text-center'>
+        <div className='flex-1 px-4 py-4 text-center'>
           <p className='font-montserrat text-primary bg-secondary inline-flex h-8 w-8 items-center justify-center rounded-full font-semibold'>
             4
           </p>

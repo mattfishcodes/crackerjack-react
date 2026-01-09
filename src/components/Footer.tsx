@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer>
-      <div className='bg-primary flex flex-col justify-center py-2 md:flex-row'>
+      <div className='bg-primary flex flex-col justify-center px-4 py-2 md:flex-row'>
         <nav className='flex max-w-300 flex-[100%] flex-col items-center justify-between gap-4 md:flex-row'>
           <div className='flex flex-col gap-4 text-center md:flex-row'>
             {routes.map((r, i) => (
