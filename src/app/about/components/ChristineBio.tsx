@@ -2,6 +2,8 @@
 
 import Image from 'next/image'
 import Container from '@/components/Container'
+import { Suspense } from 'react'
+import { Skeleton } from '@/components/ui/skeleton'
 
 const ChristineBio = () => {
   return (
@@ -9,14 +11,16 @@ const ChristineBio = () => {
       <h2>Christine Warner</h2>
       <div>
         <div className='mb-4 w-full md:float-left md:mr-4 md:w-60'>
-          <Image
-            src='/christine-headshot.png'
-            alt='Crackerjack Solutions founder Christine Warner'
-            width={500}
-            height={500}
-            sizes='(max-width: 768px) 200px, 400px'
-            priority
-          />
+          <Suspense fallback={<Skeleton className='aspect-square w-full' />}>
+            <Image
+              src='/christine-headshot.png'
+              alt='Crackerjack Solutions founder Christine Warner'
+              width={500}
+              height={500}
+              sizes='(max-width: 768px) 200px, 400px'
+              priority
+            />
+          </Suspense>
         </div>
         <div>
           <p>
