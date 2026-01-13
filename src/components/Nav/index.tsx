@@ -6,7 +6,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from '@/components/ui/navigation-menu'
+} from '@/shadcn/ui/navigation-menu'
 import { usePathname } from 'next/navigation'
 import routes from '@/app/routes'
 

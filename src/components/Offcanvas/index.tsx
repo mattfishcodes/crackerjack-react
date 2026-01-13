@@ -7,8 +7,8 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components/ui/sheet'
-import { Button } from '@/components/ui/button'
+} from '@/shadcn/ui/sheet'
+import { Button } from '@/shadcn/ui/button'
 import { Menu } from 'lucide-react'
 import { Nav } from '../Nav'
 import { useState } from 'react'

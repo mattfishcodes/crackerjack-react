@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { Suspense } from 'react'
-import { Skeleton } from '@/components/ui/skeleton'
+import { Skeleton } from '@/shadcn/ui/skeleton'
 
 const ChristineBio = () => {
   return (
