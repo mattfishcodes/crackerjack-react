@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import routes from '@/app/routes'
 import { Menu } from 'lucide-react'
 import {
@@ -25,8 +26,17 @@ export default function Navbar() {
 
   return (
     <header className='container mx-auto'>
-      <div className='flex w-full items-center justify-between'>
-        <div>Brand</div>
+      <div className='flex w-full items-center justify-between py-2'>
+        <Link href={'/'} className='h-12 w-12'>
+          <Image
+            src='/icon.svg'
+            alt='Crackerjack Solutions logo'
+            width={180}
+            height={180}
+            priority
+            unoptimized
+          />
+        </Link>
 
         {/* Desktop Nav */}
         <NavigationMenu className='hidden md:flex'>
