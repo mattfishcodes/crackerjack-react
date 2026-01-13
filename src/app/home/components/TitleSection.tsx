@@ -16,6 +16,7 @@ const TitleSection = () => {
             height={800}
             sizes='(max-width: 768px) 200px, 400px'
             priority
+            loading='eager'
           />
         </div>
         <div>

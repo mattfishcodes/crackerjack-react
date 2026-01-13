@@ -19,6 +19,7 @@ const ChristineBio = () => {
               height={500}
               sizes='(max-width: 768px) 200px, 400px'
               priority
+              loading='eager'
             />
           </Suspense>
         </div>
