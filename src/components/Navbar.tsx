@@ -13,6 +13,7 @@ import {
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -44,6 +45,9 @@ export default function Navbar() {
 
         {/* Mobile Nav */}
         <Sheet open={open} onOpenChange={setOpen}>
+          <SheetDescription className='sr-only'>
+            Main Navigation Menu
+          </SheetDescription>
           <SheetTrigger asChild className='md:hidden'>
             <Button variant='outline' size='icon'>
               <span className='sr-only'>Open menu</span>
