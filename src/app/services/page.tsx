@@ -1,13 +1,13 @@
 'use client'
 
-import Container from '@/components/Container'
-import PageHeader from '@/components/PageHeader'
+import { Container } from '@/components/Container'
+import { PageHeader } from '@/components/PageHeader'
 import ServiceDescription from './components/ServiceDescription'
 import RetainerPackages from './components/RetainerPackages'
 import ServicesList from './components/ServicesList'
 import SoftwareList from './components/SoftwareList'
 import ReviewsCarousel from './components/ReviewsCarousel'
-import ScheduleButton from '../../components/ScheduleButton'
+import { ScheduleButton } from '@/components/ScheduleButton'
 
 export default function Services() {
   return (

@@ -1,9 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import Container from '@/components/Container'
+import { Container } from '@/components/Container'
 import { Cog, List, Waypoints } from 'lucide-react'
-import Separator from '@/components/Separator'
+import { Separator } from '@/components/Separator'
 
 const links = [
   {

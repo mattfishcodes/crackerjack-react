@@ -1,6 +1,6 @@
 'use client'
 
-import Container from '@/components/Container'
+import { Container } from '@/components/Container'
 import { Skeleton } from '@/components/ui/skeleton'
 import Image from 'next/image'
 import { Suspense } from 'react'

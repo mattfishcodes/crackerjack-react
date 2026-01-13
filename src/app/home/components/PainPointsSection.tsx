@@ -1,7 +1,7 @@
 'use client'
 
-import Container from '@/components/Container'
-import Separator from '@/components/Separator'
+import { Container } from '@/components/Container'
+import { Separator } from '@/components/Separator'
 
 const PaintPointsSection = () => {
   return (

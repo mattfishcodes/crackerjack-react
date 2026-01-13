@@ -7,8 +7,8 @@ import {
 } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 
 const meowScript = Meow_Script({
   weight: ['400'],
@@ -95,7 +95,7 @@ export default function RootLayout({
           // <!-- End Google Tag Manager (noscript) -->
         )}
 
-        <Navbar />
+        <Header />
         {children}
         <Footer />
       </body>

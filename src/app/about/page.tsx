@@ -2,13 +2,13 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import PageHeader from '@/components/PageHeader'
-import Container from '@/components/Container'
+import { PageHeader } from '@/components/PageHeader'
+import { Container } from '@/components/Container'
 import ChristineBio from './components/ChristineBio'
 import ChristineCerts from './components/ChristineCerts'
 import MatthewBio from './components/MatthewBio'
 import CoreValues from './components/CoreValues'
-import ScheduleButton from '@/components/ScheduleButton'
+import { ScheduleButton } from '@/components/ScheduleButton'
 
 export default function About() {
   return (

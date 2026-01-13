@@ -2,10 +2,12 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Script from 'next/script'
-import PageHeader from '@/components/PageHeader'
-import Container from '@/components/Container'
+import { PageHeader } from '@/components/PageHeader'
+import { Container } from '@/components/Container'
 import { LoaderCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
+
+const isProduction = process.env.NODE_ENV === 'production'
 
 export default function Contact() {
   const [loaded, setLoaded] = useState(false)
@@ -55,7 +57,9 @@ export default function Contact() {
   }
 
   useEffect(() => {
-    injectForm()
+    if (isProduction) {
+      injectForm()
+    }
   }, [])
 
   return (

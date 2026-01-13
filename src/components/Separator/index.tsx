@@ -2,7 +2,11 @@
 
 import { cn } from '@/lib/utils'
 
-const Separator = ({ variant }: { variant: 'light' | 'dark' | 'dotted' }) => {
+export const Separator = ({
+  variant,
+}: {
+  variant: 'light' | 'dark' | 'dotted'
+}) => {
   return (
     <div
       className={cn(
@@ -14,5 +18,3 @@ const Separator = ({ variant }: { variant: 'light' | 'dark' | 'dotted' }) => {
     />
   )
 }
-
-export default Separator

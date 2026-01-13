@@ -6,19 +6,19 @@ import routes from '@/app/routes'
 import { cn } from '@/lib/utils'
 import { Copyright } from 'lucide-react'
 
-export default function Footer() {
+export const Footer = () => {
   const pn = usePathname()
 
   return (
     <footer>
-      <div className='bg-primary flex flex-col justify-center px-4 py-2 md:flex-row'>
-        <nav className='flex max-w-300 flex-[100%] flex-col items-center justify-between gap-4 md:flex-row'>
+      <div className='bg-primary'>
+        <nav className='container mx-auto flex flex-col justify-between py-4 md:flex-row'>
           <div className='flex flex-col gap-4 text-center md:flex-row'>
             {routes.map((r, i) => (
               <Link
                 className={cn(
                   'text-secondary transition-colors hover:text-white active:text-white',
-                  pn === r.href && 'text-white',
+                  pn === r.href && 'text-gray-300',
                 )}
                 href={r.href}
                 key={i}
@@ -27,11 +27,11 @@ export default function Footer() {
               </Link>
             ))}
           </div>
-          <div>
+          <div className='pt-4 text-center md:pt-0'>
             <Link
               className={cn(
                 'text-secondary transition-colors hover:text-white active:text-white',
-                pn === '/privacy-policy/' && 'text-white',
+                pn === '/privacy-policy/' && 'text-gray-300',
               )}
               href='/privacy-policy'
             >
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
         </nav>
       </div>
-      <div className='flex h-8 flex-row items-center justify-center font-semibold'>
+      <div className='flex flex-row items-center justify-center py-4 font-semibold'>
         <Copyright className='mr-1' /> 2025 Crackerjack Solutions LLC
       </div>
     </footer>
