@@ -31,7 +31,7 @@ const softwareList = [
 
 const SoftwareList = () => {
   return (
-    <div className='px-4 py-8 text-center'>
+    <div className='py-8 text-center'>
       <h4>Software</h4>
       <p>
         We use a variety of online apps/SaaS tools. Some of them are used daily

@@ -43,7 +43,7 @@ const ServicesList = () => {
     <div className='flex flex-row flex-wrap gap-2'>
       {services.map((s, i) => {
         return (
-          <div key={i} className='min-w-75 flex-1 px-8 py-4'>
+          <div key={i} className='min-w-75 flex-1 py-4'>
             <h3>{s.title}</h3>
             <Separator variant='dark' />
             <ul className='list-none'>

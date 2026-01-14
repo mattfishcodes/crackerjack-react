@@ -1,13 +1,12 @@
 'use client'
 
 import Image from 'next/image'
-import { Container } from '@/components/Container'
 import { Suspense } from 'react'
 import { Skeleton } from '@/shadcn/ui/skeleton'
 
 const ChristineBio = () => {
   return (
-    <Container>
+    <>
       <h2>Christine Warner</h2>
       <div>
         <div className='mb-4 w-full md:float-left md:mr-4 md:w-60'>
@@ -59,7 +58,7 @@ const ChristineBio = () => {
           </p>
         </div>
       </div>
-    </Container>
+    </>
   )
 }
 

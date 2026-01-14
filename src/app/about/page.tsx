@@ -15,7 +15,9 @@ export default function About() {
     <main>
       <PageHeader>About</PageHeader>
 
-      <ChristineBio />
+      <Container>
+        <ChristineBio />
+      </Container>
 
       <Container className='bg-primary text-secondary font-semibold'>
         <div className='text-center text-xl'>
@@ -30,9 +32,13 @@ export default function About() {
         </div>
       </Container>
 
-      <ChristineCerts />
+      <Container>
+        <ChristineCerts />
+      </Container>
 
-      <MatthewBio />
+      <Container className='bg-primary text-white'>
+        <MatthewBio />
+      </Container>
 
       <Container>
         <div className='flex justify-center'>
@@ -49,7 +55,9 @@ export default function About() {
         </div>
       </Container>
 
-      <CoreValues />
+      <Container className='bg-primary text-white'>
+        <CoreValues />
+      </Container>
 
       <Container className='bg-secondary text-center'>
         <h3>
