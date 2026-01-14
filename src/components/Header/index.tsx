@@ -21,7 +21,9 @@ export const Header = () => {
             />
           </Link>
           {/* Desktop Nav */}
-          <Nav className='hidden md:flex' />
+          <div className='hidden md:flex'>
+            <Nav />
+          </div>
           {/* Mobile Nav */}
           <Offcanvas />
         </div>

@@ -32,7 +32,7 @@ const ReviewsCarousel = () => {
       <h4 className='my-4 text-center'>Reviews</h4>
       <div className='relative flex items-center justify-center'>
         <button
-          className='bg-primary text-secondary just hidden cursor-pointer items-center rounded-full p-1 transition-all hover:scale-110 hover:text-white lg:inline-flex'
+          className='bg-primary text-primary-foreground just hidden cursor-pointer items-center rounded-full p-1 transition-all hover:scale-110 hover:text-white lg:inline-flex'
           onClick={scrollBack}
         >
           <ChevronLeft />
@@ -96,7 +96,7 @@ const ReviewsCarousel = () => {
           </li>
         </ul>
         <button
-          className='bg-primary text-secondary just hidden cursor-pointer items-center rounded-full p-1 transition-all hover:scale-110 hover:text-white lg:inline-flex'
+          className='bg-primary text-primary-foreground just hidden cursor-pointer items-center rounded-full p-1 transition-all hover:scale-110 hover:text-white lg:inline-flex'
           onClick={scrollForward}
         >
           <ChevronRight />

@@ -88,7 +88,7 @@ export default function Contact() {
 
           {!loaded && (
             <div className='flex justify-center'>
-              <LoaderCircle className='text-primary h-20 w-20 animate-spin' />
+              <LoaderCircle className='text-secondary-foreground h-20 w-20 animate-spin' />
             </div>
           )}
         </div>

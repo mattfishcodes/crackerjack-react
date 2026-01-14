@@ -19,12 +19,12 @@ export default function About() {
         <ChristineBio />
       </Container>
 
-      <Container className='bg-primary text-secondary font-semibold'>
+      <Container className='bg-primary text-primary-foreground font-semibold'>
         <div className='text-center text-xl'>
           If you would like to review my recent career history, you can do so{' '}
           <Link
             href='/qualifications/'
-            className='underline underline-offset-2 transition-all visited:text-gray-200 hover:text-white active:text-white'
+            className='underline underline-offset-2 transition-colors hover:text-white active:text-white'
           >
             here
           </Link>
@@ -59,7 +59,7 @@ export default function About() {
         <CoreValues />
       </Container>
 
-      <Container className='bg-secondary text-center'>
+      <Container className='bg-secondary text-foreground text-center'>
         <h3>
           Thank you for taking the time to learn a bit about me and Crackerjack
           Solutions online business management services.

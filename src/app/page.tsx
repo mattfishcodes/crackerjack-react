@@ -15,7 +15,7 @@ export default function Home() {
         <TitleSection />
       </Container>
 
-      <Container className='bg-gray-100 text-center'>
+      <Container className='text-foreground bg-gray-100 text-center'>
         <CourseAdvert />
       </Container>
 
@@ -23,7 +23,7 @@ export default function Home() {
         <PaintPointsSection />
       </Container>
 
-      <Container className='bg-gray-100 text-center'>
+      <Container className='text-foreground bg-gray-100 text-center'>
         <h3>
           Do you experience ongoing stress caused by these issues? <br />
           Crackerjack Solutions can help!
@@ -55,7 +55,7 @@ export default function Home() {
         <OurProcess />
       </Container>
 
-      <Container className='bg-gray-100'>
+      <Container className='text-foreground bg-gray-100'>
         <ServicesLinks />
       </Container>
     </main>

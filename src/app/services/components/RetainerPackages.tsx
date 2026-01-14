@@ -4,7 +4,7 @@ import { Separator } from '@/components/Separator'
 
 const RetainerPackages = () => {
   return (
-    <div className='text-primary flex justify-center'>
+    <div className='flex justify-center'>
       <div>
         <h3>Hourly Retainer Packages</h3>
         <p className='font-montserrat'>

@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const CourseAdvert = () => {
   return (
     <>
-      <p className='font-titillium-web bg-primary text-secondary rounded-md py-4 font-light md:text-lg'>
+      <p className='font-montserrat bg-primary text-primary-foreground rounded-md py-4 md:text-lg'>
         How many SaaS tools do you pay for each month?
       </p>
       <h3>Master Moxie: Simplify Your Business</h3>

@@ -13,16 +13,14 @@ import routes from '@/app/routes'
 export const Nav = ({
   orientation = 'horizontal',
   onNavigate = () => {},
-  className,
 }: {
   orientation?: 'horizontal' | 'vertical'
   onNavigate?: () => void
-  className?: string
 }) => {
   const pn = usePathname()
   return (
-    <NavigationMenu orientation={orientation} className={className}>
-      <NavigationMenuList className='data-[orientation=vertical]:flex-col'>
+    <NavigationMenu orientation={orientation}>
+      <NavigationMenuList>
         {routes.map((r, i) => {
           const isActive = pn === r.href
           return (

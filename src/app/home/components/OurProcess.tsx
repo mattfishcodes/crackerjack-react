@@ -12,7 +12,7 @@ const OurProcess = () => {
 
       <div className='flex flex-col lg:flex-row'>
         <div className='flex-1 px-4 py-4 text-center'>
-          <p className='font-montserrat text-primary bg-secondary inline-flex h-8 w-8 items-center justify-center rounded-full font-semibold'>
+          <p className='font-montserrat text-secondary-foreground bg-secondary inline-flex h-8 w-8 items-center justify-center rounded-full font-semibold'>
             1
           </p>
           <h3>Consultation</h3>
@@ -26,7 +26,7 @@ const OurProcess = () => {
           <ArrowDown />
         </div>
         <div className='flex-1 px-4 py-4 text-center'>
-          <p className='font-montserrat text-primary bg-secondary inline-flex h-8 w-8 items-center justify-center rounded-full font-semibold'>
+          <p className='font-montserrat text-secondary-foreground bg-secondary inline-flex h-8 w-8 items-center justify-center rounded-full font-semibold'>
             2
           </p>
           <h3>Package Selection</h3>
@@ -39,7 +39,7 @@ const OurProcess = () => {
           <ArrowDown />
         </div>
         <div className='flex-1 px-4 py-4 text-center'>
-          <p className='font-montserrat text-primary bg-secondary inline-flex h-8 w-8 items-center justify-center rounded-full font-semibold'>
+          <p className='font-montserrat text-secondary-foreground bg-secondary inline-flex h-8 w-8 items-center justify-center rounded-full font-semibold'>
             3
           </p>
           <h3>Planning</h3>
@@ -52,7 +52,7 @@ const OurProcess = () => {
           <ArrowDown />
         </div>
         <div className='flex-1 px-4 py-4 text-center'>
-          <p className='font-montserrat text-primary bg-secondary inline-flex h-8 w-8 items-center justify-center rounded-full font-semibold'>
+          <p className='font-montserrat text-secondary-foreground bg-secondary inline-flex h-8 w-8 items-center justify-center rounded-full font-semibold'>
             4
           </p>
           <h3>Execution</h3>

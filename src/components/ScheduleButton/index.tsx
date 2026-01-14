@@ -13,7 +13,7 @@ export const ScheduleButton = ({ color }: { color: 'light' | 'dark' }) => {
         color === 'light' &&
           'text-primary bg-secondary border-secondary hover:border-primary focus:border-primary active:border-primary hover:bg-white focus:bg-white active:bg-white',
         color === 'dark' &&
-          'text-secondary bg-primary border-primary hover:border-primary hover:text-primary active:border-primary active:text-primary focus:text-primary focus:border-primary hover:bg-white focus:bg-white active:bg-white',
+          'text-primary-foreground bg-primary border-primary hover:border-primary hover:text-primary active:border-primary active:text-primary focus:text-primary focus:border-primary hover:bg-white focus:bg-white active:bg-white',
       )}
     >
       <div className='font-titillium-web flex items-center justify-center gap-2 text-2xl font-semibold'>

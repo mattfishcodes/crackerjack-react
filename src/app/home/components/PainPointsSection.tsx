@@ -8,7 +8,7 @@ const PaintPointsSection = () => {
       <div className='mb-8'>
         <Separator variant='dotted' />
 
-        <h4 className='text-primary'>
+        <h4 className='text-foreground'>
           Are your days filled with scattered tasks and a never ending to do
           list?
         </h4>
@@ -25,7 +25,7 @@ const PaintPointsSection = () => {
       <div className='mb-8'>
         <Separator variant='dotted' />
 
-        <h4 className='text-primary'>
+        <h4 className='text-foreground'>
           Are you struggling to keep up with the rapidly evolving digital
           landscape and its challenges?
         </h4>
@@ -40,7 +40,7 @@ const PaintPointsSection = () => {
         </p>
       </div>
       <Separator variant='dotted' />
-      <h4 className='text-primary'>
+      <h4 className='text-foreground'>
         Is your productivity suffering due to inefficient systems and
         operations?
       </h4>

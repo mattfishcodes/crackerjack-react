@@ -17,7 +17,7 @@ export const Footer = () => {
             {routes.map((r, i) => (
               <Link
                 className={cn(
-                  'text-secondary transition-colors hover:text-white active:text-white',
+                  'text-primary-foreground transition-colors hover:text-white active:text-white',
                   pn === r.href && 'text-gray-300',
                 )}
                 href={r.href}
@@ -30,7 +30,7 @@ export const Footer = () => {
           <div className='pt-4 text-center md:pt-0'>
             <Link
               className={cn(
-                'text-secondary transition-colors hover:text-white active:text-white',
+                'text-primary-foreground transition-colors hover:text-white active:text-white',
                 pn === '/privacy-policy/' && 'text-gray-300',
               )}
               href='/privacy-policy'

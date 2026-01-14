@@ -29,7 +29,7 @@ export default function Services() {
         <ServiceDescription />
       </Container>
 
-      <Container className='bg-secondary'>
+      <Container className='bg-secondary text-foreground'>
         <RetainerPackages />
       </Container>
 
@@ -45,7 +45,7 @@ export default function Services() {
         <ScheduleButton color='light' />
       </Container>
 
-      <Container className='bg-gray-100'>
+      <Container className='text-foreground bg-gray-100'>
         <ServicesList />
       </Container>
 

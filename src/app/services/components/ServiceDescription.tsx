@@ -9,7 +9,9 @@ const ServiceDescription = () => {
         id='systems-analysis'
         className='bg-primary flex-4/9 rounded-xl p-4 text-white lg:p-8'
       >
-        <h3 className='text-secondary font-semibold'>Systems Analysis</h3>
+        <h3 className='text-primary-foreground font-semibold'>
+          Systems Analysis
+        </h3>
 
         <p>
           Identify bottlenecks, inefficiencies, and areas for improvement within
@@ -19,7 +21,7 @@ const ServiceDescription = () => {
         <Separator variant='light' />
 
         <p>
-          <strong className='text-secondary'>
+          <strong className='text-primary-foreground'>
             Understanding Your Processes
           </strong>
           <br />
@@ -28,13 +30,17 @@ const ServiceDescription = () => {
         </p>
 
         <p>
-          <strong className='text-secondary'>Thorough Evaluation</strong>
+          <strong className='text-primary-foreground'>
+            Thorough Evaluation
+          </strong>
           <br />
           Our team will conduct a detailed evaluation of your current state.
         </p>
 
         <p>
-          <strong className='text-secondary'>Actionable Recommendations</strong>
+          <strong className='text-primary-foreground'>
+            Actionable Recommendations
+          </strong>
           <br />
           You&apos;ll receive a customized report with actionable
           recommendations.
@@ -44,7 +50,7 @@ const ServiceDescription = () => {
         id='crm-setup'
         className='bg-primary flex-4/9 rounded-xl p-4 text-white lg:p-8'
       >
-        <h3 className='text-secondary font-semibold'>CRM Setup</h3>
+        <h3 className='text-primary-foreground font-semibold'>CRM Setup</h3>
 
         <p>
           Streamline your client relationships with a tailored customer
@@ -54,13 +60,15 @@ const ServiceDescription = () => {
         <Separator variant='light' />
 
         <p>
-          <strong className='text-secondary'>Centralized Platform</strong>
+          <strong className='text-primary-foreground'>
+            Centralized Platform
+          </strong>
           <br />
           Manage all client and potential client relationships seamlessly.
         </p>
 
         <p>
-          <strong className='text-secondary'>
+          <strong className='text-primary-foreground'>
             Stronger Business Relationships
           </strong>
           <br />
@@ -68,7 +76,9 @@ const ServiceDescription = () => {
         </p>
 
         <p>
-          <strong className='text-secondary'>Improved Communication</strong>
+          <strong className='text-primary-foreground'>
+            Improved Communication
+          </strong>
           <br />
           Streamline processes and watch your bottom line soar.
         </p>
@@ -77,14 +87,16 @@ const ServiceDescription = () => {
         id='website-refresh'
         className='bg-primary flex-4/9 rounded-xl p-4 text-white lg:p-8'
       >
-        <h3 className='text-secondary font-semibold'>Website Refresh</h3>
+        <h3 className='text-primary-foreground font-semibold'>
+          Website Refresh
+        </h3>
 
         <p>Launch a fast, modern, and reliable refresh of your site.</p>
 
         <Separator variant='light' />
 
         <p>
-          <strong className='text-secondary'>
+          <strong className='text-primary-foreground'>
             Faster Load Times with Pre-Rendered React Pages
           </strong>
           <br />
@@ -95,7 +107,7 @@ const ServiceDescription = () => {
         </p>
 
         <p>
-          <strong className='text-secondary'>
+          <strong className='text-primary-foreground'>
             Improved Mobile Responsiveness and UI/UX
           </strong>
           <br />
@@ -106,7 +118,7 @@ const ServiceDescription = () => {
         </p>
 
         <p>
-          <strong className='text-secondary'>
+          <strong className='text-primary-foreground'>
             Future-Ready, Maintainable Architecture
           </strong>
           <br />A static architecture reduces server load, lowers hosting costs,

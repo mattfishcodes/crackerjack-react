@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
           Our website address is:{' '}
           <a
             href='https://www.crackerjacksolutions.com'
-            className='hover:text-primary font-semibold underline transition-colors'
+            className='hover:text-secondary-foreground font-semibold underline transition-colors'
           >
             https://www.crackerjacksolutions.com
           </a>
@@ -83,7 +83,7 @@ const PrivacyPolicy = () => {
           settings of your internet browser. You can visit{' '}
           <a
             href='https://www.internetcookies.com'
-            className='hover:text-primary underline'
+            className='hover:text-secondary-foreground underline'
           >
             https://www.internetcookies.com
           </a>
