@@ -8,10 +8,14 @@ import ServicesList from './components/ServicesList'
 import SoftwareList from './components/SoftwareList'
 import ReviewsCarousel from './components/ReviewsCarousel'
 import { ScheduleButton } from '@/components/ScheduleButton'
+import { CourseAdvert } from './components/CourseAdvert'
 
 export default function Services() {
   return (
     <main>
+      <Container className='bg-primary'>
+        <CourseAdvert />
+      </Container>
       <Container className='text-center'>
         <h3>Interested in Exploring How our Services Can Benefit You?</h3>
         <p>

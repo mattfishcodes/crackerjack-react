@@ -6,17 +6,12 @@ import PaintPointsSection from './home/components/PainPointsSection'
 import ServicesLinks from './home/components/ServicesLinks'
 import OurProcess from './home/components/OurProcess'
 import { ScheduleButton } from '@/components/ScheduleButton'
-import { CourseAdvert } from './home/components/CourseAdvert'
 
 export default function Home() {
   return (
     <main>
       <Container className='bg-primary text-white'>
         <TitleSection />
-      </Container>
-
-      <Container className='text-foreground bg-gray-100 text-center'>
-        <CourseAdvert />
       </Container>
 
       <Container>
