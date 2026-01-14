@@ -1,11 +1,10 @@
 'use client'
 
-import { Container } from '@/components/Container'
 import { Separator } from '@/components/Separator'
 
 const PaintPointsSection = () => {
   return (
-    <Container>
+    <>
       <div className='mb-8'>
         <Separator variant='dotted' />
 
@@ -54,7 +53,7 @@ const PaintPointsSection = () => {
         isn&apos;t just a luxury—it&apos;s essential for staying competitive and
         reclaiming your time.
       </p>
-    </Container>
+    </>
   )
 }
 

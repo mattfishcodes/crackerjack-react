@@ -6,13 +6,22 @@ import PaintPointsSection from './home/components/PainPointsSection'
 import ServicesLinks from './home/components/ServicesLinks'
 import OurProcess from './home/components/OurProcess'
 import { ScheduleButton } from '@/components/ScheduleButton'
+import { CourseAdvert } from './home/components/CourseAdvert'
 
 export default function Home() {
   return (
     <main>
-      <TitleSection />
+      <Container className='bg-primary text-white'>
+        <TitleSection />
+      </Container>
 
-      <PaintPointsSection />
+      <Container className='bg-gray-100 text-center'>
+        <CourseAdvert />
+      </Container>
+
+      <Container>
+        <PaintPointsSection />
+      </Container>
 
       <Container className='bg-gray-100 text-center'>
         <h3>
@@ -42,9 +51,13 @@ export default function Home() {
         <ScheduleButton color='dark' />
       </Container>
 
-      <OurProcess />
+      <Container>
+        <OurProcess />
+      </Container>
 
-      <ServicesLinks />
+      <Container className='bg-gray-100'>
+        <ServicesLinks />
+      </Container>
     </main>
   )
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { Container } from '@/components/Container'
 import { Cog, List, Waypoints } from 'lucide-react'
 import { Separator } from '@/components/Separator'
 
@@ -25,7 +24,7 @@ const links = [
 
 const ServicesLinks = () => {
   return (
-    <Container className='bg-gray-100'>
+    <>
       <h3 className='text-center font-semibold'>Services</h3>
 
       <Separator variant='dark' />
@@ -48,7 +47,7 @@ const ServicesLinks = () => {
           )
         })}
       </div>
-    </Container>
+    </>
   )
 }
 

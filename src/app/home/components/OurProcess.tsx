@@ -1,12 +1,11 @@
 'use client'
 
 import { ArrowDown } from 'lucide-react'
-import { Container } from '@/components/Container'
 import { Separator } from '@/components/Separator'
 
 const OurProcess = () => {
   return (
-    <Container>
+    <>
       <h3 className='text-center'>Our Process</h3>
 
       <Separator variant='dark' />
@@ -63,7 +62,7 @@ const OurProcess = () => {
           </p>
         </div>
       </div>
-    </Container>
+    </>
   )
 }
 
