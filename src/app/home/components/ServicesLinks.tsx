@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { Cog, List, Waypoints } from 'lucide-react'
-import { Separator } from '@/components/Separator'
+import Separator from '@/components/Separator'
 
 const links = [
   {

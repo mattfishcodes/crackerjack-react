@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export const CourseAdvert = () => {
+export default function CourseAdvert() {
   return (
     <div className='mx-auto md:max-w-[50%]'>
       <Link href='https://courses.crackerjacksolutions.com/info'>

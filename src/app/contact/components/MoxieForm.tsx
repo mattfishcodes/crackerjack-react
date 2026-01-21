@@ -1,12 +1,12 @@
 'use client'
 
-import { Container } from '@/components/Container'
+import Container from '@/components/Container'
 import { cn } from '@/lib/utils'
 import { LoaderCircle } from 'lucide-react'
 import Script from 'next/script'
 import { useEffect, useRef, useState } from 'react'
 
-export const MoxieForm = () => {
+export default function MoxieForm() {
   const [loaded, setLoaded] = useState(false)
   const iframeRef = useRef<HTMLIFrameElement | null>(null)
 

@@ -10,10 +10,10 @@ import {
 } from '@/shadcn/ui/sheet'
 import { Button } from '@/shadcn/ui/button'
 import { Menu } from 'lucide-react'
-import { Nav } from '../Nav'
+import Nav from './Nav'
 import { useState } from 'react'
 
-export const Offcanvas = () => {
+export default function Offcanvas() {
   const [open, setOpen] = useState(false)
   return (
     <Sheet open={open} onOpenChange={setOpen}>

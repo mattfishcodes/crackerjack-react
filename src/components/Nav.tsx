@@ -8,15 +8,15 @@ import {
   NavigationMenuList,
 } from '@/shadcn/ui/navigation-menu'
 import { usePathname } from 'next/navigation'
-import routes from '@/app/routes'
+import { routes } from '@/app/routes'
 
-export const Nav = ({
+export default function Nav({
   orientation = 'horizontal',
   onNavigate = () => {},
 }: {
   orientation?: 'horizontal' | 'vertical'
   onNavigate?: () => void
-}) => {
+}) {
   const pn = usePathname()
   return (
     <NavigationMenu orientation={orientation}>

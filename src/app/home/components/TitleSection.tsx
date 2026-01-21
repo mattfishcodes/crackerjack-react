@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Separator } from '@/components/Separator'
+import Separator from '@/components/Separator'
 
 const TitleSection = () => {
   return (

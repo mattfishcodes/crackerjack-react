@@ -2,10 +2,10 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Nav } from '../Nav'
-import { Offcanvas } from '../Offcanvas'
+import Nav from './Nav'
+import Offcanvas from './Offcanvas'
 
-export const Header = () => {
+export default function Header() {
   return (
     <header className='border-b-2 border-gray-300'>
       <div className='container mx-auto px-4'>

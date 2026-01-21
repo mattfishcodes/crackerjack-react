@@ -2,11 +2,11 @@
 
 import { cn } from '@/lib/utils'
 
-export const Separator = ({
+export default function Separator({
   variant,
 }: {
   variant: 'light' | 'dark' | 'dotted'
-}) => {
+}) {
   return (
     <div
       className={cn(

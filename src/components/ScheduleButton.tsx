@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { SquareArrowOutUpRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-export const ScheduleButton = ({ color }: { color: 'light' | 'dark' }) => {
+export default function ScheduleButton({ color }: { color: 'light' | 'dark' }) {
   return (
     <Link
       href='https://crackerjack-solutions.moxieapp.com/public/crackerjack-solutions/consult-30-minutes'

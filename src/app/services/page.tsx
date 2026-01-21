@@ -1,12 +1,12 @@
-import { Container } from '@/components/Container'
-import { PageHeader } from '@/components/PageHeader'
+import Container from '@/components/Container'
+import PageHeader from '@/components/PageHeader'
 import ServiceDescription from './components/ServiceDescription'
 import RetainerPackages from './components/RetainerPackages'
 import ServicesList from './components/ServicesList'
 import SoftwareList from './components/SoftwareList'
 import ReviewsCarousel from './components/ReviewsCarousel'
-import { ScheduleButton } from '@/components/ScheduleButton'
-import { CourseAdvert } from './components/CourseAdvert'
+import ScheduleButton from '@/components/ScheduleButton'
+import CourseAdvert from './components/CourseAdvert'
 import { type Metadata } from 'next'
 
 export const metadata: Metadata = {

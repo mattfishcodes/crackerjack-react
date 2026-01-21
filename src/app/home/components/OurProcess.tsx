@@ -1,7 +1,7 @@
 'use client'
 
 import { ArrowDown } from 'lucide-react'
-import { Separator } from '@/components/Separator'
+import Separator from '@/components/Separator'
 
 const OurProcess = () => {
   return (

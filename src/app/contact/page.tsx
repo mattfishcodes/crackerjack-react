@@ -1,6 +1,6 @@
-import { PageHeader } from '@/components/PageHeader'
+import PageHeader from '@/components/PageHeader'
 import { type Metadata } from 'next'
-import { MoxieForm } from './components/MoxieForm'
+import MoxieForm from './components/MoxieForm'
 
 export const metadata: Metadata = {
   title: 'Contact',

@@ -7,8 +7,8 @@ import {
 } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const meowScript = Meow_Script({
   weight: ['400'],

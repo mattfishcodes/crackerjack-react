@@ -2,11 +2,11 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import routes from '@/app/routes'
+import { routes } from '@/app/routes'
 import { cn } from '@/lib/utils'
 import { Copyright } from 'lucide-react'
 
-export const Footer = () => {
+export default function Footer() {
   const pn = usePathname()
 
   return (
