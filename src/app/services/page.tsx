@@ -1,5 +1,3 @@
-'use client'
-
 import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 import ServiceDescription from './components/ServiceDescription'
@@ -9,6 +7,11 @@ import SoftwareList from './components/SoftwareList'
 import ReviewsCarousel from './components/ReviewsCarousel'
 import { ScheduleButton } from '@/components/ScheduleButton'
 import { CourseAdvert } from './components/CourseAdvert'
+import { type Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Services',
+}
 
 export default function Services() {
   return (

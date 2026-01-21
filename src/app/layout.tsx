@@ -33,7 +33,10 @@ const urbanist = Urbanist({
 })
 
 export const metadata: Metadata = {
-  title: 'Crackerjack Solutions - Virtual Business Management Services',
+  title: {
+    template: '%s | Crackerjack Solutions',
+    default: 'Crackerjack Solutions',
+  },
   description:
     'Crackerjack Solutions | Empowering Entrepreneurs and Business Leaders | Project, Systems and Operations Management',
 }

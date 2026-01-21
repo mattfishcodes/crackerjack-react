@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import Image from 'next/image'
 import { PageHeader } from '@/components/PageHeader'
@@ -9,6 +7,11 @@ import ChristineCerts from './components/ChristineCerts'
 import MatthewBio from './components/MatthewBio'
 import CoreValues from './components/CoreValues'
 import { ScheduleButton } from '@/components/ScheduleButton'
+import { type Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About',
+}
 
 export default function About() {
   return (

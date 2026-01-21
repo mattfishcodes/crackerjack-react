@@ -1,6 +1,9 @@
-'use client'
-
 import { Container } from '@/components/Container'
+import { type Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+}
 
 const PrivacyPolicy = () => {
   return (
