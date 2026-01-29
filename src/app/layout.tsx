@@ -9,6 +9,7 @@ import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import ConsentToast from '@/components/ConsentToast'
 
 const meowScript = Meow_Script({
   weight: ['400'],
@@ -41,8 +42,6 @@ export const metadata: Metadata = {
     'Crackerjack Solutions | Empowering Entrepreneurs and Business Leaders | Project, Systems and Operations Management',
 }
 
-const isProduction = process.env.NODE_ENV === 'production'
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -51,18 +50,33 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
-        {isProduction && (
-          <Script
-            id='google-tag-manager'
-            dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        <Script
+          id='google-consent-defaults'
+          strategy='beforeInteractive'
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+
+                  gtag('consent', 'default', {
+                    ad_storage: 'denied',
+                    analytics_storage: 'denied',
+                    ad_user_data: 'denied',
+                    ad_personalization: 'denied',
+                    wait_for_update: 500
+                  });`,
+          }}
+        />
+        <Script
+          id='google-tag-manager'
+          strategy='beforeInteractive'
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                 })(window,document,'script','dataLayer','GTM-TH5JV84B');`,
-            }}
-          />
-        )}
+          }}
+        />
 
         <link
           rel='icon'
@@ -85,22 +99,19 @@ export default function RootLayout({
       <body
         className={`${meowScript.variable} ${montserrat.variable} ${titilliumWeb.variable} ${urbanist.variable} antialiased`}
       >
-        {isProduction && (
-          // <!-- Google Tag Manager (noscript) -->
-          <noscript>
-            <iframe
-              src='https://www.googletagmanager.com/ns.html?id=GTM-TH5JV84B'
-              height='0'
-              width='0'
-              style={{ display: 'none', visibility: 'hidden' }}
-            ></iframe>
-          </noscript>
-          // <!-- End Google Tag Manager (noscript) -->
-        )}
+        <noscript>
+          <iframe
+            src='https://www.googletagmanager.com/ns.html?id=GTM-TH5JV84B'
+            height='0'
+            width='0'
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
 
         <Header />
         {children}
         <Footer />
+        <ConsentToast />
       </body>
     </html>
   )
