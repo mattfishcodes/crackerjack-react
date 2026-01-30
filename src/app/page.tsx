@@ -1,11 +1,14 @@
-'use client'
-
 import Container from '@/components/Container'
 import TitleSection from './home/components/TitleSection'
 import PaintPointsSection from './home/components/PainPointsSection'
 import ServicesLinks from './home/components/ServicesLinks'
 import OurProcess from './home/components/OurProcess'
 import ScheduleButton from '@/components/ScheduleButton'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Home | Crackerjack Solutions',
+}
 
 export default function Home() {
   return (

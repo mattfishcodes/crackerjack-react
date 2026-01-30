@@ -9,7 +9,7 @@ import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import ConsentToast from '@/components/ConsentToast'
+import ConsentDialog from '@/components/ConsentDialog'
 
 const meowScript = Meow_Script({
   weight: ['400'],
@@ -111,7 +111,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <ConsentToast />
+        <ConsentDialog />
       </body>
     </html>
   )
