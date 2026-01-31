@@ -40,6 +40,15 @@ export const metadata: Metadata = {
   },
   description:
     'Crackerjack Solutions | Empowering Entrepreneurs and Business Leaders | Project, Systems and Operations Management',
+  icons: {
+    icon: ['/favicon-96x96.png', '/favicon.svg'],
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
+  appleWebApp: {
+    title: 'Crackerjack Solutions',
+    statusBarStyle: 'black-translucent',
+  },
 }
 
 export default function RootLayout({
@@ -77,24 +86,6 @@ export default function RootLayout({
                 })(window,document,'script','dataLayer','GTM-TH5JV84B');`,
           }}
         />
-
-        <link
-          rel='icon'
-          type='image/png'
-          href='/favicon-96x96.png'
-          sizes='96x96'
-        />
-        <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-        <link
-          rel='apple-touch-icon'
-          sizes='180x180'
-          href='/apple-touch-icon.png'
-        />
-        <meta
-          name='apple-mobile-web-app-title'
-          content='Crackerjack Solutions'
-        />
-        <link rel='manifest' href='/site.webmanifest' />
       </head>
       <body
         className={`${meowScript.variable} ${montserrat.variable} ${titilliumWeb.variable} ${urbanist.variable} antialiased`}
