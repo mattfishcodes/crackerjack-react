@@ -1,11 +1,14 @@
 {
   "name": "crackerjack-react",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/nuggsrocks/crackerjack-react"
+  },
   "scripts": {
     "prepare": "husky",
     "dev": "next dev",
-    "postinstall": "node scripts/copy-consent.js",
     "build": "rm -rf out && node scripts/copy-consent.js && next build",
     "start": "next start",
     "lint": "eslint .",
@@ -34,7 +37,6 @@
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
-    "@mattfishcodes/image-tools": "file:///Users/mattfisher/dev/modules/image-tools",
     "@next/eslint-plugin-next": "^16.1.0",
     "@types/node": "^24",
     "@types/react": "^19",
@@ -43,6 +45,7 @@
     "eslint-config-next": "^16.1.6",
     "eslint-plugin-react-hooks": "^7.0.1",
     "husky": "^9.1.7",
+    "image-tools": "github:nuggsrocks/image-tools",
     "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",

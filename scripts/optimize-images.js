@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 
 const path = require('path')
-const { optimizeImages } = require('@mattfishcodes/image-tools')
+const { optimizeImages } = require('image-tools')
 
 optimizeImages({
   inputDir: path.join(__dirname, '../src/assets/images'),
