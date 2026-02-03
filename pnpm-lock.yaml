@@ -29,6 +29,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      cookie-consent:
+        specifier: github:nuggsrocks/cookie-consent
+        version: git+https://git@github.com:nuggsrocks/cookie-consent.git#e46e222dc0bcf7ddc042f59354380fcd636cef9e
       lucide-react:
         specifier: ^0.562.0
         version: 0.562.0(react@19.2.4)
@@ -1339,6 +1342,10 @@ packages:
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
+
+  cookie-consent@git+https://git@github.com:nuggsrocks/cookie-consent.git#e46e222dc0bcf7ddc042f59354380fcd636cef9e:
+    resolution: {commit: e46e222dc0bcf7ddc042f59354380fcd636cef9e, repo: git@github.com:nuggsrocks/cookie-consent.git, type: git}
+    version: 1.0.0
 
   cosmiconfig@9.0.0:
     resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
@@ -4056,6 +4063,8 @@ snapshots:
   concat-map@0.0.1: {}
 
   convert-source-map@2.0.0: {}
+
+  cookie-consent@git+https://git@github.com:nuggsrocks/cookie-consent.git#e46e222dc0bcf7ddc042f59354380fcd636cef9e: {}
 
   cosmiconfig@9.0.0(typescript@5.9.3):
     dependencies:

@@ -5,11 +5,10 @@ import {
   Titillium_Web,
   Urbanist,
 } from 'next/font/google'
-import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import ConsentDialog from '@/components/ConsentDialog'
+import Script from 'next/script'
 
 const meowScript = Meow_Script({
   weight: ['400'],
@@ -60,49 +59,18 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         <Script
-          id='google-consent-defaults'
+          id='cookie-consent-manager'
+          src='/consent.js'
           strategy='beforeInteractive'
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-
-                  gtag('consent', 'default', {
-                    ad_storage: 'denied',
-                    analytics_storage: 'denied',
-                    ad_user_data: 'denied',
-                    ad_personalization: 'denied',
-                    wait_for_update: 500
-                  });`,
-          }}
-        />
-        <Script
-          id='google-tag-manager'
-          strategy='beforeInteractive'
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-TH5JV84B');`,
-          }}
+          data-gtm='GTM-TH5JV84B'
         />
       </head>
       <body
         className={`${meowScript.variable} ${montserrat.variable} ${titilliumWeb.variable} ${urbanist.variable} antialiased`}
       >
-        <noscript>
-          <iframe
-            src='https://www.googletagmanager.com/ns.html?id=GTM-TH5JV84B'
-            height='0'
-            width='0'
-            style={{ display: 'none', visibility: 'hidden' }}
-          ></iframe>
-        </noscript>
-
         <Header />
         {children}
         <Footer />
-        <ConsentDialog />
       </body>
     </html>
   )

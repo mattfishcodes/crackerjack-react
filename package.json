@@ -5,7 +5,8 @@
   "scripts": {
     "prepare": "husky",
     "dev": "next dev",
-    "build": "rm -rf out && next build",
+    "postinstall": "node scripts/copy-consent.js",
+    "build": "rm -rf out && node scripts/copy-consent.js && next build",
     "start": "next start",
     "lint": "eslint .",
     "stylelint": "stylelint ./src/**/*.css --fix",
@@ -22,6 +23,7 @@
     "@tailwindcss/postcss": "^4.1.18",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cookie-consent": "github:nuggsrocks/cookie-consent",
     "lucide-react": "^0.562.0",
     "next": "^16.1.6",
     "postcss": "^8.5.6",
