@@ -7,16 +7,16 @@
     "url": "https://github.com/nuggsrocks/crackerjack-react"
   },
   "scripts": {
-    "prepare": "husky",
-    "dev": "node scripts/copy-consent.js && next dev",
-    "build": "rm -rf out && node scripts/copy-consent.js && next build",
+    "dev": "next dev",
+    "build": "pnpm copy-consent && rm -rf out && next build",
     "start": "next start",
     "lint": "eslint .",
     "stylelint": "stylelint ./src/**/*.css --fix",
     "prettier": "prettier . --write",
     "typecheck": "tsc --noEmit --project tsconfig.json",
     "cleanup": "npm run lint && npm run typecheck && npm run prettier",
-    "optimize-images": "node scripts/optimize-images.js"
+    "optimize-images": "node scripts/optimize-images.js",
+    "copy-consent": "node scripts/copy-consent.js"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.0",
@@ -26,7 +26,7 @@
     "@tailwindcss/postcss": "^4.1.18",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "cookie-consent": "github:nuggsrocks/cookie-consent#v1.2.1",
+    "cookie-consent": "github:nuggsrocks/cookie-consent#v1.2.2",
     "lucide-react": "^0.562.0",
     "next": "^16.1.6",
     "postcss": "^8.5.6",

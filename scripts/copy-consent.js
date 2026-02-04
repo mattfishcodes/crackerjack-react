@@ -5,9 +5,9 @@ const path = require('node:path')
 
 const src = path.resolve('node_modules/cookie-consent/dist/consent.iife.js')
 
-const dest = path.resolve('public/consent.js')
+const dest = path.resolve('public/consent.iife.js')
 
 fs.mkdirSync(path.dirname(dest), { recursive: true })
 fs.copyFileSync(src, dest)
 
-console.log('✔ consent.js copied to public/')
+console.log('✔ consent.iife.js copied to public/')
