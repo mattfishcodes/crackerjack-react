@@ -1,0 +1,2 @@
+overrides:
+  cookie-consent: link:../../../Library/pnpm/global/5/node_modules/cookie-consent
