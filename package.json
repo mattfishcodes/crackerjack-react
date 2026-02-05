@@ -10,10 +10,10 @@
     "dev": "next dev",
     "build": "pnpm copy-consent && next build",
     "start": "next start",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "stylelint": "stylelint ./src/**/*.css --fix",
     "prettier": "prettier . --write",
-    "typecheck": "tsc --noEmit --project tsconfig.json",
+    "typecheck": "tsc --noEmit",
     "cleanup": "npm run lint && npm run typecheck && npm run prettier",
     "optimize-images": "node scripts/optimize-images.js",
     "copy-consent": "node scripts/copy-consent.js"
