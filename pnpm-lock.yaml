@@ -30,7 +30,7 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       cookie-consent:
-        specifier: https://github.com/nuggsrocks/cookie-consent#v1.2.3
+        specifier: github:nuggsrocks/cookie-consent#v1.2.3
         version: https://codeload.github.com/nuggsrocks/cookie-consent/tar.gz/ca1b81411b15a174032f69d78ee238aa0205d44e(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       lucide-react:
         specifier: ^0.562.0
@@ -82,7 +82,7 @@ importers:
         specifier: ^9.1.7
         version: 9.1.7
       image-tools:
-        specifier: https://github.com/nuggsrocks/image-tools#v1.1.0
+        specifier: github:nuggsrocks/image-tools#v1.1.0
         version: https://codeload.github.com/nuggsrocks/image-tools/tar.gz/67a32a2353d3e00edd7db93d277ba0f553c13242
       lint-staged:
         specifier: ^16.2.7

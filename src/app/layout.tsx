@@ -60,7 +60,9 @@ export default function RootLayout({
       <body
         className={`${meowScript.variable} ${montserrat.variable} ${titilliumWeb.variable} ${urbanist.variable} antialiased`}
       >
-        <ConsentProvider gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+        <div className='cookie-consent'>
+          <ConsentProvider gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+        </div>
         <Header />
         {children}
         <Footer />
