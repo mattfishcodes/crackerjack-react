@@ -27,5 +27,5 @@ jobs:
           git add .
           git commit -m "Deploy $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
           git branch -M main
-          git remote add origin https://x-access-token:${{ secrets.DEPLOY_TOKEN }}@github.com/nuggsrocks/crackerjack-solutions-siteground.git
+          git remote add origin https://nuggsrocks:${{ secrets.DEPLOY_TOKEN }}@github.com/nuggsrocks/crackerjack-solutions-siteground.git
           git push -f origin main
