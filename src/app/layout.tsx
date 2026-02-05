@@ -8,7 +8,7 @@ import {
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import ConsentProvider from '@/components/ConsentProvider'
+import ConsentProvider from 'cookie-consent'
 
 const meowScript = Meow_Script({
   weight: ['400'],
@@ -60,7 +60,7 @@ export default function RootLayout({
       <body
         className={`${meowScript.variable} ${montserrat.variable} ${titilliumWeb.variable} ${urbanist.variable} antialiased`}
       >
-        <ConsentProvider />
+        <ConsentProvider gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
         <Header />
         {children}
         <Footer />
