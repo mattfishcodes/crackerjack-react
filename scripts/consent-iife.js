@@ -5,7 +5,9 @@ const path = require('node:path')
 
 const fn = 'consent.iife.js'
 
-const src = path.resolve(`node_modules/cookie-consent/dist/${fn}`)
+const src = path.resolve(
+  `node_modules/@mattfishcodes/cookie-consent/dist/${fn}`,
+)
 
 const dest = path.resolve(`public/${fn}`)
 

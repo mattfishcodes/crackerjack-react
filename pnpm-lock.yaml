@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@mattfishcodes/cookie-consent':
+        specifier: ^1.2.3
+        version: 1.2.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@next/third-parties':
         specifier: ^16.1.0
         version: 16.1.6(next@16.1.6(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
@@ -29,9 +32,6 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
-      cookie-consent:
-        specifier: github:nuggsrocks/cookie-consent#v1.2.3
-        version: https://codeload.github.com/nuggsrocks/cookie-consent/tar.gz/ca1b81411b15a174032f69d78ee238aa0205d44e(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       lucide-react:
         specifier: ^0.562.0
         version: 0.562.0(react@19.2.4)
@@ -57,6 +57,9 @@ importers:
         specifier: ^4.1.18
         version: 4.1.18
     devDependencies:
+      '@mattfishcodes/image-tools':
+        specifier: ^1.1.0
+        version: 1.1.0
       '@next/eslint-plugin-next':
         specifier: ^16.1.0
         version: 16.1.6
@@ -81,9 +84,6 @@ importers:
       husky:
         specifier: ^9.1.7
         version: 9.1.7
-      image-tools:
-        specifier: github:nuggsrocks/image-tools#v1.1.0
-        version: https://codeload.github.com/nuggsrocks/image-tools/tar.gz/67a32a2353d3e00edd7db93d277ba0f553c13242
       lint-staged:
         specifier: ^16.2.7
         version: 16.2.7
@@ -574,6 +574,16 @@ packages:
 
   '@keyv/serialize@1.1.1':
     resolution: {integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==}
+
+  '@mattfishcodes/cookie-consent@1.2.3':
+    resolution: {integrity: sha512-WNJllgRWdydzr/uHoNtFN3o3hURpnn+qPKyzn7HB83qWcjILmJ2txyhq1B071NBIVWqz8ckrULMEU3zutt/2qg==}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+
+  '@mattfishcodes/image-tools@1.1.0':
+    resolution: {integrity: sha512-3xhHyGtwiUa8FB1EMwdsdngKQQkPACQfjawt+4okF6E+B06B3/M71qiDrhyMA4On0hksyCMUYOmeu+TSusSgaQ==}
+    engines: {node: '>=24'}
 
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
@@ -1383,13 +1393,6 @@ packages:
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
 
-  cookie-consent@https://codeload.github.com/nuggsrocks/cookie-consent/tar.gz/ca1b81411b15a174032f69d78ee238aa0205d44e:
-    resolution: {tarball: https://codeload.github.com/nuggsrocks/cookie-consent/tar.gz/ca1b81411b15a174032f69d78ee238aa0205d44e}
-    version: 1.2.3
-    peerDependencies:
-      react: '>=18'
-      react-dom: '>=18'
-
   cosmiconfig@9.0.0:
     resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
     engines: {node: '>=14'}
@@ -1875,11 +1878,6 @@ packages:
   ignore@7.0.5:
     resolution: {integrity: sha512-Hs59xBNfUIunMFgWAbGX5cq6893IbWg4KnrjbYwX3tx0ztorVgTDA6B2sxf8ejHJ4wz8BqGUMYlnzNBer5NvGg==}
     engines: {node: '>= 4'}
-
-  image-tools@https://codeload.github.com/nuggsrocks/image-tools/tar.gz/67a32a2353d3e00edd7db93d277ba0f553c13242:
-    resolution: {tarball: https://codeload.github.com/nuggsrocks/image-tools/tar.gz/67a32a2353d3e00edd7db93d277ba0f553c13242}
-    version: 1.1.0
-    engines: {node: '>=24'}
 
   import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
@@ -3372,6 +3370,16 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
+  '@mattfishcodes/cookie-consent@1.2.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+
+  '@mattfishcodes/image-tools@1.1.0':
+    dependencies:
+      fs-extra: 11.3.3
+      sharp: 0.33.5
+
   '@napi-rs/wasm-runtime@0.2.12':
     dependencies:
       '@emnapi/core': 1.8.1
@@ -4111,11 +4119,6 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
-  cookie-consent@https://codeload.github.com/nuggsrocks/cookie-consent/tar.gz/ca1b81411b15a174032f69d78ee238aa0205d44e(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
-    dependencies:
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
-
   cosmiconfig@9.0.0(typescript@5.9.3):
     dependencies:
       env-paths: 2.2.1
@@ -4739,11 +4742,6 @@ snapshots:
   ignore@5.3.2: {}
 
   ignore@7.0.5: {}
-
-  image-tools@https://codeload.github.com/nuggsrocks/image-tools/tar.gz/67a32a2353d3e00edd7db93d277ba0f553c13242:
-    dependencies:
-      fs-extra: 11.3.3
-      sharp: 0.33.5
 
   import-fresh@3.3.1:
     dependencies:

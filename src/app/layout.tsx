@@ -8,7 +8,7 @@ import {
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import ConsentProvider from 'cookie-consent'
+import ConsentProvider from '@mattfishcodes/cookie-consent'
 
 const meowScript = Meow_Script({
   weight: ['400'],
