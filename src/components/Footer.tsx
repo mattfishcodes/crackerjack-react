@@ -8,6 +8,7 @@ import { Copyright } from 'lucide-react'
 
 export default function Footer() {
   const pn = usePathname()
+  const year = new Date().getFullYear()
 
   return (
     <footer>
@@ -41,7 +42,8 @@ export default function Footer() {
         </nav>
       </div>
       <div className='flex flex-row items-center justify-center py-4 font-semibold'>
-        <Copyright className='mr-1' /> 2025 Crackerjack Solutions LLC
+        <Copyright className='mr-1' />
+        {` ${year} Crackerjack Solutions LLC`}
       </div>
     </footer>
   )
