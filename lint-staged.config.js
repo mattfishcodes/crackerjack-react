@@ -1,12 +1,8 @@
 module.exports = {
   '*.{ts,tsx,mjs,js}': (files) => [
-    `npx eslint --fix ${files.join(' ')}`,
-    'npm run typecheck',
-    `npx prettier ${files.join(' ')} --write`,
+    `pnpm lint ${files.join(' ')}`,
+    'pnpm typecheck',
   ],
-  '*.json': (files) => [`npx prettier ${files.join(' ')} --write`],
-  '*.css': (files) => [
-    `npx stylelint ${files.join(' ')} --fix`,
-    `npx prettier ${files.join(' ')} --write`,
-  ],
+  '*.css': (files) => `pnpm stylelint ${files.join(' ')}`,
+  '*': (files) => `pnpm format ${files.join(' ')}`,
 }
