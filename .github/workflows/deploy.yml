@@ -1,0 +1,35 @@
+name: Deploy Static Site to Github
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install
+        run: |
+          npm i -g pnpm
+          pnpm install
+
+      - name: Build static site
+        run: pnpm build
+
+      - name: Add to Github
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        run: |
+          git clone https://nuggsrocks:${DEPLOY_TOKEN}@github.com/nuggsrocks/crackerjack-solutions-siteground.git prod
+          rsync -av out/ prod/
+
+          cd prod
+          git config user.name "deploy-bot"
+          git config user.email "deploy@bot.com"
+
+          git add .
+          git commit -m "Deploy $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || echo "No changes to commit"
+
+          git push origin main
