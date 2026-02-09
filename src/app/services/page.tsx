@@ -8,12 +8,15 @@ import ReviewsCarousel from './components/ReviewsCarousel'
 import ScheduleButton from '@/components/ScheduleButton'
 import CourseAdvert from './components/CourseAdvert'
 import { type Metadata } from 'next'
+import { getReviews } from '@/lib/getReviews'
 
 export const metadata: Metadata = {
   title: 'Services',
 }
 
-export default function Services() {
+export default async function Services() {
+  const reviews = await getReviews()
+
   return (
     <main>
       <Container className='bg-primary'>
@@ -61,7 +64,7 @@ export default function Services() {
       </Container>
 
       <Container>
-        <ReviewsCarousel />
+        <ReviewsCarousel reviews={reviews} />
       </Container>
     </main>
   )
