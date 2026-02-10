@@ -10,12 +10,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Add pnpm
+        run: npm i -g pnpm
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'pnpm'
+
       - name: Install
-        run: |
-          npm i -g pnpm
-          pnpm install
+        run: pnpm install
 
       - name: Build static site
+        env:
+          NEXT_PUBLIC_GTM_ID: ${{ secrets.NEXT_PUBLIC_GTM_ID }}
         run: pnpm build
 
       - name: Add to Github
