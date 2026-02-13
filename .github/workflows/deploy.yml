@@ -31,7 +31,7 @@ jobs:
         env:
           DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         run: |
-          git clone https://nuggsrocks:${DEPLOY_TOKEN}@github.com/nuggsrocks/crackerjack-solutions-siteground.git prod
+          git clone https://mattfishcodes:${DEPLOY_TOKEN}@github.com/mattfishcodes/crackerjack-solutions-siteground.git prod
           rsync -av out/ prod/
 
           cd prod
