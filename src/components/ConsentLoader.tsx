@@ -9,5 +9,14 @@ export default function ConsentLoader() {
     return null
   }
 
-  return <ConsentProvider gtmId={gtmId} />
+  return (
+    <ConsentProvider
+      gtmId={gtmId}
+      domain={
+        process.env.NODE_ENV === 'production'
+          ? 'crackerjacksolutions.com'
+          : 'localhost'
+      }
+    />
+  )
 }

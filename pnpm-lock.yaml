@@ -8,8 +8,8 @@ importers:
   .:
     dependencies:
       '@mattfishcodes/cookie-consent':
-        specifier: ^1.3.2
-        version: 1.3.2
+        specifier: 1.4.0
+        version: 1.4.0
       '@mattfishcodes/google-sheets':
         specifier: ^1.0.1
         version: 1.0.1
@@ -855,10 +855,10 @@ packages:
         integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==,
       }
 
-  '@mattfishcodes/cookie-consent@1.3.2':
+  '@mattfishcodes/cookie-consent@1.4.0':
     resolution:
       {
-        integrity: sha512-FL6L6BuR4EgxfLUzbo3TmhNvQ1D9y/XjVD2NdaZXfjMSpEEiVey54VH7ajcVH7ArGoFBtGj+acescO0sJvo0wQ==,
+        integrity: sha512-NJkQgfzgNqpRpcePV1Uvz4OpOJri8JnERGcMZsSO0LKIC1A6IyrArkkh3ufd6mX16HLRhim+nqIDLz2UrTIRrQ==,
       }
 
   '@mattfishcodes/google-sheets@1.0.1':
@@ -5164,7 +5164,7 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@mattfishcodes/cookie-consent@1.3.2':
+  '@mattfishcodes/cookie-consent@1.4.0':
     dependencies:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
