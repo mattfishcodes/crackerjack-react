@@ -4,24 +4,15 @@ import ServiceDescription from './components/ServiceDescription'
 import RetainerPackages from './components/RetainerPackages'
 import ServicesList from './components/ServicesList'
 import SoftwareList from './components/SoftwareList'
-import ReviewsCarousel from './components/ReviewsCarousel'
 import ScheduleButton from '@/components/ScheduleButton'
 import CourseAdvert from './components/CourseAdvert'
 import { type Metadata } from 'next'
-import { client } from '@/sanity/client'
-import { type SanityDocument } from 'next-sanity'
-
-export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Services',
 }
 
-const REVIEWS_QUERY = `*[_type == "review"]|order(_createdAt){_id, name, body}`
-
 export default async function Services() {
-  const reviews = await client.fetch<SanityDocument[]>(REVIEWS_QUERY)
-
   return (
     <main>
       <Container className='bg-primary'>
@@ -66,10 +57,6 @@ export default async function Services() {
 
       <Container className='from-secondary to-primary bg-linear-30 from-85% to-95%'>
         <SoftwareList />
-      </Container>
-
-      <Container>
-        <ReviewsCarousel reviews={reviews} />
       </Container>
     </main>
   )

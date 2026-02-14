@@ -25,15 +25,17 @@ jobs:
       - name: Build static site
         env:
           NEXT_PUBLIC_GTM_ID: ${{ secrets.NEXT_PUBLIC_GTM_ID }}
+          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
         run: |
-          pnpm -r copy-consent
-          pnpm -r build
+          pnpm --filter web copy-consent
+          pnpm --filter web build
 
       - name: Add to Github
         env:
           DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         run: |
           cd web
+
           git clone https://mattfishcodes:${DEPLOY_TOKEN}@github.com/mattfishcodes/crackerjack-solutions-siteground.git prod
 
           rsync -av --delete --exclude '.git/' out/ prod/
@@ -43,6 +45,7 @@ jobs:
           git config user.email "deploy@bot.com"
 
           git add .
+
           git commit -m "Deploy $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || echo "No changes to commit"
 
           git push origin main

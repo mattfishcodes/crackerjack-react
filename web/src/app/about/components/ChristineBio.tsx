@@ -1,13 +1,24 @@
-'use client'
-
 import Image from 'next/image'
 import { Suspense } from 'react'
 import { Skeleton } from '@/shadcn/ui/skeleton'
+import { client } from '@/sanity/client'
+import { SanityDocument } from 'next-sanity'
 
-const ChristineBio = () => {
+export const dynamic = 'force-static'
+
+const BIO_QUERY =
+  '*[_type == "bio" && name == "Christine Warner"]{_id, name, body}'
+
+export default async function ChristineBio() {
+  const bio = (await client.fetch<SanityDocument[]>(BIO_QUERY))[0]
+
+  const paragraphs: string[] = bio.body
+    .split('\n')
+    .filter((p: string) => p.length > 0)
+
   return (
     <>
-      <h2>Christine Warner</h2>
+      <h2>{bio.name}</h2>
       <div>
         <div className='mb-4 w-full md:float-left md:mr-4 md:w-60'>
           <Suspense fallback={<Skeleton className='aspect-square w-full' />}>
@@ -23,43 +34,11 @@ const ChristineBio = () => {
           </Suspense>
         </div>
         <div>
-          <p>
-            Hey there! I&apos;m Christine, the founder of Crackerjack Solutions.
-            With a lifelong background in entrepreneurship and over 25 years of
-            corporate experience across diverse industries, I&apos;ve embraced
-            the digital nomad lifestyle for the past 8 years to refine my
-            expertise.
-          </p>
-          <p>
-            At Crackerjack Solutions, I help entrepreneurs, solopreneurs, and
-            freelancers strategize, organize, and streamline their operations.
-            Think of me as your behind-the-scenes sherpa, leading you through
-            complex business terrain and fine-tuning your systems.
-          </p>
-          <p>
-            I excel at strategic thinking and solving complex business
-            challenges through the effective use of technology, processes, and
-            resources. Together, we&apos;ll create a plan to automate and
-            streamline your operations, transforming chaos into efficiency and
-            freeing you to focus on what you do best. Building strong
-            relationships with customers is a priority for me.
-          </p>
-          <p>
-            When I&apos;m not busy crafting business solutions, you can find me
-            exploring the beautiful woods and waters of Traverse City, tending
-            to my garden, getting lost in a good book, or painting my next
-            masterpiece. After all, even a sherpa needs some downtime to
-            recharge!
-          </p>
-          <p>
-            I&apos;m excited to help you achieve peak efficiency and tackle your
-            business challenges. Let&apos;s optimize your business for peak
-            performance!
-          </p>
+          {paragraphs.map((p) => (
+            <p key={p}>{p}</p>
+          ))}
         </div>
       </div>
     </>
   )
 }
-
-export default ChristineBio

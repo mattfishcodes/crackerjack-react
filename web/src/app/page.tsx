@@ -7,12 +7,21 @@ import ScheduleButton from '@/components/ScheduleButton'
 import { Metadata } from 'next'
 import Script from 'next/script'
 import { OnlineBusiness, WithContext } from 'schema-dts'
+import ReviewsCarousel from './home/components/ReviewsCarousel'
+import { client } from '@/sanity/client'
+import { type SanityDocument } from 'next-sanity'
+
+export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Home | Crackerjack Solutions',
 }
 
-export default function Home() {
+const REVIEWS_QUERY = `*[_type == "review"]|order(_createdAt){_id, name, body}`
+
+export default async function Home() {
+  const reviews = await client.fetch<SanityDocument[]>(REVIEWS_QUERY)
+
   const jsonLd: WithContext<OnlineBusiness> = {
     '@context': 'https://schema.org',
     '@type': 'OnlineStore',
@@ -71,6 +80,10 @@ export default function Home() {
             get in touch today and unlock your business&apos;s full potential?
           </p>
           <ScheduleButton color='dark' />
+        </Container>
+
+        <Container>
+          <ReviewsCarousel reviews={reviews} />
         </Container>
 
         <Container>

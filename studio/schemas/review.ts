@@ -8,12 +8,12 @@ export const reviewType = defineType({
     defineField({
       name: 'name',
       type: 'string',
-      validation: (rule) => rule.required(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'body',
-      type: 'string',
-      validation: (rule) => rule.required(),
+      type: 'text',
+      validation: (Rule) => Rule.required(),
     }),
   ],
 })
