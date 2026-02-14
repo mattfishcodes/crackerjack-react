@@ -2,12 +2,12 @@
 
 import { useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { Review } from '@/lib/schemas/review'
+import { SanityDocument } from 'next-sanity'
 
 export default function ReviewsCarousel({
   reviews = [],
 }: {
-  reviews: Review[]
+  reviews: SanityDocument[]
 }) {
   const ulRef = useRef<HTMLUListElement | null>(null)
   const liRef = useRef<HTMLLIElement | null>(null)
@@ -49,10 +49,10 @@ export default function ReviewsCarousel({
           ref={ulRef}
           className='mb-4 flex snap-x snap-mandatory gap-[1.1rem] overflow-x-scroll scroll-smooth px-4'
         >
-          {reviews.map((r: Review, i: number) => {
+          {reviews.map((r: SanityDocument, i: number) => {
             return (
               <li
-                key={r.name}
+                key={r._id}
                 ref={i === 0 ? liRef : undefined}
                 className='flex flex-[100%] shrink-0 grow-0 snap-center list-none flex-col justify-center border border-gray-200 p-4'
               >

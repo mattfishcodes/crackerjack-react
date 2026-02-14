@@ -8,14 +8,19 @@ import ReviewsCarousel from './components/ReviewsCarousel'
 import ScheduleButton from '@/components/ScheduleButton'
 import CourseAdvert from './components/CourseAdvert'
 import { type Metadata } from 'next'
-import { getReviews } from '@/lib/getReviews'
+import { client } from '@/sanity/client'
+import { type SanityDocument } from 'next-sanity'
+
+export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Services',
 }
 
+const REVIEWS_QUERY = `*[_type == "review"]|order(_createdAt){_id, name, body}`
+
 export default async function Services() {
-  const reviews = await getReviews()
+  const reviews = await client.fetch<SanityDocument[]>(REVIEWS_QUERY)
 
   return (
     <main>
