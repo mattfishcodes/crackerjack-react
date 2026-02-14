@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm copy-consent && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint --fix",
     "stylelint": "stylelint --fix",
