@@ -4,6 +4,9 @@ const command = process.env.npm_lifecycle_event
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  allowedDevOrigins: ['192.168.1.*'],
+
+  // important for siteground
   output: command === 'build' ? 'export' : undefined,
   trailingSlash: true,
   images: {
@@ -11,7 +14,6 @@ const nextConfig: NextConfig = {
     deviceSizes: [576, 768, 992, 1200, 1400],
     imageSizes: [16, 32, 256],
   },
-  allowedDevOrigins: ['192.168.1.*'],
 }
 
 export default nextConfig

@@ -25,12 +25,13 @@ jobs:
       - name: Build static site
         env:
           NEXT_PUBLIC_GTM_ID: ${{ secrets.NEXT_PUBLIC_GTM_ID }}
-        run: pnpm build
+        run: pnpm -r build
 
       - name: Add to Github
         env:
           DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         run: |
+          cd web
           git clone https://mattfishcodes:${DEPLOY_TOKEN}@github.com/mattfishcodes/crackerjack-solutions-siteground.git prod
           rsync -av out/ prod/
 

@@ -59,10 +59,7 @@ export default function MoxieForm() {
 
   return (
     <Container>
-      <Script
-        type='text/javascript'
-        src='https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.10/iframeResizer.min.js'
-      ></Script>
+      <Script src='https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.10/iframeResizer.min.js'></Script>
 
       <div className='min-h-150 w-full'>
         <iframe
