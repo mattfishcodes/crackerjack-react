@@ -44,7 +44,7 @@ jobs:
         run: |
           cd web
 
-          git clone -b dev ---single-branch https://mattfishcodes:${DEPLOY_TOKEN}@github.com/mattfishcodes/crackerjack-solutions-siteground.git prod
+          git clone -b dev --single-branch https://mattfishcodes:${DEPLOY_TOKEN}@github.com/mattfishcodes/crackerjack-solutions-siteground.git prod
 
           rsync -av --delete --exclude '.git/' out/ prod/
 
