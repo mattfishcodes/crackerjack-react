@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import {defineField, defineType} from 'sanity'
 
 export const reviewType = defineType({
   name: 'review',
@@ -8,12 +8,12 @@ export const reviewType = defineType({
     defineField({
       name: 'name',
       type: 'string',
-      validation: (Rule) => Rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'body',
       type: 'text',
-      validation: (Rule) => Rule.required(),
+      validation: (rule) => rule.required(),
     }),
   ],
 })

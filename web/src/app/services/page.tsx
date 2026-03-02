@@ -7,26 +7,38 @@ import SoftwareList from './components/SoftwareList'
 import ScheduleButton from '@/components/ScheduleButton'
 import CourseAdvert from './components/CourseAdvert'
 import { type Metadata } from 'next'
+import ReviewsCarousel from './components/ReviewsCarousel'
+import { client } from '@/sanity/client'
+import { type SanityDocument } from 'next-sanity'
+import Link from 'next/link'
+import { SquareArrowOutUpRight } from 'lucide-react'
+
+export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Services',
 }
 
+const HERO_QUERY =
+  '*[_type == "hero"]{_id, heading, description, buttonText, buttonLink}'
+const REVIEWS_QUERY = `*[_type == "review"]|order(_createdAt){_id, name, body}`
+
 export default async function Services() {
+  const hero = await client.fetch<SanityDocument[]>(HERO_QUERY)
+
+  const reviews = await client.fetch<SanityDocument[]>(REVIEWS_QUERY)
   return (
     <main>
-      <Container className='bg-primary'>
-        <CourseAdvert />
-      </Container>
-      <Container className='text-center'>
-        <h3>Interested in Exploring How our Services Can Benefit You?</h3>
-        <p>
-          Schedule your complimentary 30 minute call below.
-          <br />
-          Let&apos;s explore how to navigate life&apos;s unpredictability
-          together and find that equilibrium you&apos;re searching for.
-        </p>
-        <ScheduleButton color='light' />
+      <Container className='bg-primary text-center'>
+        <h1 className='text-primary-foreground'>{hero[0].heading}</h1>
+        <p className='text-white'>{hero[0].description}</p>
+
+        <Link
+          href={hero[0].buttonLink}
+          className='text-secondary-foreground bg-secondary border-secondary hover:border-primary focus:border-primary active:border-primary font-titillium-web inline-block cursor-pointer rounded-3xl border-4 px-8 py-4 text-2xl font-bold transition-all hover:bg-white focus:bg-white active:bg-white'
+        >
+          {hero[0].buttonText}
+        </Link>
       </Container>
 
       <PageHeader>Services</PageHeader>
@@ -53,6 +65,10 @@ export default async function Services() {
 
       <Container className='text-foreground bg-gray-100'>
         <ServicesList />
+      </Container>
+
+      <Container>
+        <ReviewsCarousel reviews={reviews} />
       </Container>
 
       <Container className='from-secondary to-primary bg-linear-30 from-85% to-95%'>
