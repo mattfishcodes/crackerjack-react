@@ -5,11 +5,12 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
+  - package-ecosystem: 'npm' # See documentation for possible values
     directories: # Location of package manifests
-      - "/studio"
-      - "/web"
-      - "/"
+      - '/studio'
+      - '/web'
+      - '/'
     schedule:
-      interval: "daily"
-      time: "02:35"
+      interval: 'weekly'
+      day: 'monday'
+      time: '02:00'
