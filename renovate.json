@@ -4,9 +4,16 @@
   "timezone": "America/Detroit",
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["* 0-3 * * 1"]
+    "schedule": ["before 3am on monday"]
   },
+
+  "schedule": ["every weekend"],
+
   "ignoreDeps": ["eslint"],
+
+  "prConcurrentLimit": 1,
+  "prHourlyLimit": 1,
+
   "packageRules": [
     {
       "matchDatasources": ["node-version"],
@@ -19,6 +26,16 @@
     {
       "matchDepTypes": ["devDependencies"],
       "groupName": "dev dependencies"
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "groupName": "runtime dependencies"
     }
-  ]
+  ],
+
+  "ignorePaths": [".nvmrc", ".node-version"],
+
+  "semanticCommits": "enabled",
+  "semanticCommitType": "chore",
+  "semanticCommitScope": "deps"
 }
