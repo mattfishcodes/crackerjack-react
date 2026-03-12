@@ -9,6 +9,10 @@
   "ignoreDeps": ["eslint"],
   "packageRules": [
     {
+      "matchDatasources": ["node-version"],
+      "enabled": false
+    },
+    {
       "matchUpdateTypes": ["patch"],
       "groupName": "patch dependencies"
     },
