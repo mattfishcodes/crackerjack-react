@@ -6,6 +6,7 @@
     "enabled": true,
     "schedule": ["* 0-3 * * 1"]
   },
+  "ignoreDeps": ["eslint"],
   "packageRules": [
     {
       "matchUpdateTypes": ["patch"],
