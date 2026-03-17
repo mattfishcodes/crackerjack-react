@@ -1,17 +1,12 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
-export const heroType = defineType({
-  name: 'hero',
-  title: 'Hero',
+export const ctaType = defineType({
+  name: 'cta',
+  title: 'CTA',
   type: 'document',
   fields: [
     defineField({
-      name: 'heading',
-      type: 'string',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      name: 'description',
+      name: 'name',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
@@ -21,8 +16,12 @@ export const heroType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'buttonLink',
+      name: 'buttonSubtext',
       type: 'string',
+    }),
+    defineField({
+      name: 'buttonLink',
+      type: 'url',
       validation: (rule) => rule.required(),
     }),
   ],

@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity'
 
-export const reviewType = defineType({
-  name: 'review',
-  title: 'Review',
+export const personType = defineType({
+  name: 'person',
+  title: 'Person',
   type: 'document',
   fields: [
     defineField({
@@ -11,9 +11,18 @@ export const reviewType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'body',
+      name: 'role',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'bio',
       type: 'text',
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'image',
+      type: 'image',
     }),
   ],
 })

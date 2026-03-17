@@ -1,9 +1,13 @@
-'use client'
-
 import Image from 'next/image'
 import Separator from '@/components/Separator'
+import { client } from '@/sanity/client'
 
-const TitleSection = () => {
+const heroQuery = `*[_type == "homePage"][0]{hero}`
+
+const HeroSection = async () => {
+  const content = await client.fetch(heroQuery)
+
+  const hero = content.hero
   return (
     <>
       <div className='flex flex-col items-center justify-between gap-4 text-center lg:flex-row'>
@@ -19,24 +23,14 @@ const TitleSection = () => {
           />
         </div>
         <div>
-          <h1>Crackerjack Solutions</h1>
+          <h1>{hero.title}</h1>
           <Separator variant='light' />
-          <p>
-            Welcome to Crackerjack Solutions Virtual Business Management
-            Services!
-          </p>
-          <p>
-            Empowering Entrepreneurs and Business Leaders to cultivate business
-            growth, elevate productivity, and optimize operations.
-          </p>
-          <p>
-            Unleash Your Potential, Reduce Stress, and Reclaim Time for What
-            Matters Most!
-          </p>
+          <h2>{hero.headline}</h2>
+          <p>{hero.subtext}</p>
         </div>
       </div>
     </>
   )
 }
 
-export default TitleSection
+export default HeroSection

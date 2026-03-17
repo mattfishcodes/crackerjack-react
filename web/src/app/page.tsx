@@ -1,5 +1,5 @@
 import Container from '@/components/Container'
-import TitleSection from './home/components/TitleSection'
+import HeroSection from './home/components/HeroSection'
 import PaintPointsSection from './home/components/PainPointsSection'
 import ServicesLinks from './home/components/ServicesLinks'
 import OurProcess from './home/components/OurProcess'
@@ -7,15 +7,12 @@ import ScheduleButton from '@/components/ScheduleButton'
 import { Metadata } from 'next'
 import Script from 'next/script'
 import { OnlineBusiness, WithContext } from 'schema-dts'
-import ReviewsCarousel from './services/components/ReviewsCarousel'
-import { client } from '@/sanity/client'
-import { type SanityDocument } from 'next-sanity'
 
 export const metadata: Metadata = {
   title: 'Home | Crackerjack Solutions',
 }
 
-export default async function Home() {
+export default function Home() {
   const jsonLd: WithContext<OnlineBusiness> = {
     '@context': 'https://schema.org',
     '@type': 'OnlineStore',
@@ -40,7 +37,7 @@ export default async function Home() {
       />
       <main>
         <Container className='bg-primary text-white'>
-          <TitleSection />
+          <HeroSection />
         </Container>
 
         <Container>
