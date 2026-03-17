@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "pnpm -r dev",
     "build": "pnpm -r build",
+    "deploy": "pnpm -r run deploy",
     "format": "prettier --write --ignore-unknown",
     "prepare": "husky"
   },
