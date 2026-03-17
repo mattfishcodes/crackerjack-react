@@ -11,9 +11,6 @@
 
   "ignoreDeps": ["eslint"],
 
-  "prConcurrentLimit": 1,
-  "prHourlyLimit": 1,
-
   "packageRules": [
     {
       "matchDatasources": ["node-version"],
