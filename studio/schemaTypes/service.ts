@@ -15,6 +15,5 @@ export const serviceType = {
       type: 'array',
       of: [{ type: 'string' }],
     },
-    { name: 'icon', type: 'image' },
   ],
 }
