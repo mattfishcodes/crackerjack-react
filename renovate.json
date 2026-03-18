@@ -1,10 +1,11 @@
 {
   "extends": ["config:recommended"],
+  "baseBranches": ["dev"],
   "rangeStrategy": "bump",
   "timezone": "America/Detroit",
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 3am on monday"]
+    "schedule": ["every weekend"]
   },
 
   "schedule": ["every weekend"],
