@@ -8,6 +8,7 @@ import Script from 'next/script'
 import { OnlineBusiness, WithContext } from 'schema-dts'
 import TransformationSection from './home/components/TransformationSection'
 import MoxiePromoSection from './home/components/MoxiePromoSection'
+import CallToActionSection from './home/components/CallToActionSection'
 
 export const metadata: Metadata = {
   title: 'Home | Crackerjack Solutions',
@@ -49,11 +50,11 @@ export default function Home() {
 
         <MoxiePromoSection />
 
+        <CallToActionSection />
+
         <OurProcessSection />
 
-        <Container className='text-foreground bg-gray-100'>
-          <ServicesLinks />
-        </Container>
+        <ServicesLinks />
       </main>
     </>
   )
