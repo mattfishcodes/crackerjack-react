@@ -10,10 +10,14 @@
     "dev": "pnpm -r dev",
     "build": "pnpm -r build",
     "deploy": "pnpm -r run deploy",
-    "format": "prettier --write --ignore-unknown",
+    "format": "prettier --write .",
+    "lint": "pnpm -r lint",
     "prepare": "husky"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "prettier": "^3.8.1",

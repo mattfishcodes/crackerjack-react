@@ -20,6 +20,10 @@ out/
 # production
 prod/
 
+# sanity.io
+dist/
+.sanity/
+
 # misc
 .DS_Store
 *.pem
