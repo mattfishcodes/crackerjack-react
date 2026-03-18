@@ -1,38 +1,54 @@
 {
-  "extends": ["config:recommended"],
-  "baseBranches": ["dev"],
+  "extends": [
+    "config:recommended"
+  ],
+  "baseBranchPatterns": [
+    "dev"
+  ],
   "rangeStrategy": "bump",
   "timezone": "America/Detroit",
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["every weekend"]
+    "schedule": [
+      "every weekend"
+    ]
   },
-
-  "schedule": ["every weekend"],
-
-  "ignoreDeps": ["eslint"],
-
+  "schedule": [
+    "every weekend"
+  ],
+  "ignoreDeps": [
+    "eslint"
+  ],
   "packageRules": [
     {
-      "matchDatasources": ["node-version"],
+      "matchDatasources": [
+        "node-version"
+      ],
       "enabled": false
     },
     {
-      "matchUpdateTypes": ["patch"],
+      "matchUpdateTypes": [
+        "patch"
+      ],
       "groupName": "patch dependencies"
     },
     {
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
       "groupName": "dev dependencies"
     },
     {
-      "matchDepTypes": ["dependencies"],
+      "matchDepTypes": [
+        "dependencies"
+      ],
       "groupName": "runtime dependencies"
     }
   ],
-
-  "ignorePaths": [".nvmrc", ".node-version"],
-
+  "ignorePaths": [
+    ".nvmrc",
+    ".node-version"
+  ],
   "semanticCommits": "enabled",
   "semanticCommitType": "chore",
   "semanticCommitScope": "deps"
