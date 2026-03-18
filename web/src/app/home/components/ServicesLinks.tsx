@@ -1,54 +1,32 @@
-'use client'
-
-import Link from 'next/link'
-import { Cog, List, Waypoints } from 'lucide-react'
 import Separator from '@/components/Separator'
+import { client } from '@/sanity/client'
+import { type SanityDocument } from 'next-sanity'
+import Link from 'next/link'
 
-const links = [
-  {
-    name: 'Systems Analysis',
-    href: '/services#systems-analysis',
-    icon: <List size={48} />,
-  },
-  {
-    name: 'CRM Setup',
-    href: '/services#crm-setup',
-    icon: <Cog size={48} />,
-  },
-  {
-    name: 'Website Refresh',
-    href: '/services#website-refresh',
-    icon: <Waypoints size={48} />,
-  },
-]
+const servicesQuery = `*[_type == "service"]{_id, description, slug, title}`
 
-const ServicesLinks = () => {
+const headingQuery = `*[_type == "homePage"][0]{"heading": servicesHeading}`
+
+export default async function ServicesLinks() {
+  const services: SanityDocument[] = await client.fetch(servicesQuery)
+
+  const { heading } = await client.fetch(headingQuery)
+
   return (
     <>
-      <h3 className='text-center font-semibold'>Services</h3>
+      <h3 className='text-center font-semibold'>{heading}</h3>
 
       <Separator variant='dark' />
 
       <div className='flex w-full flex-col gap-2 lg:flex-row'>
-        {links.map((link, i) => {
-          return (
-            <Link
-              key={i}
-              href={link.href}
-              className='group bg-primary text-primary-foreground hover:bg-secondary focus:bg-secondary active:bg-secondary flex flex-row items-center rounded-xl p-[1.5rem_1rem] lg:min-h-60 lg:flex-1/3 lg:flex-col lg:justify-center lg:transition-all'
-            >
-              <span className='group-hover:text-secondary-foreground group-focus:text-secondary-foreground group-active:text-secondary-foreground mr-2 flex items-center justify-center lg:m-0 lg:transition-all'>
-                {link.icon}
-              </span>
-              <span className='group-hover:text-secondary-foreground group-focus:text-secondary-foreground group-active:text-secondary-foreground text-2xl lg:transition-all'>
-                {link.name}
-              </span>
-            </Link>
-          )
-        })}
+        {services.map((s) => (
+          <div key={s._id}>
+            <span>{s.title}</span>
+            <p>{s.description}</p>
+            <Link href={'/services#' + s.slug.current}>Learn More</Link>
+          </div>
+        ))}
       </div>
     </>
   )
 }
-
-export default ServicesLinks
