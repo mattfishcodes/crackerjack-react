@@ -1,17 +1,15 @@
 import Container from '@/components/Container'
 import PageHeader from '@/components/PageHeader'
-import ServiceDescription from './components/ServiceDescription'
+import ServicesDescription from './components/ServicesDescription'
 import RetainerPackages from './components/RetainerPackages'
 import ServicesList from './components/ServicesList'
 import SoftwareList from './components/SoftwareList'
 import ScheduleButton from '@/components/ScheduleButton'
-import CourseAdvert from './components/CourseAdvert'
 import { type Metadata } from 'next'
 import ReviewsCarousel from './components/ReviewsCarousel'
 import { client } from '@/sanity/client'
 import { type SanityDocument } from 'next-sanity'
-import Link from 'next/link'
-import { SquareArrowOutUpRight } from 'lucide-react'
+import CTAButton from '@/components/CTAButton'
 
 export const dynamic = 'force-static'
 
@@ -21,35 +19,31 @@ export const metadata: Metadata = {
 
 const HERO_QUERY =
   '*[_type == "hero"]{_id, heading, description, buttonText, buttonLink}'
+
+const scheduleQuery = `*[_type == "cta" && name == 'Schedule Call']{buttonLink, buttonText, buttonSubtext, name}`
+
 const REVIEWS_QUERY = `*[_type == "review"]|order(_createdAt){_id, name, body}`
 
 export default async function Services() {
   const hero = await client.fetch<SanityDocument[]>(HERO_QUERY)
 
+  const cta = await client.fetch<SanityDocument[]>(scheduleQuery)
+
   const reviews = await client.fetch<SanityDocument[]>(REVIEWS_QUERY)
   return (
     <main>
-      <Container className='bg-primary text-center'>
-        <h1 className='text-primary-foreground'>{hero[0].heading}</h1>
-        <p className='text-white'>{hero[0].description}</p>
+      <Container className='text-secondary-foreground text-center'>
+        <h1 className=''>{hero[0].heading}</h1>
+        <p className=''>{hero[0].description}</p>
 
-        <Link
-          href={hero[0].buttonLink}
-          className='text-secondary-foreground bg-secondary border-secondary hover:border-primary focus:border-primary active:border-primary font-titillium-web inline-block cursor-pointer rounded-3xl border-4 px-8 py-4 text-2xl font-bold transition-all hover:bg-white focus:bg-white active:bg-white'
-        >
-          {hero[0].buttonText}
-        </Link>
+        <CTAButton cta={cta[0]} />
       </Container>
 
       <PageHeader>Services</PageHeader>
 
-      <Container>
-        <ServiceDescription />
-      </Container>
+      <ServicesDescription />
 
-      <Container className='bg-secondary text-foreground'>
-        <RetainerPackages />
-      </Container>
+      <RetainerPackages />
 
       <Container className='text-center'>
         <h3>Ready to Get Started?</h3>

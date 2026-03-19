@@ -10,6 +10,8 @@ import { promoSectionType } from './sections/promoSection'
 import { ctaSectionType } from './sections/ctaSection'
 import { processSectionType } from './sections/processSection'
 import { ctaType } from './cta'
+import { featureSectionType } from './sections/featureSection'
+import { retainerPackageType } from './retainerPackage'
 
 export const schemaTypes = [
   // documents
@@ -18,6 +20,7 @@ export const schemaTypes = [
   reviewType,
   personType,
   ctaType,
+  retainerPackageType,
 
   // sections (objects)
   heroSectionType,
@@ -26,4 +29,5 @@ export const schemaTypes = [
   promoSectionType,
   ctaSectionType,
   processSectionType,
+  featureSectionType,
 ]

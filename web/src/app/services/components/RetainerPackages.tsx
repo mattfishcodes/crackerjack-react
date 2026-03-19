@@ -1,71 +1,48 @@
-'use client'
-
+import Container from '@/components/Container'
 import Separator from '@/components/Separator'
+import { client } from '@/sanity/client'
+import { type SanityDocument } from 'next-sanity'
 
-const RetainerPackages = () => {
+const query = `*[_type == "retainerPackage"]{_id, name, hours, price, description}`
+
+export default async function RetainerPackages() {
+  const packages = await client.fetch<SanityDocument[]>(query)
   return (
-    <div className='flex justify-center'>
-      <div>
-        <h3>Hourly Retainer Packages</h3>
-        <p className='font-montserrat'>
-          Flexible Solutions for Your Business Needs
-        </p>
-        <p>
-          At Crackerjack Solutions, we understand that every business has unique
-          requirements. Our hourly retainer packages offer the flexibility and
-          expertise you need, exactly when you need it. Whether you require
-          ongoing support, specialized project assistance, or expert advice, our
-          retainer packages are designed to fit seamlessly into your workflow.
-        </p>
-        <Separator variant='dark' />
+    <Container>
+      <div className='flex justify-center'>
         <div>
-          <h4>Why Choose Our Hourly Retainer Packages?</h4>
-
+          <h3>Need Ongoing Support? Retainer Packages Have You Covered.</h3>
           <p>
-            Customizable Plans: Tailor your package to suit your specific needs,
-            from a few hours a month to full-time support.
+            Every business is different — and your support should be too. Our
+            hourly retainer packages give you flexible, expert help exactly when
+            you need it. No full-time hire. No wasted hours. Just the right
+            amount of support for where you are right now.
           </p>
-          <p>
-            Cost-Effective: Optimize your budget with flexible hourly rates that
-            provide excellent value without the commitment of a full-time hire.
-          </p>
-          <p>
-            Consistency: Work with the same team members who understand your
-            business, ensuring consistent and high-quality results.
-          </p>
+          <Separator variant='dark' />
+          <div className='flex items-stretch gap-4'>
+            {packages.map((p) => (
+              <div
+                key={p._id}
+                className='bg-primary flex-1 rounded-3xl p-8 text-white'
+              >
+                <h4 className='font-bold'>{p.name}</h4>
+                <p>{p.hours}</p>
+                <p className='text-primary-foreground font-bold'>${p.price}</p>
+                <p>{p.description}</p>
+              </div>
+            ))}
+          </div>
+          <Separator variant='dotted' />
+          <div className='px-4'>
+            Hourly packages expire 6 months from the date of purchase, and any
+            remaining hours are lost. If you purchase additional hours prior to
+            the expiration of existing hours, they will be added to the existing
+            package, and the expiration date will be extended to 6 months from
+            the last purchase.
+          </div>
+          <Separator variant='dotted' />
         </div>
-        <Separator variant='dark' />
-        <div>
-          <h4>Packages</h4>
-          <p>
-            Starter Package: 10 hours per month &#45; Ideal for small projects
-            or as-needed support.
-          </p>
-          <p>
-            Basic Package: 20 hours per month &#45; Suitable for moderate
-            projects and more frequent assistance.
-          </p>
-          <p>
-            Growth Package: 30 hours per month &#45; Perfect for ongoing
-            projects and consistent support.
-          </p>
-          <p>
-            Pro Package: 40 hours per month &#45; Best for larger projects and
-            frequent collaboration.
-          </p>
-        </div>
-        <Separator variant='dotted' />
-        <div className='px-4'>
-          Hourly packages expire 6 months from the date of purchase, and any
-          remaining hours are lost. If you purchase additional hours prior to
-          the expiration of existing hours, they will be added to the existing
-          package, and the expiration date will be extended to 6 months from the
-          last purchase.
-        </div>
-        <Separator variant='dotted' />
       </div>
-    </div>
+    </Container>
   )
 }
-
-export default RetainerPackages

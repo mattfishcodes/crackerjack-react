@@ -4,6 +4,7 @@ export const serviceType = {
   type: 'document',
   fields: [
     { name: 'title', type: 'string' },
+    { name: 'subtitle', type: 'string' },
     {
       name: 'slug',
       type: 'slug',
@@ -13,7 +14,7 @@ export const serviceType = {
     {
       name: 'features',
       type: 'array',
-      of: [{ type: 'string' }],
+      of: [{ type: 'featureSection' }],
     },
   ],
 }
