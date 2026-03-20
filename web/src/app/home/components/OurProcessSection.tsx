@@ -1,8 +1,9 @@
 import { ArrowDown } from 'lucide-react'
-import Separator from '@/components/Separator'
-import Container from '@/components/Container'
-import { client } from '@/sanity/client'
 import { type SanityDocument } from 'next-sanity'
+
+import Container from '@/components/Container'
+import Separator from '@/components/Separator'
+import { client } from '@/sanity/client'
 
 const query = `*[_type == "homePage"][0]{process}`
 

@@ -22,7 +22,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
-  "js/ts.tsdk.path": "node_modules/typescript/lib",
   "files.associations": {
     "*.css": "tailwindcss"
   },

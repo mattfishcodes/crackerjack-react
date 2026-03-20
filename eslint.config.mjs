@@ -1,4 +1,4 @@
-import { defineConfig } from 'eslint/config'
+import { defineConfig, globalIgnores } from 'eslint/config'
 import js from '@eslint/js'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
 
@@ -11,4 +11,5 @@ export default defineConfig([
     extends: ['js/recommended'],
   },
   eslintConfigPrettier,
+  globalIgnores(['web/', 'studio/']),
 ])

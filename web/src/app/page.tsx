@@ -1,14 +1,17 @@
+import { type Metadata } from 'next'
+import { type OnlineBusiness, type WithContext } from 'schema-dts'
+
+import Script from 'next/script'
+
 import Container from '@/components/Container'
+
+import CallToActionSection from './home/components/CallToActionSection'
 import HeroSection from './home/components/HeroSection'
+import MoxiePromoSection from './home/components/MoxiePromoSection'
+import OurProcessSection from './home/components/OurProcessSection'
 import PaintPointsSection from './home/components/PainPointsSection'
 import ServicesLinks from './home/components/ServicesLinks'
-import OurProcessSection from './home/components/OurProcessSection'
-import { Metadata } from 'next'
-import Script from 'next/script'
-import { OnlineBusiness, WithContext } from 'schema-dts'
 import TransformationSection from './home/components/TransformationSection'
-import MoxiePromoSection from './home/components/MoxiePromoSection'
-import CallToActionSection from './home/components/CallToActionSection'
 
 export const metadata: Metadata = {
   title: 'Home | Crackerjack Solutions',

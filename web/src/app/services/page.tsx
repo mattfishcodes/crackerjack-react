@@ -1,15 +1,17 @@
+import { type Metadata } from 'next'
+import { type SanityDocument } from 'next-sanity'
+
 import Container from '@/components/Container'
+import CTAButton from '@/components/CTAButton'
 import PageHeader from '@/components/PageHeader'
-import ServicesDescription from './components/ServicesDescription'
+import ScheduleButton from '@/components/ScheduleButton'
+import { client } from '@/sanity/client'
+
 import RetainerPackages from './components/RetainerPackages'
+import ReviewsCarousel from './components/ReviewsCarousel'
+import ServicesDescription from './components/ServicesDescription'
 import ServicesList from './components/ServicesList'
 import SoftwareList from './components/SoftwareList'
-import ScheduleButton from '@/components/ScheduleButton'
-import { type Metadata } from 'next'
-import ReviewsCarousel from './components/ReviewsCarousel'
-import { client } from '@/sanity/client'
-import { type SanityDocument } from 'next-sanity'
-import CTAButton from '@/components/CTAButton'
 
 export const dynamic = 'force-static'
 

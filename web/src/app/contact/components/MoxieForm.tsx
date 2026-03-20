@@ -1,10 +1,13 @@
 'use client'
 
+import { useEffect, useRef, useState } from 'react'
+
+import { LoaderCircle } from 'lucide-react'
+
+import Script from 'next/script'
+
 import Container from '@/components/Container'
 import { cn } from '@/lib/utils'
-import { LoaderCircle } from 'lucide-react'
-import Script from 'next/script'
-import { useEffect, useRef, useState } from 'react'
 
 export default function MoxieForm() {
   const [loaded, setLoaded] = useState(false)

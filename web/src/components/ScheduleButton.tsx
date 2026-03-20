@@ -1,7 +1,9 @@
 'use client'
 
-import Link from 'next/link'
 import { SquareArrowOutUpRight } from 'lucide-react'
+
+import Link from 'next/link'
+
 import { cn } from '@/lib/utils'
 
 export default function ScheduleButton({ color }: { color: 'light' | 'dark' }) {

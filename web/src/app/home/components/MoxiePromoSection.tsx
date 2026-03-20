@@ -1,6 +1,7 @@
+import Image from 'next/image'
+
 import Container from '@/components/Container'
 import { client } from '@/sanity/client'
-import Image from 'next/image'
 
 const query = `*[_type == "homePage"][0]{
     promo {

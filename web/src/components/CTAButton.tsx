@@ -1,5 +1,6 @@
 import { SquareArrowOutUpRight } from 'lucide-react'
 import { type SanityDocument } from 'next-sanity'
+
 import Link from 'next/link'
 
 export default function CTAButton({ cta }: { cta: SanityDocument }) {

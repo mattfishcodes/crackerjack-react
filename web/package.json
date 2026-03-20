@@ -34,6 +34,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@mattfishcodes/eslint-configs": "^1.0.1",
     "@mattfishcodes/image-tools": "^1.1.0",
     "@next/eslint-plugin-next": "^16.1.6",
     "@types/node": "^25.5.0",

@@ -1,14 +1,16 @@
-import type { Metadata } from 'next'
+import { type Metadata } from 'next'
+
 import {
   Meow_Script,
   Montserrat,
   Titillium_Web,
   Urbanist,
 } from 'next/font/google'
+
 import './globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 import ConsentLoader from '@/components/ConsentLoader'
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 
 const meowScript = Meow_Script({
   weight: ['400'],

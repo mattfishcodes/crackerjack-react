@@ -1,8 +1,9 @@
 'use client'
 
 import { useRef } from 'react'
+
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { SanityDocument } from 'next-sanity'
+import { type SanityDocument } from 'next-sanity'
 
 export default function ReviewsCarousel({
   reviews = [],

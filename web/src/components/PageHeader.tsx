@@ -1,6 +1,7 @@
 'use client'
 
 import Separator from '@/components/Separator'
+
 import Container from './Container'
 
 export default function PageHeader({ children }: { children: string }) {

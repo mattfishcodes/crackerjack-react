@@ -1,8 +1,11 @@
-import Image from 'next/image'
 import { Suspense } from 'react'
-import { Skeleton } from '@/shadcn/ui/skeleton'
+
+import { type SanityDocument } from 'next-sanity'
+
+import Image from 'next/image'
+
 import { client } from '@/sanity/client'
-import { SanityDocument } from 'next-sanity'
+import { Skeleton } from '@/shadcn/ui/skeleton'
 
 export const dynamic = 'force-static'
 

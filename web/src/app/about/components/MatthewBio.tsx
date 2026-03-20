@@ -1,5 +1,6 @@
+import { type SanityDocument } from 'next-sanity'
+
 import { client } from '@/sanity/client'
-import { SanityDocument } from 'next-sanity'
 
 export const dynamic = 'force-static'
 

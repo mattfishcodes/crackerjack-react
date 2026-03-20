@@ -1,4 +1,5 @@
 import Image from 'next/image'
+
 import Separator from '@/components/Separator'
 import { client } from '@/sanity/client'
 

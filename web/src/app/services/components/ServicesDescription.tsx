@@ -1,7 +1,8 @@
+import { type SanityDocument } from 'next-sanity'
+
 import Container from '@/components/Container'
 import Separator from '@/components/Separator'
 import { client } from '@/sanity/client'
-import { type SanityDocument } from 'next-sanity'
 
 const servicesQuery = `*[_type == "service"]{_id, title, subtitle, features, slug}`
 

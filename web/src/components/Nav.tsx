@@ -1,14 +1,15 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+import { routes } from '@/app/routes'
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
 } from '@/shadcn/ui/navigation-menu'
-import { usePathname } from 'next/navigation'
-import { routes } from '@/app/routes'
 
 export default function Nav({
   orientation = 'horizontal',

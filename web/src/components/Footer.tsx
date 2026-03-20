@@ -1,10 +1,12 @@
 'use client'
 
+import { Copyright } from 'lucide-react'
+
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+
 import { routes } from '@/app/routes'
 import { cn } from '@/lib/utils'
-import { Copyright } from 'lucide-react'
 
 export default function Footer() {
   const pn = usePathname()

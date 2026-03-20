@@ -1,5 +1,6 @@
 import path from 'path'
-import { ImageLoaderProps } from 'next/image'
+
+import { type ImageLoaderProps } from 'next/image'
 
 const imageLoader = ({ src, width }: ImageLoaderProps) => {
   const ext = path.extname(src).toLowerCase()

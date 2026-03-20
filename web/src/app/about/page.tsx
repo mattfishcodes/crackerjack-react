@@ -1,13 +1,16 @@
-import Link from 'next/link'
+import { type Metadata } from 'next'
+
 import Image from 'next/image'
-import PageHeader from '@/components/PageHeader'
+import Link from 'next/link'
+
 import Container from '@/components/Container'
+import PageHeader from '@/components/PageHeader'
+import ScheduleButton from '@/components/ScheduleButton'
+
 import ChristineBio from './components/ChristineBio'
 import ChristineCerts from './components/ChristineCerts'
-import MatthewBio from './components/MatthewBio'
 import CoreValues from './components/CoreValues'
-import ScheduleButton from '@/components/ScheduleButton'
-import { type Metadata } from 'next'
+import MatthewBio from './components/MatthewBio'
 
 export const metadata: Metadata = {
   title: 'About',

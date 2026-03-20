@@ -1,5 +1,7 @@
-import PageHeader from '@/components/PageHeader'
 import { type Metadata } from 'next'
+
+import PageHeader from '@/components/PageHeader'
+
 import MoxieForm from './components/MoxieForm'
 
 export const metadata: Metadata = {

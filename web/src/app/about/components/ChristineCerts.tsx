@@ -1,8 +1,10 @@
 'use client'
 
-import { Skeleton } from '@/shadcn/ui/skeleton'
-import Image from 'next/image'
 import { Suspense } from 'react'
+
+import Image from 'next/image'
+
+import { Skeleton } from '@/shadcn/ui/skeleton'
 
 const ChristineCerts = () => {
   return (

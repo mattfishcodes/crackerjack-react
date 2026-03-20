@@ -11,11 +11,11 @@
     "build": "pnpm -r build",
     "deploy": "pnpm -r run deploy",
     "format": "prettier --write .",
-    "lint": "pnpm -r lint",
+    "lint": "eslint --fix . && pnpm -r lint",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
+    "@eslint/js": "^9.39.4",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
