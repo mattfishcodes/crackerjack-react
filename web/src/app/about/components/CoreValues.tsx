@@ -1,10 +1,10 @@
-'use client'
-
 import Image from 'next/image'
 
-const CoreValues = () => {
+import Container from '@/components/Container'
+
+export default function CoreValues() {
   return (
-    <>
+    <Container className='bg-primary text-white'>
       <div className='flex flex-col items-center font-light'>
         <h3>Core Values</h3>
         <p className='font-montserrat text-xl'>
@@ -44,8 +44,6 @@ const CoreValues = () => {
           </div>
         </div>
       </div>
-    </>
+    </Container>
   )
 }
-
-export default CoreValues

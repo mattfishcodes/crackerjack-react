@@ -24,5 +24,10 @@ export const personType = defineType({
       name: 'image',
       type: 'image',
     }),
+    defineField({
+      name: 'certificates',
+      type: 'array',
+      of: [{ type: 'image' }],
+    }),
   ],
 })

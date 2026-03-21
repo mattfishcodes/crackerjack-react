@@ -14,8 +14,6 @@ export default async function ServicesLinks() {
 
   const { heading } = await client.fetch(headingQuery)
 
-  console.log(services)
-
   return (
     <Container>
       <h3 className='text-center font-semibold'>{heading}</h3>

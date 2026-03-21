@@ -1,64 +1,42 @@
-'use client'
-
 import { Suspense } from 'react'
 
 import Image from 'next/image'
 
+import Container from '@/components/Container'
+import { client } from '@/sanity/client'
 import { Skeleton } from '@/shadcn/ui/skeleton'
 
-const ChristineCerts = () => {
+const query = `*[_type == "person" && name == "Christine Warner"] {
+  certificates[] {
+    "url": asset->url
+  }
+}`
+
+export default async function ChristineCerts() {
+  const { certificates } = (await client.fetch(query))[0]
+
   return (
-    <div className='flex flex-wrap items-stretch justify-center'>
-      <div className='flex aspect-square flex-[49%] items-center md:flex-1'>
-        <Suspense fallback={<Skeleton className='size-full' />}>
-          <Image
-            src='/Salesforce-Administrator.png'
-            alt=''
-            width={200}
-            height={200}
-            sizes='(max-width: 768px) 200px, 300px'
-            loading='eager'
-          />
-        </Suspense>
+    <Container>
+      <div className='flex flex-wrap items-stretch justify-center'>
+        {certificates.map((c: { url: string }, i: number) => (
+          <div
+            key={i}
+            className='flex aspect-square flex-[49%] items-center md:flex-1'
+          >
+            <Suspense fallback={<Skeleton className='size-full' />}>
+              <Image
+                src={c.url}
+                alt=''
+                width={200}
+                height={200}
+                sizes='(max-width: 768px) 200px, 300px'
+                loading='eager'
+                unoptimized
+              />
+            </Suspense>
+          </div>
+        ))}
       </div>
-      <div className='flex aspect-square flex-[49%] items-center md:flex-1'>
-        <Suspense fallback={<Skeleton className='size-full' />}>
-          <Image
-            src='/DBM-PM-Cert.jpg'
-            alt=''
-            width={200}
-            height={200}
-            sizes='(max-width: 768px) 200px, 300px'
-            loading='eager'
-          />
-        </Suspense>
-      </div>
-      <div className='flex aspect-square flex-[49%] items-center md:flex-1'>
-        <Suspense fallback={<Skeleton className='size-full' />}>
-          <Image
-            src='/DBM-SM-Cert.jpg'
-            alt=''
-            width={200}
-            height={200}
-            sizes='(max-width: 768px) 200px, 300px'
-            loading='eager'
-          />
-        </Suspense>
-      </div>
-      <div className='flex aspect-square flex-[49%] items-center md:flex-1'>
-        <Suspense fallback={<Skeleton className='size-full' />}>
-          <Image
-            src='/Moxie-Approved.png'
-            alt=''
-            width={200}
-            height={200}
-            sizes='(max-width: 768px) 200px, 300px'
-            loading='eager'
-          />
-        </Suspense>
-      </div>
-    </div>
+    </Container>
   )
 }
-
-export default ChristineCerts

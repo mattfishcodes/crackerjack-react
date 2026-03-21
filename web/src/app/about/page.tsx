@@ -1,6 +1,5 @@
 import { type Metadata } from 'next'
 
-import Image from 'next/image'
 import Link from 'next/link'
 
 import Container from '@/components/Container'
@@ -21,9 +20,7 @@ export default function About() {
     <main>
       <PageHeader>About</PageHeader>
 
-      <Container>
-        <ChristineBio />
-      </Container>
+      <ChristineBio />
 
       <Container className='bg-primary text-primary-foreground font-semibold'>
         <div className='text-center text-xl'>
@@ -38,32 +35,11 @@ export default function About() {
         </div>
       </Container>
 
-      <Container>
-        <ChristineCerts />
-      </Container>
+      <ChristineCerts />
 
-      <Container className='bg-primary text-white'>
-        <MatthewBio />
-      </Container>
+      <MatthewBio />
 
-      <Container>
-        <div className='flex justify-center'>
-          <div className='w-full md:w-[30%]'>
-            <Image
-              className=''
-              src='/Matthew-Cert.png'
-              alt=''
-              width={300}
-              height={300}
-              sizes='(max-width: 768px) 200px, 300px'
-            />
-          </div>
-        </div>
-      </Container>
-
-      <Container className='bg-primary text-white'>
-        <CoreValues />
-      </Container>
+      <CoreValues />
 
       <Container className='bg-secondary text-foreground text-center'>
         <h3>
