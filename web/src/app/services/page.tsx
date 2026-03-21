@@ -4,16 +4,13 @@ import { type SanityDocument } from 'next-sanity'
 import Container from '@/components/Container'
 import CTAButton from '@/components/CTAButton'
 import PageHeader from '@/components/PageHeader'
-import ScheduleButton from '@/components/ScheduleButton'
 import { client } from '@/sanity/client'
 
 import RetainerPackages from './components/RetainerPackages'
+import RetainerServices from './components/RetainerServices'
 import ReviewsCarousel from './components/ReviewsCarousel'
 import ServicesDescription from './components/ServicesDescription'
-import ServicesList from './components/ServicesList'
 import SoftwareList from './components/SoftwareList'
-
-export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -24,12 +21,16 @@ const HERO_QUERY =
 
 const scheduleQuery = `*[_type == "cta" && name == 'Schedule Call']{buttonLink, buttonText, buttonSubtext, name}`
 
-const REVIEWS_QUERY = `*[_type == "review"]|order(_createdAt){_id, name, body}`
+const REVIEWS_QUERY = `*[_type == "review"]|order(order asc){_id, name, body}`
+
+const reviewsHeadingQuery = `*[_type == "servicesPage"][0]{reviewsHeading}`
 
 export default async function Services() {
   const hero = await client.fetch<SanityDocument[]>(HERO_QUERY)
 
   const cta = await client.fetch<SanityDocument[]>(scheduleQuery)
+
+  const { reviewsHeading } = await client.fetch(reviewsHeadingQuery)
 
   const reviews = await client.fetch<SanityDocument[]>(REVIEWS_QUERY)
   return (
@@ -56,16 +57,12 @@ export default async function Services() {
           Contact us today to schedule your free consultation and discover how
           we can help you achieve your goals.
         </p>
-        <ScheduleButton color='light' />
+        <CTAButton cta={cta[0]} />
       </Container>
 
-      <Container className='text-foreground bg-gray-100'>
-        <ServicesList />
-      </Container>
+      <RetainerServices />
 
-      <Container>
-        <ReviewsCarousel reviews={reviews} />
-      </Container>
+      <ReviewsCarousel heading={reviewsHeading} reviews={reviews} />
 
       <Container className='from-secondary to-primary bg-linear-30 from-85% to-95%'>
         <SoftwareList />

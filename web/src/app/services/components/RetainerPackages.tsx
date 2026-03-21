@@ -6,19 +6,19 @@ import { client } from '@/sanity/client'
 
 const query = `*[_type == "retainerPackage"]{_id, name, hours, price, description}`
 
+const sectionQuery = `*[_type == "servicesPage"][0]{"retainerSection":retainer, transformation}`
+
 export default async function RetainerPackages() {
   const packages = await client.fetch<SanityDocument[]>(query)
+
+  const { retainerSection } = await client.fetch(sectionQuery)
+
   return (
     <Container>
       <div className='flex justify-center'>
         <div>
-          <h3>Need Ongoing Support? Retainer Packages Have You Covered.</h3>
-          <p>
-            Every business is different — and your support should be too. Our
-            hourly retainer packages give you flexible, expert help exactly when
-            you need it. No full-time hire. No wasted hours. Just the right
-            amount of support for where you are right now.
-          </p>
+          <h3>{retainerSection.heading}</h3>
+          <p>{retainerSection.description}</p>
           <Separator variant='dark' />
           <div className='flex items-stretch gap-4'>
             {packages.map((p) => (
@@ -34,15 +34,17 @@ export default async function RetainerPackages() {
             ))}
           </div>
           <Separator variant='dotted' />
-          <div className='px-4'>
-            Hourly packages expire 6 months from the date of purchase, and any
-            remaining hours are lost. If you purchase additional hours prior to
-            the expiration of existing hours, they will be added to the existing
-            package, and the expiration date will be extended to 6 months from
-            the last purchase.
-          </div>
+          <div className='px-4'>{retainerSection.disclaimer}</div>
           <Separator variant='dotted' />
         </div>
+      </div>
+      <div>
+        <h4>{retainerSection.transformation.heading}</h4>
+        <ul>
+          {retainerSection.transformation.benefits.map((ben: string) => (
+            <li key={ben}>{ben}</li>
+          ))}
+        </ul>
       </div>
     </Container>
   )

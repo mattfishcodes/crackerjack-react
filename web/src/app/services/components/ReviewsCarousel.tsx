@@ -5,9 +5,13 @@ import { useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { type SanityDocument } from 'next-sanity'
 
+import Container from '@/components/Container'
+
 export default function ReviewsCarousel({
+  heading = '',
   reviews = [],
 }: {
+  heading: string
   reviews: SanityDocument[]
 }) {
   const ulRef = useRef<HTMLUListElement | null>(null)
@@ -37,8 +41,8 @@ export default function ReviewsCarousel({
   }
 
   return (
-    <div>
-      <h4 className='my-4 text-center'>Reviews</h4>
+    <Container>
+      <h4 className='my-4 text-center'>{heading}</h4>
       <div className='relative flex items-center justify-center'>
         <button
           className='bg-primary text-primary-foreground just hidden cursor-pointer items-center rounded-full p-1 transition-all hover:scale-110 hover:text-white lg:inline-flex'
@@ -70,6 +74,6 @@ export default function ReviewsCarousel({
           <ChevronRight />
         </button>
       </div>
-    </div>
+    </Container>
   )
 }

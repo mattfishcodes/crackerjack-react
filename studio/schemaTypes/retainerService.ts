@@ -1,12 +1,12 @@
 import { defineField, defineType } from 'sanity'
 
-export const reviewType = defineType({
-  name: 'review',
-  title: 'Review',
+export const retainerServiceType = defineType({
+  name: 'retainerService',
+  title: 'Retainer Service',
   type: 'document',
   fields: [
     defineField({
-      name: 'name',
+      name: 'title',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
@@ -16,8 +16,9 @@ export const reviewType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'body',
-      type: 'text',
+      name: 'features',
+      type: 'array',
+      of: [{ type: 'string' }],
       validation: (rule) => rule.required(),
     }),
   ],
