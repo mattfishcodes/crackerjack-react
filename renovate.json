@@ -10,7 +10,7 @@
 
   "schedule": ["every weekend"],
 
-  "ignoreDeps": ["eslint"],
+  "ignoreDeps": ["eslint", "@eslint/js"],
 
   "packageRules": [
     {
