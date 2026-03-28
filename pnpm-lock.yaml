@@ -86,8 +86,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       lucide-react:
-        specifier: ^0.577.0
-        version: 0.577.0(react@19.2.4)
+        specifier: ^1.7.0
+        version: 1.7.0(react@19.2.4)
       next:
         specifier: ^16.2.1
         version: 16.2.1(@babel/core@7.29.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -104,8 +104,8 @@ importers:
         specifier: ^19.2.4
         version: 19.2.4(react@19.2.4)
       schema-dts:
-        specifier: ^1.1.5
-        version: 1.1.5
+        specifier: ^2.0.0
+        version: 2.0.0(typescript@6.0.2)
       tailwind-merge:
         specifier: ^3.5.0
         version: 3.5.0
@@ -5138,8 +5138,8 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-react@0.577.0:
-    resolution: {integrity: sha512-4LjoFv2eEPwYDPg/CUdBJQSDfPyzXCRrVW1X7jrx/trgxnxkHFjnVZINbzvzxjN70dxychOfg+FTYwBiS3pQ5A==}
+  lucide-react@1.7.0:
+    resolution: {integrity: sha512-yI7BeItCLZJTXikmK4KNUGCKoGzSvbKlfCvw44bU4fXAL6v3gYS4uHD1jzsLkfwODYwI6Drw5Tu9Z5ulDe0TSg==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -6006,8 +6006,14 @@ packages:
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
 
-  schema-dts@1.1.5:
-    resolution: {integrity: sha512-RJr9EaCmsLzBX2NDiO5Z3ux2BVosNZN5jo0gWgsyKvxKIUL5R3swNvoorulAeL9kLB0iTSX7V6aokhla2m7xbg==}
+  schema-dts-lib@1.0.0:
+    resolution: {integrity: sha512-9MEO5vpQH9JdBioUupqluzxSYxPLjhmqRUudk15adUl/ypnRsM2/M1kN3AmVJQeG7nZqcL68H8JlGqQQT6vy9A==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      typescript: '>=4.9.5'
+
+  schema-dts@2.0.0:
+    resolution: {integrity: sha512-t7NoCy3Rn5GHGx6p7s1qIYK/AeIb8ZxJNR9WUNFkwMv2CiiGZBmqqYWc2FlZVm5ZbiHMY4OvBWhj7QtyrFO2Jw==}
 
   scroll-into-view-if-needed@3.1.0:
     resolution: {integrity: sha512-49oNpRjWRvnU8NyGVmUaYG4jtTkNonFZI86MmGRDqBphEK2EXT9gdEUoQPZhuBM8yWHxCWbobltqYO5M4XrUvQ==}
@@ -9268,7 +9274,7 @@ snapshots:
       '@sanity/export': 6.1.0
       '@sanity/generate-help-url': 4.0.0
       '@sanity/id-utils': 1.0.0
-      '@sanity/import': 5.0.1(@sanity/client@7.20.0(debug@4.4.3))(@types/react@19.2.14)
+      '@sanity/import': 5.0.1(@sanity/client@7.20.0)(@types/react@19.2.14)
       '@sanity/migrate': 6.1.0(@oclif/core@4.10.2)(@sanity/cli-core@1.2.0(@noble/hashes@2.0.1)(@sanity/telemetry@0.8.1(react@19.2.4))(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.32.0)(yaml@2.8.3))(@types/react@19.2.14)(xstate@5.28.0)
       '@sanity/runtime-cli': 14.7.0(@types/node@25.5.0)(debug@4.4.3)(lightningcss@1.32.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.3)
       '@sanity/schema': 5.17.1(@types/react@19.2.14)(debug@4.4.3)
@@ -9473,7 +9479,7 @@ snapshots:
     dependencies:
       '@sanity/signed-urls': 2.0.2
 
-  '@sanity/import@5.0.1(@sanity/client@7.20.0(debug@4.4.3))(@types/react@19.2.14)':
+  '@sanity/import@5.0.1(@sanity/client@7.20.0)(@types/react@19.2.14)':
     dependencies:
       '@sanity/asset-utils': 2.3.0
       '@sanity/client': 7.20.0(debug@4.4.3)
@@ -9591,7 +9597,7 @@ snapshots:
       - '@sanity/client'
       - '@sanity/types'
 
-  '@sanity/preview-url-secret@4.0.4(@sanity/client@7.20.0(debug@4.4.3))':
+  '@sanity/preview-url-secret@4.0.4(@sanity/client@7.20.0)':
     dependencies:
       '@sanity/client': 7.20.0(debug@4.4.3)
       '@sanity/uuid': 3.0.2
@@ -9812,7 +9818,7 @@ snapshots:
       '@sanity/insert-menu': 3.0.4(@emotion/is-prop-valid@1.4.0)(@sanity/types@5.17.1(@types/react@19.2.14))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(styled-components@6.3.12(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       '@sanity/mutate': 0.16.1(debug@4.4.3)(xstate@5.28.0)
       '@sanity/presentation-comlink': 2.0.1(@sanity/client@7.20.0)(@sanity/types@5.17.1(@types/react@19.2.14))
-      '@sanity/preview-url-secret': 4.0.4(@sanity/client@7.20.0(debug@4.4.3))
+      '@sanity/preview-url-secret': 4.0.4(@sanity/client@7.20.0)
       '@sanity/ui': 3.1.14(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.4(react@19.2.4))(react-is@19.2.4)(react@19.2.4)(styled-components@6.3.12(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       '@sanity/visual-editing-csm': 3.0.6(@sanity/client@7.20.0)(@sanity/types@5.17.1(@types/react@19.2.14))(typescript@6.0.2)
       '@vercel/stega': 1.1.0
@@ -12366,7 +12372,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-react@0.577.0(react@19.2.4):
+  lucide-react@1.7.0(react@19.2.4):
     dependencies:
       react: 19.2.4
 
@@ -12505,7 +12511,7 @@ snapshots:
       '@sanity/client': 7.20.0(debug@4.4.3)
       '@sanity/comlink': 4.0.1
       '@sanity/presentation-comlink': 2.0.1(@sanity/client@7.20.0)(@sanity/types@5.17.1(@types/react@19.2.14))
-      '@sanity/preview-url-secret': 4.0.4(@sanity/client@7.20.0(debug@4.4.3))
+      '@sanity/preview-url-secret': 4.0.4(@sanity/client@7.20.0)
       '@sanity/visual-editing': 5.3.1(@emotion/is-prop-valid@1.4.0)(@sanity/client@7.20.0)(@sanity/types@5.17.1(@types/react@19.2.14))(next@16.2.1(@babel/core@7.29.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react-is@19.2.4)(react@19.2.4)(styled-components@6.3.12(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@6.0.2)
       '@sanity/webhook': 4.0.4
       dequal: 2.0.3
@@ -13264,7 +13270,7 @@ snapshots:
       '@sanity/mutate': 0.16.1(debug@4.4.3)(xstate@5.28.0)
       '@sanity/mutator': 5.17.1(@types/react@19.2.14)
       '@sanity/presentation-comlink': 2.0.1(@sanity/client@7.20.0)(@sanity/types@5.17.1(@types/react@19.2.14))
-      '@sanity/preview-url-secret': 4.0.4(@sanity/client@7.20.0(debug@4.4.3))
+      '@sanity/preview-url-secret': 4.0.4(@sanity/client@7.20.0)
       '@sanity/schema': 5.17.1(@types/react@19.2.14)(debug@4.4.3)
       '@sanity/sdk': 2.1.2(@types/react@19.2.14)(debug@4.4.3)(react@19.2.4)(use-sync-external-store@1.6.0(react@19.2.4))
       '@sanity/telemetry': 0.8.1(react@19.2.4)
@@ -13359,7 +13365,15 @@ snapshots:
 
   scheduler@0.27.0: {}
 
-  schema-dts@1.1.5: {}
+  schema-dts-lib@1.0.0(typescript@6.0.2):
+    dependencies:
+      typescript: 6.0.2
+
+  schema-dts@2.0.0(typescript@6.0.2):
+    dependencies:
+      schema-dts-lib: 1.0.0(typescript@6.0.2)
+    transitivePeerDependencies:
+      - typescript
 
   scroll-into-view-if-needed@3.1.0:
     dependencies:
