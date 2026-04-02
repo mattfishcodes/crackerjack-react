@@ -1,72 +1,50 @@
 import { type Metadata } from 'next'
-import { type SanityDocument } from 'next-sanity'
 
-import Container from '@/components/Container'
-import CTAButton from '@/components/CTAButton'
 import PageHeader from '@/components/PageHeader'
-import { client } from '@/sanity/client'
+import { client } from '@/sanity/lib/client'
+import {
+  type ServicesPageData,
+  servicesPageQuery,
+} from '@/sanity/queries/servicesPage'
 
+import ConsultPromo from './components/ConsultPromo'
+import FooterPromo from './components/FooterPromo'
+import RetainerBenefits from './components/RetainerBenefits'
 import RetainerPackages from './components/RetainerPackages'
+import RetainerPromo from './components/RetainerPromo'
 import RetainerServices from './components/RetainerServices'
 import ReviewsCarousel from './components/ReviewsCarousel'
-import ServicesDescription from './components/ServicesDescription'
-import SoftwareList from './components/SoftwareList'
+import ServicesCards from './components/ServicesCards'
+import ToolsList from './components/ToolsList'
 
 export const metadata: Metadata = {
   title: 'Services',
 }
 
-const HERO_QUERY =
-  '*[_type == "hero"]{_id, heading, description, buttonText, buttonLink}'
-
-const scheduleQuery = `*[_type == "cta" && name == 'Schedule Call']{buttonLink, buttonText, buttonSubtext, name}`
-
-const REVIEWS_QUERY = `*[_type == "review"]|order(order asc){_id, name, body}`
-
-const reviewsHeadingQuery = `*[_type == "servicesPage"][0]{reviewsHeading}`
-
 export default async function Services() {
-  const hero = await client.fetch<SanityDocument[]>(HERO_QUERY)
+  const data = (await client.fetch(servicesPageQuery)) as ServicesPageData
 
-  const cta = await client.fetch<SanityDocument[]>(scheduleQuery)
-
-  const { reviewsHeading } = await client.fetch(reviewsHeadingQuery)
-
-  const reviews = await client.fetch<SanityDocument[]>(REVIEWS_QUERY)
   return (
     <main>
-      <Container className='text-secondary-foreground text-center'>
-        <h1 className=''>{hero[0].heading}</h1>
-        <p className=''>{hero[0].description}</p>
-
-        <CTAButton cta={cta[0]} />
-      </Container>
+      <ConsultPromo data={data.consultPromo} />
 
       <PageHeader>Services</PageHeader>
 
-      <ServicesDescription />
+      <ServicesCards data={data.servicesCards} />
 
-      <RetainerPackages />
+      <RetainerPackages data={data.retainerPackages} />
 
-      <Container className='text-center'>
-        <h3>Ready to Get Started?</h3>
-        <p>
-          Invest in your business&apos;s success with a flexible hourly retainer
-          package from Crackerjack Solutions.
-          <br />
-          Contact us today to schedule your free consultation and discover how
-          we can help you achieve your goals.
-        </p>
-        <CTAButton cta={cta[0]} />
-      </Container>
+      <RetainerBenefits data={data.retainerBenefits} />
 
-      <RetainerServices />
+      <RetainerPromo data={data.retainerPromo} />
 
-      <ReviewsCarousel heading={reviewsHeading} reviews={reviews} />
+      <RetainerServices data={data.retainerServices} />
 
-      <Container className='from-secondary to-primary bg-linear-30 from-85% to-95%'>
-        <SoftwareList />
-      </Container>
+      <ReviewsCarousel data={data.reviews} />
+
+      <ToolsList data={data.tools} />
+
+      <FooterPromo data={data.footerPromo} />
     </main>
   )
 }

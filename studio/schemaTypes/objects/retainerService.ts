@@ -3,23 +3,18 @@ import { defineField, defineType } from 'sanity'
 export const retainerServiceType = defineType({
   name: 'retainerService',
   title: 'Retainer Service',
-  type: 'document',
+  type: 'object',
   fields: [
     defineField({
       name: 'title',
       type: 'string',
-      validation: (rule) => rule.required(),
+      validation: (r) => r.required(),
     }),
     defineField({
-      name: 'order',
-      type: 'number',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      name: 'features',
+      name: 'items',
       type: 'array',
       of: [{ type: 'string' }],
-      validation: (rule) => rule.required(),
+      validation: (r) => r.required(),
     }),
   ],
 })

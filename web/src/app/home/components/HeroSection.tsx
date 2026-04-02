@@ -1,16 +1,16 @@
 import Image from 'next/image'
 
+import Container from '@/components/Container'
 import Separator from '@/components/Separator'
-import { client } from '@/sanity/client'
+import { type HomePageData } from '@/sanity/queries/homePage'
 
-const heroQuery = `*[_type == "homePage"][0]{hero}`
+type HeroSectionProps = {
+  data: HomePageData['hero']
+}
 
-const HeroSection = async () => {
-  const content = await client.fetch(heroQuery)
-
-  const hero = content.hero
+export default function HeroSection({ data }: HeroSectionProps) {
   return (
-    <>
+    <Container className='bg-primary text-white'>
       <div className='flex flex-col items-center justify-between gap-4 text-center lg:flex-row'>
         <div className='w-full md:max-w-1/4'>
           <Image
@@ -24,14 +24,12 @@ const HeroSection = async () => {
           />
         </div>
         <div>
-          <h1>{hero.title}</h1>
+          <h1>{data.heading}</h1>
           <Separator variant='light' />
-          <h2>{hero.headline}</h2>
-          <p>{hero.subtext}</p>
+          <h2>{data.subheading}</h2>
+          <p>{data.body}</p>
         </div>
       </div>
-    </>
+    </Container>
   )
 }
-
-export default HeroSection

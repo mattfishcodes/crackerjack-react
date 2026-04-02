@@ -1,50 +1,38 @@
-import { type SanityDocument } from 'next-sanity'
-
 import Container from '@/components/Container'
 import Separator from '@/components/Separator'
-import { client } from '@/sanity/client'
+import { type ServicesPageData } from '@/sanity/queries/servicesPage'
 
-const query = `*[_type == "retainerPackage"]{_id, name, hours, price, description}`
+type RetainerPackagesProps = {
+  data: ServicesPageData['retainerPackages']
+}
 
-const sectionQuery = `*[_type == "servicesPage"][0]{"retainerSection":retainer, transformation}`
-
-export default async function RetainerPackages() {
-  const packages = await client.fetch<SanityDocument[]>(query)
-
-  const { retainerSection } = await client.fetch(sectionQuery)
-
+export default function RetainerPackages({ data }: RetainerPackagesProps) {
   return (
     <Container>
       <div className='flex justify-center'>
         <div>
-          <h3>{retainerSection.heading}</h3>
-          <p>{retainerSection.description}</p>
+          <h3>{data.heading}</h3>
+          <p>{data.body}</p>
           <Separator variant='dark' />
           <div className='flex items-stretch gap-4'>
-            {packages.map((p) => (
+            {data.items.map((item) => (
               <div
-                key={p._id}
+                key={item.title}
                 className='bg-primary flex-1 rounded-3xl p-8 text-white'
               >
-                <h4 className='font-bold'>{p.name}</h4>
-                <p>{p.hours}</p>
-                <p className='text-primary-foreground font-bold'>${p.price}</p>
-                <p>{p.description}</p>
+                <h4 className='font-bold'>{item.title}</h4>
+                <p>{item.hours}</p>
+                <p className='text-primary-foreground font-bold'>
+                  ${item.price}
+                </p>
+                <p>{item.body}</p>
               </div>
             ))}
           </div>
           <Separator variant='dotted' />
-          <div className='px-4'>{retainerSection.disclaimer}</div>
+          <div className='px-4'>{data.disclaimer}</div>
           <Separator variant='dotted' />
         </div>
-      </div>
-      <div>
-        <h4>{retainerSection.transformation.heading}</h4>
-        <ul>
-          {retainerSection.transformation.benefits.map((ben: string) => (
-            <li key={ben}>{ben}</li>
-          ))}
-        </ul>
       </div>
     </Container>
   )

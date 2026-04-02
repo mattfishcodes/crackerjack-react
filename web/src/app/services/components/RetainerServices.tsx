@@ -1,29 +1,31 @@
-import { type SanityDocument } from 'next-sanity'
-
 import Container from '@/components/Container'
 import Separator from '@/components/Separator'
-import { client } from '@/sanity/client'
+import { type ServicesPageData } from '@/sanity/queries/servicesPage'
 
-const servicesQuery = `*[_type == "retainerService"]|order(order asc){_id, title, features}`
+type RetainerServicesProps = {
+  data: ServicesPageData['retainerServices']
+}
 
-export default async function RetainerServices() {
-  const services = await client.fetch(servicesQuery)
+export default function RetainerServices({ data }: RetainerServicesProps) {
   return (
     <Container className='bg-gray-200'>
+      <h5>{data.heading}</h5>
+      <p>{data.body}</p>
       <div className='flex flex-row flex-wrap gap-4'>
-        {services.map((s: SanityDocument) => {
+        {data.items.map((item) => {
           return (
-            <div key={s._id} className='min-w-75 flex-1 py-4'>
-              <h3>{s.title}</h3>
+            <div key={item.title} className='min-w-75 flex-1 py-4'>
+              <h3>{item.title}</h3>
               <Separator variant='dark' />
               <ul className='list-none'>
-                {s.features.map((f: string) => {
+                {item.items.map((i) => {
+                  console.log(i)
                   return (
                     <li
-                      key={f}
+                      key={i}
                       className='bg-[url(/icon.svg)] bg-size-[10px_auto] bg-position-[0_7px] bg-no-repeat pl-4'
                     >
-                      {f}
+                      {i}
                     </li>
                   )
                 })}

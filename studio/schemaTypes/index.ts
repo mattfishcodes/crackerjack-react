@@ -1,41 +1,29 @@
-import { homePageType } from './homePage'
-import { serviceType } from './service'
-import { reviewType } from './review'
-import { personType } from './person'
-
-import { heroSectionType } from './sections/heroSection'
-import { problemSectionType } from './sections/problemSection'
-import { transformationSectionType } from './sections/transformationSection'
-import { promoSectionType } from './sections/promoSection'
-import { ctaSectionType } from './sections/ctaSection'
-import { processSectionType } from './sections/processSection'
-import { ctaType } from './cta'
-import { featureSectionType } from './sections/featureSection'
-import { retainerPackageType } from './retainerPackage'
-import { servicesPageType } from './servicesPage'
-import { retainerSectionType } from './sections/retainerSection'
-import { softwareSectionType } from './sections/softwareSection'
-import { retainerServiceType } from './retainerService'
+import { homePageType } from './documents/homePage'
+import { ctaButtonType } from './documents/ctaButton'
+import { processStepType } from './objects/processStep'
+import { serviceCardType } from './objects/serviceCard'
+import { serviceType } from './documents/service'
+import { servicesPageType } from './documents/servicesPage'
+import { retainerPackageType } from './objects/retainerPackage'
+import { retainerServiceType } from './objects/retainerService'
+import { reviewType } from './documents/review'
+import { serviceFeatureType } from './objects/serviceFeature'
+import { aboutPageType } from './documents/aboutPage'
+import { personType } from './documents/person'
+import { contactPageType } from './documents/contactPage'
 
 export const schemaTypes = [
-  // documents
+  aboutPageType,
+  contactPageType,
+  ctaButtonType,
   homePageType,
-  servicesPageType,
-  serviceType,
-  reviewType,
   personType,
-  ctaType,
+  processStepType,
   retainerPackageType,
   retainerServiceType,
-
-  // sections (objects)
-  heroSectionType,
-  problemSectionType,
-  transformationSectionType,
-  promoSectionType,
-  ctaSectionType,
-  processSectionType,
-  featureSectionType,
-  retainerSectionType,
-  softwareSectionType,
+  reviewType,
+  serviceCardType,
+  serviceFeatureType,
+  servicesPageType,
+  serviceType,
 ]

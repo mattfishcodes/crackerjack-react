@@ -1,63 +1,39 @@
 import { type Metadata } from 'next'
-import { type OnlineBusiness, type WithContext } from 'schema-dts'
 
-import Script from 'next/script'
+import { client } from '@/sanity/lib/client'
+import { type HomePageData, homePageQuery } from '@/sanity/queries/homePage'
 
-import Container from '@/components/Container'
-
-import CallToActionSection from './home/components/CallToActionSection'
+import BenefitsSection from './home/components/BenefitsSection'
+import CoursePromoSection from './home/components/CoursePromoSection'
 import HeroSection from './home/components/HeroSection'
 import MoxiePromoSection from './home/components/MoxiePromoSection'
-import OurProcessSection from './home/components/OurProcessSection'
-import PaintPointsSection from './home/components/PainPointsSection'
-import ServicesLinks from './home/components/ServicesLinks'
-import TransformationSection from './home/components/TransformationSection'
+import PainPointsSection from './home/components/PainPointsSection'
+import ProcessSection from './home/components/ProcessSection'
+import ServicesSection from './home/components/ServicesSection'
 
 export const metadata: Metadata = {
   title: 'Home | Crackerjack Solutions',
 }
 
-export default function Home() {
-  const jsonLd: WithContext<OnlineBusiness> = {
-    '@context': 'https://schema.org',
-    '@type': 'OnlineStore',
-    name: 'Crackerjack Solutions',
-    description:
-      'Crackerjack Solutions | Empowering Entrepreneurs and Business Leaders | Project, Systems and Operations Management',
-    url: 'https://www.crackerjacksolutions.com',
-    logo: 'https://www.crackerjacksolutions.com/icon.svg',
-    legalName: 'Crackerjack Solutions LLC',
-    sameAs: 'https://www.facebook.com/profile.php?id=61561307813553',
-  }
+export default async function Home() {
+  const data = (await client.fetch(homePageQuery)) as HomePageData
 
   return (
     <>
-      <Script
-        id='google-structured-data'
-        type='application/ld+json'
-        strategy='beforeInteractive'
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
-        }}
-      />
       <main>
-        <Container className='bg-primary text-white'>
-          <HeroSection />
-        </Container>
+        <HeroSection data={data.hero} />
 
-        <Container>
-          <PaintPointsSection />
-        </Container>
+        <PainPointsSection data={data.painPoints} />
 
-        <TransformationSection />
+        <BenefitsSection data={data.benefits} />
 
-        <MoxiePromoSection />
+        <MoxiePromoSection data={data.moxiePromo} />
 
-        <CallToActionSection />
+        <CoursePromoSection data={data.coursePromo} />
 
-        <OurProcessSection />
+        <ServicesSection data={data.services} />
 
-        <ServicesLinks />
+        <ProcessSection data={data.process} />
       </main>
     </>
   )

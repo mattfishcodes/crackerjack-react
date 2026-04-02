@@ -13,4 +13,14 @@ export default defineCliConfig({
     autoUpdates: true,
     appId: 'f7uiubu0sjj2o7h56u9knec5',
   },
+
+  schemaExtraction: {
+    enabled: true,
+  },
+
+  typegen: {
+    path: '../web/src/**/*.{ts,tsx,js,jsx}',
+    schema: 'schema.json',
+    generates: '../web/src/sanity/types.ts',
+  },
 })

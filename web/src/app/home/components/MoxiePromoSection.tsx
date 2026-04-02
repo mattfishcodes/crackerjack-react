@@ -1,28 +1,27 @@
 import Image from 'next/image'
 
 import Container from '@/components/Container'
-import { client } from '@/sanity/client'
+import CTAButton from '@/components/CTAButton'
+import { type HomePageData } from '@/sanity/queries/homePage'
 
-const query = `*[_type == "homePage"][0]{
-    promo {
-        text,
-        ctaText,
-        ctaLink,
-        "imageUrl": image.asset->url
-    }
-}`
+type MoxiePromoSectionProps = {
+  data: HomePageData['moxiePromo']
+}
 
-export default async function MoxiePromoSection() {
-  const { promo } = await client.fetch(query)
-
+export default function MoxiePromoSection({ data }: MoxiePromoSectionProps) {
   return (
     <>
       <Container className='bg-secondary'>
-        <p>{promo.text}</p>
-        <button>{promo.ctaText}</button>
+        <p>{data.heading}</p>
+        <CTAButton
+          cta={{
+            buttonLink: data.cta.buttonLink,
+            buttonText: data.cta.buttonText,
+          }}
+        />
         <div className='h-auto w-20'>
           <Image
-            src={promo.imageUrl}
+            src={data.logoUrl}
             alt=''
             width={256}
             height={256}

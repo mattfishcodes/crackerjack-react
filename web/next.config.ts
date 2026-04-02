@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
 
   // important for siteground
   output: command === 'build' ? 'export' : undefined,
-  trailingSlash: true,
+
   images: {
     loaderFile: './imageLoader.ts',
     deviceSizes: [576, 768, 992, 1200, 1400],

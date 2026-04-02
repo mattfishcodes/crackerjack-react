@@ -1,22 +1,19 @@
-import { client } from '@/sanity/client'
+import Container from '@/components/Container'
+import { type HomePageData } from '@/sanity/queries/homePage'
 
-const problemQuery = `*[_type == "homePage"][0]{problem}`
+type PainPointsSectionProps = {
+  data: HomePageData['painPoints']
+}
 
-const PaintPointsSection = async () => {
-  const content = await client.fetch(problemQuery)
-
-  const problem = content.problem
-
+export default function PainPointsSection({ data }: PainPointsSectionProps) {
   return (
-    <>
-      <h3>{problem.heading}</h3>
+    <Container>
+      <h3>{data.heading}</h3>
       <ul>
-        {problem.problems.map((p: string) => (
+        {data.items.map((p: string) => (
           <li key={p}>{p}</li>
         ))}
       </ul>
-    </>
+    </Container>
   )
 }
-
-export default PaintPointsSection

@@ -9,15 +9,15 @@ import Script from 'next/script'
 import Container from '@/components/Container'
 import { cn } from '@/lib/utils'
 
-export default function MoxieForm() {
+export default function MoxieForm({ url }: { url: string }) {
   const [loaded, setLoaded] = useState(false)
   const iframeRef = useRef<HTMLIFrameElement | null>(null)
 
   const injectForm = () => {
     if (iframeRef.current !== null) {
-      iframeRef.current.src =
-        'https://hello.withmoxie.com/01/crackerjack-solutions/website-contact-form?inFrame=true&sourceUrl=' +
-        encodeURIComponent(window.location.href)
+      const iframeUrl = `${url}?inFrame=true&sourceUrl=${encodeURIComponent(window.location.href)}`
+
+      iframeRef.current.src = iframeUrl
 
       iframeRef.current.onload = () => {
         setTimeout(() => {
@@ -58,7 +58,7 @@ export default function MoxieForm() {
 
   useEffect(() => {
     injectForm()
-  }, [])
+  })
 
   return (
     <Container>

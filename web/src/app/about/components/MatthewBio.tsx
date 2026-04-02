@@ -1,25 +1,22 @@
-import { type SanityDocument } from 'next-sanity'
-
 import Image from 'next/image'
 
 import Container from '@/components/Container'
-import { client } from '@/sanity/client'
+import { type AboutPageData } from '@/sanity/queries/aboutPage'
 
-const query = `*[_type == "person" && name == "Matthew Fisher"]{_id, name, bio, certificates[] {
-    "url": asset->url
-  }}`
+type MatthewBioProps = {
+  data: AboutPageData['matthew']
+}
 
-export default async function MatthewBio() {
-  const person = (await client.fetch<SanityDocument[]>(query))[0]
-
-  const paragraphs: string[] = person.bio
+export default async function MatthewBio({ data }: MatthewBioProps) {
+  console.log(data)
+  const paragraphs: string[] = data.bio
     .split('\n')
     .filter((p: string) => p.length > 0)
 
   return (
     <>
       <Container className='bg-primary text-white'>
-        <h2>{person.name}</h2>
+        <h2>{data.name}</h2>
         {paragraphs.map((p) => (
           <p key={p}>{p}</p>
         ))}
@@ -29,7 +26,7 @@ export default async function MatthewBio() {
           <div className='w-full md:w-[30%]'>
             <Image
               className=''
-              src={person.certificates[0].url}
+              src={data.certificates[0].imageUrl}
               alt=''
               width={300}
               height={300}
