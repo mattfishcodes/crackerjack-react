@@ -8,10 +8,10 @@ type RetainerPromoProps = {
 
 export default function RetainerPromo({ data }: RetainerPromoProps) {
   return (
-    <Container>
+    <Container className='text-center'>
       <h3>{data.heading}</h3>
       <p>{data.body}</p>
-      <CTAButton cta={data.cta} />
+      <CTAButton cta={data.cta} variant='dark' />
     </Container>
   )
 }

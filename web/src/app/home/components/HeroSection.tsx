@@ -26,7 +26,9 @@ export default function HeroSection({ data }: HeroSectionProps) {
         <div>
           <h1>{data.heading}</h1>
           <Separator variant='light' />
-          <h2>{data.subheading}</h2>
+          <p className='text-primary-foreground text-2xl font-semibold'>
+            {data.subheading}
+          </p>
           <p>{data.body}</p>
         </div>
       </div>

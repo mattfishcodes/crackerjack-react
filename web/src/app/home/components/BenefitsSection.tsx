@@ -12,7 +12,7 @@ export default function BenefitsSection({ data }: BenefitsSectionProps) {
         <span className='text-3xl'>{data.heading}</span>
       </Container>
 
-      <Container>
+      <Container className='text-center'>
         {data.items.map((b: string) => (
           <p key={b}>{b}</p>
         ))}

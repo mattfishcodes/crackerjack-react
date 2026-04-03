@@ -9,8 +9,10 @@ type RetainerServicesProps = {
 export default function RetainerServices({ data }: RetainerServicesProps) {
   return (
     <Container className='bg-gray-200'>
-      <h5>{data.heading}</h5>
-      <p>{data.body}</p>
+      <div className='text-center'>
+        <h5>{data.heading}</h5>
+        <p>{data.body}</p>
+      </div>
       <div className='flex flex-row flex-wrap gap-4'>
         {data.items.map((item) => {
           return (
@@ -19,7 +21,6 @@ export default function RetainerServices({ data }: RetainerServicesProps) {
               <Separator variant='dark' />
               <ul className='list-none'>
                 {item.items.map((i) => {
-                  console.log(i)
                   return (
                     <li
                       key={i}

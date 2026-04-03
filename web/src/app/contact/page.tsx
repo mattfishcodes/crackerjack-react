@@ -16,8 +16,6 @@ export const metadata: Metadata = {
 export default async function Contact() {
   const data = (await client.fetch(contactPageQuery)) as ContactPageData
 
-  console.log(data)
-
   return (
     <main>
       <PageHeader>Contact Us</PageHeader>

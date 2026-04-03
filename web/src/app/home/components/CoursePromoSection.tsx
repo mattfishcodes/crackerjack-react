@@ -8,7 +8,7 @@ type CoursePromoSectionProps = {
 
 export default function CoursePromoSection({ data }: CoursePromoSectionProps) {
   return (
-    <Container className='bg-primary'>
+    <Container className='bg-primary text-center'>
       <p className='text-primary-foreground'>{data.heading}</p>
       <p className='text-white'>{data.primaryBody}</p>
       <CTAButton cta={data.primaryCta} />

@@ -8,13 +8,13 @@ type FooterPromoProps = {
 
 export default function FooterPromo({ data }: FooterPromoProps) {
   return (
-    <Container>
+    <Container className='text-center'>
       <h6>{data.heading}</h6>
       <p>{data.primaryBody}</p>
-      <CTAButton cta={data.primaryCta} />
+      <CTAButton cta={data.primaryCta} variant='dark' />
 
       <p>{data.secondaryBody}</p>
-      <CTAButton cta={data.secondaryCta} />
+      <CTAButton cta={data.secondaryCta} variant='dark' />
     </Container>
   )
 }

@@ -11,16 +11,18 @@ type MoxiePromoSectionProps = {
 export default function MoxiePromoSection({ data }: MoxiePromoSectionProps) {
   return (
     <>
-      <Container className='bg-secondary'>
+      <Container className='bg-secondary text-center'>
         <p>{data.heading}</p>
         <CTAButton
           cta={{
             buttonLink: data.cta.buttonLink,
             buttonText: data.cta.buttonText,
           }}
+          variant='secondary'
         />
-        <div className='h-auto w-20'>
+        <div className='flex h-auto items-center justify-center'>
           <Image
+            className='h-20 w-20'
             src={data.logoUrl}
             alt=''
             width={256}

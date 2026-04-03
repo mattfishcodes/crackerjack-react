@@ -12,7 +12,7 @@ export default function ConsultPromo({ data }: ConsultPromoProps) {
       <h1 className=''>{data.heading}</h1>
       <p className=''>{data.body}</p>
 
-      <CTAButton cta={data.cta} />
+      <CTAButton cta={data.cta} variant='dark' />
     </Container>
   )
 }

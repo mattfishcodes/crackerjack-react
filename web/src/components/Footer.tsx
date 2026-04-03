@@ -13,8 +13,8 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className='h-40'>
-      <div className='bg-primary flex h-20 items-center'>
+    <footer className='lg:h-40'>
+      <div className='bg-primary flex items-center lg:h-20'>
         <nav className='container mx-auto flex flex-col justify-between py-4 md:flex-row'>
           <div className='flex flex-col gap-4 text-center md:flex-row'>
             {routes.map((r, i) => (

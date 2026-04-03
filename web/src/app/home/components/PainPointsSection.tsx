@@ -7,7 +7,7 @@ type PainPointsSectionProps = {
 
 export default function PainPointsSection({ data }: PainPointsSectionProps) {
   return (
-    <Container>
+    <Container className='text-center'>
       <h3>{data.heading}</h3>
       <ul>
         {data.items.map((p: string) => (

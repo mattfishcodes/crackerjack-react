@@ -7,7 +7,7 @@ type RetainerBenefitsProps = {
 
 export default function RetainerBenefits({ data }: RetainerBenefitsProps) {
   return (
-    <Container>
+    <Container className='text-center'>
       <h4>{data.heading}</h4>
       <ul>
         {data.items.map((item) => (

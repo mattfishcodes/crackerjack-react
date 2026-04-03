@@ -9,7 +9,7 @@ type RetainerPackagesProps = {
 export default function RetainerPackages({ data }: RetainerPackagesProps) {
   return (
     <Container>
-      <div className='flex justify-center'>
+      <div className='flex justify-center text-center'>
         <div>
           <h3>{data.heading}</h3>
           <p>{data.body}</p>

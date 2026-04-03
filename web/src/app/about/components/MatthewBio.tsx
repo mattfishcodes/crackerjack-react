@@ -8,14 +8,13 @@ type MatthewBioProps = {
 }
 
 export default async function MatthewBio({ data }: MatthewBioProps) {
-  console.log(data)
   const paragraphs: string[] = data.bio
     .split('\n')
     .filter((p: string) => p.length > 0)
 
   return (
     <>
-      <Container className='bg-primary text-white'>
+      <Container className='bg-secondary text-secondary-foreground'>
         <h2>{data.name}</h2>
         {paragraphs.map((p) => (
           <p key={p}>{p}</p>
