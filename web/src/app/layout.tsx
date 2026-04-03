@@ -60,11 +60,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${meowScript.variable} ${montserrat.variable} ${titilliumWeb.variable} ${urbanist.variable} antialiased`}
+        className={`${meowScript.variable} ${montserrat.variable} ${titilliumWeb.variable} ${urbanist.variable} flex min-h-screen flex-col antialiased`}
       >
         <ConsentLoader />
         <Header />
-        {children}
+        <main className='flex-1'>{children}</main>
         <Footer />
       </body>
     </html>

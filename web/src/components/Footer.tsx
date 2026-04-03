@@ -13,8 +13,8 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer>
-      <div className='bg-primary'>
+    <footer className='h-40'>
+      <div className='bg-primary flex h-20 items-center'>
         <nav className='container mx-auto flex flex-col justify-between py-4 md:flex-row'>
           <div className='flex flex-col gap-4 text-center md:flex-row'>
             {routes.map((r, i) => (
@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
         </nav>
       </div>
-      <div className='flex flex-row items-center justify-center py-4 font-semibold'>
+      <div className='flex h-20 flex-row items-center justify-center font-semibold'>
         <Copyright className='mr-1' />
         {` ${year} Crackerjack Solutions LLC`}
       </div>

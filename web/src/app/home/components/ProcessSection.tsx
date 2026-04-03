@@ -17,8 +17,8 @@ export default function ProcessSection({ data }: ProcessSectionProps) {
 
       <div className='flex flex-col lg:flex-row'>
         {data.steps.map((s, i: number) => (
-          <div key={s.title}>
-            <div className='flex-1 px-4 py-4 text-center'>
+          <div key={s.title} className='min-w-0 flex-1'>
+            <div className='px-4 py-4 text-center'>
               <p className='font-montserrat text-secondary-foreground bg-secondary inline-flex h-8 w-8 items-center justify-center rounded-full font-semibold'>
                 {i + 1}
               </p>
