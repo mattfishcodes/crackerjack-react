@@ -1,3 +1,3 @@
-public/
+web/public/
 
-*.yaml
+pnpm-lock.yaml
