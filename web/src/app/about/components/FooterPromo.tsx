@@ -11,9 +11,9 @@ export default function FooterPromo({ data }: FooterPromoProps) {
     <Container className='bg-secondary text-foreground text-center'>
       <h6>{data.heading}</h6>
       <p>{data.body}</p>
-      <CTAButton cta={data.primaryCta} variant='secondary' />
+      <CTAButton cta={data.primaryCta} />
       <br />
-      <CTAButton cta={data.secondaryCta} variant='secondary' />
+      <CTAButton cta={data.secondaryCta} />
     </Container>
   )
 }

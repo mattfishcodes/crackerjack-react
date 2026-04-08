@@ -24,7 +24,7 @@ export default async function ServicesSection({ data }: ServicesSectionProps) {
             <p className='text-center'>{item.description}</p>
             <Link
               href={item.href}
-              className='bg-secondary text-secondary-foreground rounded-2xl px-4 py-2 transition-colors hover:bg-white'
+              className='bg-secondary text-secondary-foreground rounded-2xl px-4 py-2 transition-all hover:scale-105 hover:bg-white active:scale-95 active:bg-white'
             >
               Read More
             </Link>

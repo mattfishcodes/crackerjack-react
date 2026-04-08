@@ -8,9 +8,9 @@ type ConsultPromoProps = {
 
 export default function ConsultPromo({ data }: ConsultPromoProps) {
   return (
-    <Container className='bg-primary text-center text-white'>
-      <h3>{data.heading}</h3>
-      <CTAButton cta={data.cta} />
+    <Container className='bg-primary text-center'>
+      <h3 className='text-white'>{data.heading}</h3>
+      <CTAButton cta={data.cta} variant='secondary' />
     </Container>
   )
 }

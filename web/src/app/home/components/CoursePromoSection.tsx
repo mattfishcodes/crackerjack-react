@@ -11,9 +11,9 @@ export default function CoursePromoSection({ data }: CoursePromoSectionProps) {
     <Container className='bg-primary text-center'>
       <p className='text-primary-foreground'>{data.heading}</p>
       <p className='text-white'>{data.primaryBody}</p>
-      <CTAButton cta={data.primaryCta} />
+      <CTAButton cta={data.primaryCta} variant='secondary' />
       <p className='text-white'>{data.secondaryBody}</p>
-      <CTAButton cta={data.secondaryCta} />
+      <CTAButton cta={data.secondaryCta} variant='secondary' />
     </Container>
   )
 }

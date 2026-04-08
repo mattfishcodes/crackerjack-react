@@ -18,7 +18,6 @@ export default function MoxiePromoSection({ data }: MoxiePromoSectionProps) {
             buttonLink: data.cta.buttonLink,
             buttonText: data.cta.buttonText,
           }}
-          variant='secondary'
         />
         <div className='flex h-auto items-center justify-center'>
           <Image
