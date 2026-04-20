@@ -42,7 +42,7 @@
     "@types/react-dom": "^19.2.3",
     "eslint-config-next": "^16.2.4",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.1.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "stylelint": "^17.8.0",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-config-tailwindcss": "^1.0.1",
