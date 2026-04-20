@@ -9,6 +9,8 @@ import Separator from '@/components/Separator'
 import { client } from '@/sanity/lib/client'
 import { type HomePageData, homePageQuery } from '@/sanity/queries/homePage'
 
+import structuredData from './structured-data.json'
+
 export const metadata: Metadata = {
   title: 'Home | Crackerjack Solutions',
 }
@@ -26,6 +28,10 @@ export default async function Home() {
 
   return (
     <>
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <main>
         {/* Hero */}
         <Container className='bg-primary text-white'>
