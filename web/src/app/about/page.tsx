@@ -1,5 +1,3 @@
-import { Suspense } from 'react'
-
 import { type Metadata } from 'next'
 
 import Image from 'next/image'
@@ -10,7 +8,6 @@ import Container from '@/components/Container'
 import PageHeader from '@/components/PageHeader'
 import { client } from '@/sanity/lib/client'
 import { type AboutPageData, aboutPageQuery } from '@/sanity/queries/aboutPage'
-import { Skeleton } from '@/shadcn/ui/skeleton'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -28,19 +25,14 @@ export default async function About() {
       <Container className='bg-secondary'>
         <h2>{christine.name}</h2>
         <div>
-          <div className='mb-4 w-full md:float-left md:mr-4 md:w-60'>
-            <Suspense fallback={<Skeleton className='aspect-square w-full' />}>
-              <Image
-                src={christine.imageUrl}
-                alt='Crackerjack Solutions founder Christine Warner'
-                width={500}
-                height={500}
-                sizes='(max-width: 768px) 200px, 400px'
-                priority
-                loading='eager'
-                unoptimized
-              />
-            </Suspense>
+          <div className='relative aspect-square w-full'>
+            <Image
+              src={christine.imageUrl}
+              alt=''
+              fill
+              className='object-cover'
+              unoptimized
+            />
           </div>
           <div>{christine.bio}</div>
         </div>
@@ -62,19 +54,15 @@ export default async function About() {
           {christine.certificates.map((cert, i: number) => (
             <div
               key={i}
-              className='flex aspect-square flex-[49%] items-center md:flex-1'
+              className='relative flex aspect-square flex-[49%] items-center md:flex-1'
             >
-              <Suspense fallback={<Skeleton className='size-full' />}>
-                <Image
-                  src={cert.imageUrl}
-                  alt=''
-                  width={200}
-                  height={200}
-                  sizes='(max-width: 768px) 200px, 300px'
-                  loading='eager'
-                  unoptimized
-                />
-              </Suspense>
+              <Image
+                src={cert.imageUrl}
+                alt=''
+                fill
+                className='object-contain'
+                unoptimized
+              />
             </div>
           ))}
         </div>
@@ -92,18 +80,14 @@ export default async function About() {
         <p>{matthew.bio}</p>
       </Container>
       <Container>
-        <div className='flex justify-center'>
-          <div className='w-full md:w-[30%]'>
-            <Image
-              className=''
-              src={matthew.certificates[0].imageUrl}
-              alt=''
-              width={300}
-              height={300}
-              sizes='(max-width: 768px) 200px, 300px'
-              unoptimized
-            />
-          </div>
+        <div className='relative aspect-square w-full'>
+          <Image
+            src={matthew.certificates[0].imageUrl}
+            alt=''
+            fill
+            className='object-contain'
+            unoptimized
+          />
         </div>
       </Container>
 
@@ -118,14 +102,12 @@ export default async function About() {
           </div>
           <div className='my-4 flex w-full flex-col gap-4 md:flex-row md:justify-stretch'>
             {coreValues.memes.map(({ imageUrl }) => (
-              <div key={imageUrl} className='flex-1'>
+              <div key={imageUrl} className='relative aspect-square flex-1'>
                 <Image
-                  className='h-full'
                   src={imageUrl}
                   alt=''
-                  width={300}
-                  height={300}
-                  sizes='(max-width: 768px) 200px, 300px'
+                  fill
+                  className='object-contain'
                   unoptimized
                 />
               </div>

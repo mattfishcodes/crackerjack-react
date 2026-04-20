@@ -36,15 +36,13 @@ export default async function Home() {
         {/* Hero */}
         <Container className='bg-primary text-white'>
           <div className='flex flex-col items-center justify-between gap-4 text-center lg:flex-row'>
-            <div className='w-[85%] md:max-w-1/4'>
+            <div className='relative aspect-square w-[85%]'>
               <Image
-                src='/images/icon-square.png'
+                src={hero.imageUrl}
                 alt=''
-                width={800}
-                height={800}
-                sizes='(max-width: 768px) 200px, 400px'
-                priority
-                loading='eager'
+                fill
+                className='object-cover'
+                unoptimized
               />
             </div>
             <div>
@@ -91,15 +89,16 @@ export default async function Home() {
               }}
             />
           </div>
-          <div className='flex h-auto items-center justify-center'>
-            <Image
-              className='h-20 w-20'
-              src={moxiePromo.logoUrl}
-              alt=''
-              width={256}
-              height={256}
-              unoptimized
-            />
+          <div className='flex justify-center'>
+            <div className='relative flex aspect-square w-25'>
+              <Image
+                src={moxiePromo.logoUrl}
+                alt=''
+                fill
+                className='object-cover'
+                unoptimized
+              />
+            </div>
           </div>
         </Container>
 
