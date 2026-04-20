@@ -1,10 +1,10 @@
 import { type Metadata } from 'next'
 
-import Image from 'next/image'
 import Link from 'next/link'
 
 import Button from '@/components/Button'
 import Container from '@/components/Container'
+import FillImage from '@/components/FillImage'
 import PageHeader from '@/components/PageHeader'
 import { client } from '@/sanity/lib/client'
 import { type AboutPageData, aboutPageQuery } from '@/sanity/queries/aboutPage'
@@ -26,13 +26,7 @@ export default async function About() {
         <h2>{christine.name}</h2>
         <div>
           <div className='relative aspect-square w-full'>
-            <Image
-              src={christine.imageUrl}
-              alt=''
-              fill
-              className='object-cover'
-              unoptimized
-            />
+            <FillImage src={christine.imageUrl} alt='' />
           </div>
           <div>{christine.bio}</div>
         </div>
@@ -56,12 +50,10 @@ export default async function About() {
               key={i}
               className='relative flex aspect-square flex-[49%] items-center md:flex-1'
             >
-              <Image
+              <FillImage
                 src={cert.imageUrl}
                 alt=''
-                fill
-                className='object-contain'
-                unoptimized
+                objectFit='object-contain'
               />
             </div>
           ))}
@@ -81,12 +73,10 @@ export default async function About() {
       </Container>
       <Container>
         <div className='relative aspect-square w-full'>
-          <Image
+          <FillImage
             src={matthew.certificates[0].imageUrl}
             alt=''
-            fill
-            className='object-contain'
-            unoptimized
+            objectFit='object-contain'
           />
         </div>
       </Container>
@@ -103,13 +93,7 @@ export default async function About() {
           <div className='my-4 flex w-full flex-col gap-4 md:flex-row md:justify-stretch'>
             {coreValues.memes.map(({ imageUrl }) => (
               <div key={imageUrl} className='relative aspect-square flex-1'>
-                <Image
-                  src={imageUrl}
-                  alt=''
-                  fill
-                  className='object-contain'
-                  unoptimized
-                />
+                <FillImage src={imageUrl} alt='' />
               </div>
             ))}
           </div>

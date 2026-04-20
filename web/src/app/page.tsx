@@ -1,10 +1,9 @@
 import { ArrowDown } from 'lucide-react'
 import { type Metadata } from 'next'
 
-import Image from 'next/image'
-
 import Button from '@/components/Button'
 import Container from '@/components/Container'
+import FillImage from '@/components/FillImage'
 import Separator from '@/components/Separator'
 import { client } from '@/sanity/lib/client'
 import { type HomePageData, homePageQuery } from '@/sanity/queries/homePage'
@@ -37,13 +36,7 @@ export default async function Home() {
         <Container className='bg-primary text-white'>
           <div className='flex flex-col items-center justify-between gap-4 text-center lg:flex-row'>
             <div className='relative aspect-square w-[85%]'>
-              <Image
-                src={hero.imageUrl}
-                alt=''
-                fill
-                className='object-cover'
-                unoptimized
-              />
+              <FillImage src={hero.imageUrl} alt='' />
             </div>
             <div>
               <h1>{hero.heading}</h1>
@@ -91,13 +84,7 @@ export default async function Home() {
           </div>
           <div className='flex justify-center'>
             <div className='relative flex aspect-square w-25'>
-              <Image
-                src={moxiePromo.logoUrl}
-                alt=''
-                fill
-                className='object-cover'
-                unoptimized
-              />
+              <FillImage src={moxiePromo.logoUrl} alt='' />
             </div>
           </div>
         </Container>
