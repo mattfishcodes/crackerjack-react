@@ -10,7 +10,6 @@
     "stylelint": "stylelint --fix src/app/globals.css",
     "format": "prettier --write --ignore-unknown .",
     "typecheck": "tsc --noEmit",
-    "optimize-images": "node scripts/optimize-images.js",
     "copy-consent": "node scripts/consent-iife.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -35,7 +34,6 @@
   },
   "devDependencies": {
     "@mattfishcodes/eslint-configs": "^1.0.1",
-    "@mattfishcodes/image-tools": "^1.1.0",
     "@next/eslint-plugin-next": "^16.2.4",
     "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
