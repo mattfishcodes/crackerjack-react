@@ -1,39 +1,34 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "baseBranches": ["dev"],
-  "rangeStrategy": "bump",
-  "timezone": "America/Detroit",
+  "baseBranchPatterns": ["main"],
+
+  "automergeType": "branch",
+  "ignoreTests": true,
+
+  "schedule": ["before 9am on Monday"],
+
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["every weekend"]
+    "schedule": ["before 9am on Monday"]
   },
-
-  "schedule": ["every weekend"],
-
-  "ignoreDeps": ["eslint", "@eslint/js"],
 
   "packageRules": [
     {
       "matchDatasources": ["node-version"],
-      "enabled": false
+      "allowedVersions": "/^(20|22|24)\\.[0-9]+\\.[0-9]+$/"
     },
     {
       "matchUpdateTypes": ["patch"],
-      "groupName": "patch dependencies"
+      "automerge": true
     },
     {
-      "matchDepTypes": ["devDependencies"],
-      "groupName": "dev dependencies"
+      "matchUpdateTypes": ["minor"],
+      "automerge": true
     },
     {
-      "matchDepTypes": ["dependencies"],
-      "groupName": "runtime dependencies"
+      "matchPackageNames": ["eslint"],
+      "allowedVersions": "<10"
     }
-  ],
-
-  "ignorePaths": [".nvmrc", ".node-version"],
-
-  "semanticCommits": "enabled",
-  "semanticCommitType": "chore",
-  "semanticCommitScope": "deps"
+  ]
 }
