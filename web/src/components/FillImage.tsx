@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import Image from 'next/image'
 
@@ -19,18 +19,23 @@ export default function FillImage({
   objectFit?: 'object-cover' | 'object-contain'
 }) {
   const [loaded, setLoaded] = useState(false)
+  const imgRef = useRef<HTMLImageElement>(null)
+
+  useEffect(() => {
+    if (imgRef.current?.complete) {
+      setLoaded(true)
+    }
+  }, [src])
 
   return (
     <div className={`relative w-full ${aspectRatio}`}>
       {!loaded && <Skeleton className='absolute inset-0' />}
       <Image
+        ref={imgRef}
         src={src}
         alt={alt}
         fill
-        className={cn(
-          `${objectFit} opacity-0 transition-opacity duration-300`,
-          loaded && 'opacity-100',
-        )}
+        className={cn(`${objectFit} opacity-0`, loaded && 'opacity-100')}
         onLoad={() => setLoaded(true)}
         unoptimized
       />
