@@ -26,7 +26,7 @@ export default async function About() {
         <h2>{christine.name}</h2>
         <div>
           <div className='relative aspect-square w-full'>
-            <FillImage src={christine.imageUrl} alt='' />
+            <FillImage src={christine.imageUrl} alt='' loading='eager' />
           </div>
           <div>{christine.bio}</div>
         </div>

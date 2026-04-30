@@ -12,11 +12,13 @@ export default function FillImage({
   alt,
   aspectRatio = 'aspect-square',
   objectFit = 'object-cover',
+  loading = 'lazy',
 }: {
   src: string
   alt: string
   aspectRatio?: string
   objectFit?: 'object-cover' | 'object-contain'
+  loading?: 'lazy' | 'eager'
 }) {
   const [loaded, setLoaded] = useState(false)
   const imgRef = useRef<HTMLImageElement>(null)
@@ -37,6 +39,7 @@ export default function FillImage({
         fill
         className={cn(`${objectFit} opacity-0`, loaded && 'opacity-100')}
         onLoad={() => setLoaded(true)}
+        loading={loading}
         unoptimized
       />
     </div>

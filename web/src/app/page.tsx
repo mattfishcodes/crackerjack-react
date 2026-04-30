@@ -36,7 +36,7 @@ export default async function Home() {
         <Container className='bg-primary text-white'>
           <div className='flex flex-col items-center justify-between gap-4 text-center lg:flex-row'>
             <div className='relative aspect-square w-[85%]'>
-              <FillImage src={hero.imageUrl} alt='' />
+              <FillImage src={hero.imageUrl} alt='' loading='eager' />
             </div>
             <div>
               <h1>{hero.heading}</h1>
