@@ -145,13 +145,13 @@ importers:
         version: 7.1.1(eslint@9.39.4(jiti@2.6.1))
       stylelint:
         specifier: ^17.8.0
-        version: 17.11.1(typescript@6.0.3)
+        version: 17.12.0(typescript@6.0.3)
       stylelint-config-standard:
         specifier: ^40.0.0
-        version: 40.0.0(stylelint@17.11.1(typescript@6.0.3))
+        version: 40.0.0(stylelint@17.12.0(typescript@6.0.3))
       stylelint-config-tailwindcss:
         specifier: ^1.0.1
-        version: 1.0.1(stylelint@17.11.1(typescript@6.0.3))(tailwindcss@4.2.4)
+        version: 1.0.1(stylelint@17.12.0(typescript@6.0.3))(tailwindcss@4.2.4)
       tw-animate-css:
         specifier: ^1.4.0
         version: 1.4.0
@@ -6376,8 +6376,8 @@ packages:
       stylelint: '>=13.13.1'
       tailwindcss: '>=2.2.16'
 
-  stylelint@17.11.1:
-    resolution: {integrity: sha512-+smN/HqVTggUx3iuAzOi9fPh8SrH+cJWlZrYVldXoJ06orWBhZ4Ue/QEp64oei6pVrAh4w3tG+Y12Vw7MbCFRQ==}
+  stylelint@17.12.0:
+    resolution: {integrity: sha512-KIlzWXMHUvgfPUR0R7TK3H80yCIi0uoivUwf+6Az4yrHJD1Q3c1qIkh/H5Z0i/K3QXgtq/UMEkWyBUSUwnpnOg==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -13950,21 +13950,21 @@ snapshots:
     optionalDependencies:
       '@babel/core': 7.29.0
 
-  stylelint-config-recommended@18.0.0(stylelint@17.11.1(typescript@6.0.3)):
+  stylelint-config-recommended@18.0.0(stylelint@17.12.0(typescript@6.0.3)):
     dependencies:
-      stylelint: 17.11.1(typescript@6.0.3)
+      stylelint: 17.12.0(typescript@6.0.3)
 
-  stylelint-config-standard@40.0.0(stylelint@17.11.1(typescript@6.0.3)):
+  stylelint-config-standard@40.0.0(stylelint@17.12.0(typescript@6.0.3)):
     dependencies:
-      stylelint: 17.11.1(typescript@6.0.3)
-      stylelint-config-recommended: 18.0.0(stylelint@17.11.1(typescript@6.0.3))
+      stylelint: 17.12.0(typescript@6.0.3)
+      stylelint-config-recommended: 18.0.0(stylelint@17.12.0(typescript@6.0.3))
 
-  stylelint-config-tailwindcss@1.0.1(stylelint@17.11.1(typescript@6.0.3))(tailwindcss@4.2.4):
+  stylelint-config-tailwindcss@1.0.1(stylelint@17.12.0(typescript@6.0.3))(tailwindcss@4.2.4):
     dependencies:
-      stylelint: 17.11.1(typescript@6.0.3)
+      stylelint: 17.12.0(typescript@6.0.3)
       tailwindcss: 4.2.4
 
-  stylelint@17.11.1(typescript@6.0.3):
+  stylelint@17.12.0(typescript@6.0.3):
     dependencies:
       '@csstools/css-calc': 3.2.1(@csstools/css-parser-algorithms@4.0.0(@csstools/css-tokenizer@4.0.0))(@csstools/css-tokenizer@4.0.0)
       '@csstools/css-parser-algorithms': 4.0.0(@csstools/css-tokenizer@4.0.0)
